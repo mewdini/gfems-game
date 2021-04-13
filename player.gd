@@ -21,7 +21,7 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.name == "mew":
-			get_node("../message").show()
+			get_node("../Camera2D/message").show()
 
 	# We don't need to multiply velocity by delta because "move_and_slide" already takes delta time into account.
 

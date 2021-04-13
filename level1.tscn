@@ -72,8 +72,23 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 5
+limit_right = 1025
+limit_bottom = 720
+limit_smoothed = true
+
+[node name="message" type="Sprite" parent="player/Camera2D"]
+visible = false
+position = Vector2( -48, -15.9999 )
+scale = Vector2( 1.34589, 1.4543 )
+texture = ExtResource( 6 )
+
 [node name="mew" type="StaticBody2D" parent="."]
-position = Vector2( 248, -64 )
+position = Vector2( 279.461, -61.606 )
 script = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -237,9 +252,3 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/vertTree2"]
 position = Vector2( 984, 256 )
 shape = SubResource( 7 )
-
-[node name="message" type="Sprite" parent="."]
-visible = false
-position = Vector2( 504, 504 )
-scale = Vector2( 1.34589, 1.4543 )
-texture = ExtResource( 6 )
