@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 500
 
 var velocity = Vector2()
+var player_name = "Pablo" # TODO add section where player inputs name at start of game
 
 func get_input():
 	# NPC Interaction

@@ -36,9 +36,15 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	
 func _input(event):
 	if event is InputEventKey:
-		if event.scancode == KEY_A:
+		if event.scancode == KEY_Z:
 			set_process_input(false)
-			npc.talk("A")
-		elif event.scancode == KEY_B:
+			npc.talk('Z')
+		elif event.scancode == KEY_X:
 			set_process_input(false)
-			npc.talk("B")
+			npc.talk('X')
+		elif event.scancode == KEY_C:
+			set_process_input(false)
+			npc.talk('C')
+		elif event.scancode == KEY_V:
+			set_process_input(false)
+			npc.talk('V')

@@ -182,8 +182,6 @@ margin_bottom = 17.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Bob"
-text = "Bob"
 __meta__ = {
 "_edit_use_anchors_": false
 }

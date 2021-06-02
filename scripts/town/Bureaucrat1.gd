@@ -9,13 +9,14 @@ var going_home = true
 var inside_timer = 0
 
 # references
-var dialoguePopup
+var dialogue_popup
 var player
 
-var dialogue_state = 0
+var dialogue_state = "0"
+var state_data
 
 func _ready():
-	dialoguePopup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
+	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
 	player = get_tree().root.get_node("Root/Player")
 
 # state machine
@@ -74,48 +75,52 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	
 func talk(answer = ""):
-	# load file
-	# parse JSON
-	# get dictionary for Neighbor
+	# load file and parse JSON
+	var dialogue = load_file("res://dialogue/neighbor.json")
 	
+	# Set dialoguePopup npc to neighbor
+	dialogue_popup.npc = self
 	
-	# Set dialoguePopup npc to Bob
-	dialoguePopup.npc = self
-	dialoguePopup.npc_name = "Bob"
+	# Get state of dialogue
+	if answer != "":
+		var state_next = state_data.next
+		if answer == 'Z':
+			dialogue_state = state_next[0].id
+		elif answer == 'X' and len(state_next) > 1:
+			dialogue_state = state_next[1].id
+		elif answer == 'C' and len(state_next) > 2:
+			dialogue_state = state_next[2].id
+		elif answer == 'V' and len(state_next) > 3:
+			dialogue_state = state_next[3].id
+		else:
+			dialogue_state = dialogue.start
+		
+	# Check if done
+	if dialogue_state == "-1":
+		dialogue_state = "0"
+		dialogue_popup.close()
+		return
 	
-	# Show the current dialogue
+	# Set possible buttons
+	# TODO don't hardcode this here
+	var buttons = ['Z', 'X', 'C', 'V']
+	
+	var ans
+	
+	var answers = ""
+	state_data = dialogue.lines[dialogue_state]
+	dialogue_popup.npc_name = state_data.actor.replace("%player%", player.player_name)
+	dialogue_popup.dialogue = state_data.text.replace("%player%", player.player_name)
+	for i in range(len(state_data.next)):
+		ans = state_data.next[i]
+		answers += '[' + buttons[i] + "] " + ans.text + "  "
+	dialogue_popup.answers = "[center]%s[/center]" % answers
+	dialogue_popup.answers = dialogue_popup.answers.replace("%player%", player.player_name)
+	dialogue_popup.open()
 
-	match dialogue_state:
-		0:
-			# Update dialogue tree state
-			dialogue_state = 1
-			# Show dialogue popup
-			dialoguePopup.dialogue = "Hello adventurer! I lost my necklace, can you find it for me?"
-			dialoguePopup.answers = "[center]%s[/center]" % "[A] Yes  [B] No"
-			dialoguePopup.open()
-		1:
-			match answer:
-				"A":
-					# Update dialogue tree state
-					dialogue_state = 2
-					# Show dialogue popup
-					dialoguePopup.dialogue = "Thank you!"
-					dialoguePopup.answers = "[A] Bye"
-					dialoguePopup.open()
-				"B":
-					# Update dialogue tree state
-					dialogue_state = 3
-					# Show dialogue popup
-					dialoguePopup.dialogue = "If you change your mind, you'll find me here."
-					dialoguePopup.answers = "[A] Bye"
-					dialoguePopup.open()
-		2:
-			# Update dialogue tree state
-			dialogue_state = 0
-			# Close dialogue popup
-			dialoguePopup.close()
-		3:
-			# Update dialogue tree state
-			dialogue_state = 0
-			# Close dialogue popup
-			dialoguePopup.close()
+# load file and parse JSON
+func load_file(file_path: String):
+	var file = File.new()
+	assert (file.file_exists(file_path))
+	file.open(file_path, file.READ)
+	return parse_json(file.get_as_text())
