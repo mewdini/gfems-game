@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export (int) var speed = 500
+export (int) var detection_range = 52
 
 var velocity = Vector2()
 var player_name = "Pablo" # TODO add section where player inputs name at start of game
@@ -31,6 +32,6 @@ func _physics_process(delta):
 	
 	# Turn RayCast2D toward movement direction
 	if direction != Vector2.ZERO:
-		$RayCast2D.cast_to = direction.normalized() * 52
+		$RayCast2D.cast_to = direction.normalized() * detection_range
 	
 	get_input()

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 500
+export (int) var speed = 300
 export (float) var time_inside = 3
 
 # pathfinding variables
@@ -37,7 +37,6 @@ func update_velocity(delta):
 			# if at door, disappear and change bool
 			if (self.position.y <= 2117):
 				self.visible = false
-				# TODO find way to pause here
 			else:
 				velocity.y -= 1
 			self.position.x = 1839
@@ -56,7 +55,6 @@ func update_velocity(delta):
 			# if at door, disappear and change bool
 			if (self.position.y <= 2174):
 				self.visible = false
-				# TODO find way to pause here
 			else:
 				velocity.y -= 1
 			self.position.x = 3111
