@@ -7,15 +7,15 @@ var npc
 
 func name_set(new_value):
 	npc_name = new_value
-	$ColorRect/CharacterName.text = new_value
+	$ColorRect/CharacterName.bbcode_text = new_value
 
 func dialogue_set(new_value):
 	dialogue = new_value
-	$ColorRect/Dialogue.text = new_value
+	$ColorRect/Dialogue.bbcode_text = new_value
 
 func answers_set(new_value):
 	answers = new_value
-	$ColorRect/Answers.text = new_value
+	$ColorRect/Answers.bbcode_text = new_value
 
 func open():
 	get_tree().paused = true

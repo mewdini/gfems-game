@@ -174,39 +174,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CharacterName" type="Label" parent="CanvasLayer/DialoguePopup/ColorRect"]
+[node name="CharacterName" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
 margin_left = 5.0
 margin_top = 2.0
-margin_right = 295.0
-margin_bottom = 16.0
+margin_right = 535.0
+margin_bottom = 17.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Fiona"
-
-[node name="Dialogue" type="Label" parent="CanvasLayer/DialoguePopup/ColorRect"]
-margin_left = 5.0
-margin_top = 24.0
-margin_right = 295.0
-margin_bottom = 55.0
-rect_scale = Vector2( 1.5, 1.5 )
-custom_colors/font_color = Color( 0.501961, 0.501961, 0.501961, 1 )
-text = "Hello adventurer! I lost my necklace, can you find it for me?"
-autowrap = true
-percent_visible = 0.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Bob"
+text = "Bob"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Answers" type="Label" parent="CanvasLayer/DialoguePopup/ColorRect"]
-visible = false
-margin_left = 184.0
-margin_top = 80.0
-margin_right = 474.0
-margin_bottom = 94.0
+[node name="Dialogue" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
+margin_left = 5.0
+margin_top = 24.0
+margin_right = 535.0
+margin_bottom = 56.0
 rect_scale = Vector2( 1.5, 1.5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "[A] Yes [B] No"
-align = 1
+custom_colors/default_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+bbcode_enabled = true
+
+[node name="Answers" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
+margin_top = 77.0
+margin_right = 533.0
+margin_bottom = 92.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/DialoguePopup"]
 anims/ShowDialogue = SubResource( 1 )

@@ -74,6 +74,11 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	
 func talk(answer = ""):
+	# load file
+	# parse JSON
+	# get dictionary for Neighbor
+	
+	
 	# Set dialoguePopup npc to Bob
 	dialoguePopup.npc = self
 	dialoguePopup.npc_name = "Bob"
@@ -86,7 +91,7 @@ func talk(answer = ""):
 			dialogue_state = 1
 			# Show dialogue popup
 			dialoguePopup.dialogue = "Hello adventurer! I lost my necklace, can you find it for me?"
-			dialoguePopup.answers = "[A] Yes  [B] No"
+			dialoguePopup.answers = "[center]%s[/center]" % "[A] Yes  [B] No"
 			dialoguePopup.open()
 		1:
 			match answer:
