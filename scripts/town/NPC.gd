@@ -8,7 +8,7 @@ var velocity = Vector2()
 
 
 # checkpoints are set up as tuples with x, y, delay at point in seconds, and visibility
-var checkpoints = [[3075, 2304, 0, trawue]] # this will generally not run
+var checkpoints = [[3075, 2304, 0, true]] # this will generally not run
 var current_destination = 0
 var current_checkpoint
 var pause_timer = 0
