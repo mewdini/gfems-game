@@ -2,25 +2,31 @@ extends KinematicBody2D
 
 export (int) var speed = 500
 export (int) var detection_range = 52
+export var start_animation = "idle_right" setget set_start_anim
 
 var velocity: Vector2
-var player_name = "Pablo" # TODO add section where player inputs name at start of game
+var player_name = "Julia" # TODO add section where player inputs name at start of game
+
+func set_start_anim(anim):
+	start_animation = anim
+	$AnimatedSprite.play(anim)
+
+func _on_ready():
+	$AnimatedSprite.play(start_animation)
 
 func get_input():
 	# NPC Interaction
 	if Input.is_action_pressed("ui_select"):
 		var target = $RayCast2D.get_collider()
 		if target != null:
-			if target.is_in_group("NPCs"):
-				# Talk to NPC
-				target.talk()
-				return
+			# Talk to NPC
+			target.talk()
+			return
 
 func _physics_process(delta):
 	var direction: Vector2
-	if !get_tree().paused:	
+	if !get_tree().paused:
 		# Get player input
-		
 		direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 		direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	else:
