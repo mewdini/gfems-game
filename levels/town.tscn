@@ -389,8 +389,9 @@ polygon = PoolVector2Array( 1598, 3475.75, 1598, 3835.75, 2236, 3834.75, 2237, 3
 polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96, 2878.38, 3670.28, 2876.7, 3508.83, 3186.15, 3354.1, 3211.38, 3352.42, 3517.46, 3508.83, 3517.46, 3749.32, 3677.23, 3828.37, 3678.92, 4154.64 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
+pause_mode = 2
 position = Vector2( 88, 1504 )
-scale = Vector2( 1.25, 1.25 )
+scale = Vector2( 1.75, 1.75 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -400,10 +401,11 @@ __meta__ = {
 polygon = PoolVector2Array( 19.2, 0, 12.8, 6.40002, 6.4, 44.8, 12.8, 64, 51.2, 64, 57.6, 44.8, 51.2, 6.40002, 44.8, 0 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+pause_mode = 2
 position = Vector2( 32, 19.2 )
 scale = Vector2( 1, 1 )
 frames = SubResource( 25 )
-animation = "idle_left"
+animation = "idle_right"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -24, -28.3595 )
@@ -418,7 +420,7 @@ limit_smoothed = true
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
 position = Vector2( 32, 32 )
 enabled = true
-cast_to = Vector2( 0, 48 )
+cast_to = Vector2( 0, 52 )
 
 [node name="NPCs" type="Node2D" parent="."]
 
