@@ -6,8 +6,6 @@ export (int) var detection_range = 52
 var velocity: Vector2
 var player_name = "Pablo" # TODO add section where player inputs name at start of game
 
-var last_dir = Vector2(0,1)
-
 func get_input():
 	# NPC Interaction
 	if Input.is_action_pressed("ui_select"):
@@ -39,11 +37,9 @@ func _physics_process(delta):
 	# Update player animation
 	animation_manager(direction)
 	
+	# Turn RayCast2D toward movement direction
 	if direction != Vector2.ZERO:
-		# Turn RayCast2D toward movement direction
 		$RayCast2D.cast_to = direction.normalized() * detection_range
-		# Save movement
-		last_dir = direction
 	
 	get_input()
 	
@@ -57,11 +53,12 @@ func animation_manager(dir):
 	elif dir.y == -1:
 		$AnimatedSprite.play("run_up")
 	elif dir == Vector2.ZERO:
-		if last_dir.x == 1:
-			$AnimatedSprite.play("idle_right")
-		elif last_dir.x == -1:
-			$AnimatedSprite.play("idle_left")
-		elif last_dir.y == 1:
-			$AnimatedSprite.play("idle_down")
-		elif last_dir.y == -1: # could be "else", but keeping for more obvious error
-			$AnimatedSprite.play("idle_up")
+		match $AnimatedSprite.animation:
+			"run_right":
+				$AnimatedSprite.play("idle_right")
+			"run_left":
+				$AnimatedSprite.play("idle_left")
+			"run_up":
+				$AnimatedSprite.play("idle_up")
+			"run_down":
+				$AnimatedSprite.play("idle_down")
