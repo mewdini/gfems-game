@@ -2,30 +2,30 @@ extends KinematicBody2D
 class_name NPC
 
 export (int) var speed = 300
+export (String, FILE) var dialogue_file
+export (String) var npc_name
+
+# checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
+export (Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 1]]
+
 
 # pathfinding variables
 var velocity = Vector2()
 
 
-# checkpoints are set up as tuples with x, y, delay at point in seconds, and visibility
-var checkpoints = [[3075, 2304, 0, true]] # this will generally not run
+
 var current_destination = 0
 var current_checkpoint
 var pause_timer = 0
 var x_dif
 var y_dif
-
+var current_check_viz
 # references
 var dialogue_popup
 var player
 
 var dialogue_state = "0"
 var state_data
-var dialogue_file = "res://dialogue/neighbor.json"
-
-func _init(_dialogue_file, _checkpoints).():
-	dialogue_file = _dialogue_file
-	checkpoints = _checkpoints
 
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
@@ -40,6 +40,10 @@ func update_velocity(delta):
 	current_checkpoint = checkpoints[current_destination]
 	x_dif = self.position.x - current_checkpoint[0]
 	y_dif = self.position.y - current_checkpoint[1]
+	if current_checkpoint[3] == 0:
+		current_check_viz = false
+	else:
+		current_check_viz = true
 
 	# uses a 3 pixel fudge factor, as otherwise the velocity can overshoot the destination
 	# move in direction of checkpoint
@@ -71,10 +75,15 @@ func update_velocity(delta):
 			else:
 				current_destination += 1
 			pause_timer = 0
-			if checkpoints[current_destination][3]:
-				self.visible = checkpoints[current_destination][3]
+			current_checkpoint = checkpoints[current_destination]
+			if current_checkpoint[3] == 0:
+				current_check_viz = false
+			else:
+				current_check_viz = true
+			
+			self.visible = current_check_viz
 		else:
-			self.visible = current_checkpoint[3]
+			self.visible = current_check_viz
 
 	velocity = velocity.normalized() * speed
 
