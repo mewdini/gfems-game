@@ -1,0 +1,211 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://backgrounds/town.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scripts/town/Player.gd" type="Script" id=3]
+[ext_resource path="res://scripts/town/Bureaucrat1.gd" type="Script" id=4]
+[ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ShowDialogue"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/Dialogue:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect/Answers:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Root" type="Node2D"]
+position = Vector2( 0, -8 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 3424, 2696 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BuildingCollisions" type="Node2D" parent="."]
+
+[node name="house" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/house"]
+polygon = PoolVector2Array( 481.491, 473.273, 477.927, 687.089, 158.985, 902.686, 158.985, 1276.86, 1119.37, 1275.08, 1117.59, 902.686, 955.449, 797.56, 957.231, 473.273, 718.47, 316.475, 481.491, 473.273 )
+
+[node name="neighbor house" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/neighbor house"]
+polygon = PoolVector2Array( 1436.29, 625.885, 1748.11, 472.651, 1769.49, 472.651, 2077.74, 627.667, 2077.74, 793.374, 2093.78, 793.374, 2396.68, 948.391, 2394.9, 1276.24, 1436.29, 1278.02 )
+
+[node name="business 1" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/business 1"]
+polygon = PoolVector2Array( 1597.34, 1596.2, 1597.34, 2109.94, 1613.99, 2111.13, 1615.18, 2075.46, 2055.19, 2076.64, 2056.38, 2108.75, 2076.59, 2111.13, 2082.54, 2233.62, 2240.7, 2233.62, 2239.51, 2155.13, 2098, 2152.75, 2099.19, 2075.46, 2082.54, 2075.46, 2076.59, 1674.69, 2232.38, 1677.07, 2233.57, 1599.77 )
+
+[node name="business 2" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/business 2"]
+polygon = PoolVector2Array( 2232.38, 1596.2, 2234.76, 2102.81, 2234.76, 2104, 2233.57, 2104, 2241.89, 2111.13, 2252.6, 2112.32, 2256.16, 2105.19, 2257.35, 2075.46, 2856.71, 2076.64, 2857.9, 2112.32, 2878.12, 2112.32, 2879.31, 1596.2 )
+
+[node name="govt center" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/govt center"]
+polygon = PoolVector2Array( 2876.02, 2231.24, 2877.2, 1388.09, 3262.12, 1199.06, 3292.32, 1197.17, 3677.43, 1389.72, 3675.54, 2233.55, 3649.11, 2233.55, 3647.22, 2216.56, 3571.71, 2220.33, 3520.74, 2169.36, 3518.85, 2133.5, 3033.7, 2133.5, 3035.59, 2167.48, 2982.73, 2216.56, 2907.22, 2218.45, 2905.34, 2233.55 )
+
+[node name="business 3" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/business 3"]
+polygon = PoolVector2Array( 3676, 2105.32, 3677, 1595.32, 4316, 1596.32, 4317, 2113.32, 4295, 2113.32, 4295, 2073.32, 3695, 2075.32, 3695, 2111.32, 3677, 2113.32 )
+
+[node name="boat shop" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/boat shop"]
+polygon = PoolVector2Array( 4797.72, 1575.32, 4797.72, 2237.32, 4980.72, 2235.32, 4982.72, 2201.32, 5251.72, 2202.32, 5252.72, 2236.32, 5435.72, 2237.32, 5436.72, 1575.32 )
+
+[node name="planes shop" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/planes shop"]
+polygon = PoolVector2Array( 3676.38, 954.282, 3678.27, 296.401, 4316.33, 296.401, 4315.38, 956.17 )
+
+[node name="broker 1" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 1"]
+polygon = PoolVector2Array( 158.578, 3157.34, 157.318, 3515.16, 796.098, 3513.9, 794.838, 3156.08 )
+
+[node name="broker 2" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 2"]
+polygon = PoolVector2Array( 157.318, 3957.36, 156.058, 4315.18, 796.098, 4313.92, 794.838, 3957.36 )
+
+[node name="broker 3" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 3"]
+polygon = PoolVector2Array( 1598, 3475.75, 1598, 3835.75, 2236, 3834.75, 2237, 3476.75 )
+
+[node name="cousin house" type="StaticBody2D" parent="BuildingCollisions"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/cousin house"]
+polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96, 2878.38, 3670.28, 2876.7, 3508.83, 3186.15, 3354.1, 3211.38, 3352.42, 3517.46, 3508.83, 3517.46, 3749.32, 3677.23, 3828.37, 3678.92, 4154.64 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 88, 1504 )
+scale = Vector2( 1.25, 1.25 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PoolVector2Array( 6.4, 0, 0, 6.40002, 0, 57.6, 6.4, 64, 57.6, 64, 64, 57.6, 64, 6.40002, 57.6, 0 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -24, -28.3595 )
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = 0
+limit_top = 0
+limit_right = 6852
+limit_bottom = 5395
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+position = Vector2( 32, 32 )
+enabled = true
+cast_to = Vector2( 0, 48 )
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Bureaucrat1" type="KinematicBody2D" parent="NPCs" groups=[
+"NPCs",
+]]
+position = Vector2( 3112, 2176 )
+scale = Vector2( 1.25, 1.25 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NPCs/Bureaucrat1"]
+polygon = PoolVector2Array( -32, -25.6, -25.6, -32, 25.6, -32, 32, -25.6, 32, 25.6, 25.6, 32, -25.6, 32, -32, 25.6 )
+
+[node name="Sprite" type="Sprite" parent="NPCs/Bureaucrat1"]
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialoguePopup" type="Popup" parent="CanvasLayer"]
+pause_mode = 2
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+popup_exclusive = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/DialoguePopup"]
+margin_left = 112.0
+margin_top = 584.0
+margin_right = 912.0
+margin_bottom = 684.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterName" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 535.0
+margin_bottom = 17.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
+margin_left = 5.0
+margin_top = 24.0
+margin_right = 535.0
+margin_bottom = 56.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+bbcode_enabled = true
+
+[node name="Answers" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
+margin_top = 77.0
+margin_right = 533.0
+margin_bottom = 92.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/DialoguePopup"]
+anims/ShowDialogue = SubResource( 1 )
+[connection signal="animation_finished" from="CanvasLayer/DialoguePopup/AnimationPlayer" to="CanvasLayer/DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
