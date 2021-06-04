@@ -3,7 +3,7 @@ extends Area2D
 
 onready var anim_player: AnimationPlayer = $AnimationPlayer
 
-export var next_scene: String
+export (String, FILE) var next_scene = ""
 
 export (int) var size_x setget set_x
 export (int) var size_y setget set_y
