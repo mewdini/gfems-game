@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="gfems-game"
-run/main_scene="res://levels/town.tscn"
+run/main_scene="res://levels/Town.tscn"
 config/icon="res://icon.png"
 
 [display]
