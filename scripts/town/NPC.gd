@@ -81,9 +81,13 @@ func update_velocity(delta):
 			else:
 				current_check_viz = true
 			
+			
 			self.visible = current_check_viz
 		else:
+			
 			self.visible = current_check_viz
+	else:
+		self.visible = true
 
 	velocity = velocity.normalized() * speed
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scripts/town/Bureaucrat1.gd" type="Script" id=1]
+[ext_resource path="res://characters/Neighbor1NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=2]
 [ext_resource path="res://backgrounds/town.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
 
@@ -138,21 +137,8 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 
 [node name="Neighbor" parent="NPCs" groups=[
 "NPCs",
-]]
-position = Vector2( 3112, 2176 )
-scale = Vector2( 1.25, 1.25 )
-collision_layer = 4
-collision_mask = 7
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NPCs/Bureaucrat1"]
-polygon = PoolVector2Array( -32, -25.6, -25.6, -32, 25.6, -32, 32, -25.6, 32, 25.6, 25.6, 32, -25.6, 32, -32, 25.6 )
-
-[node name="Sprite" type="Sprite" parent="NPCs/Bureaucrat1"]
-texture = ExtResource( 4 )
+] instance=ExtResource( 1 )]
+position = Vector2( 3101.83, 2184.01 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -220,4 +206,5 @@ position = Vector2( 3272, 2104 )
 next_scene = "res://levels/Government.tscn"
 size_x = 250
 size_y = 34
+
 [connection signal="animation_finished" from="CanvasLayer/DialoguePopup/AnimationPlayer" to="CanvasLayer/DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
