@@ -139,6 +139,7 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 "NPCs",
 ] instance=ExtResource( 1 )]
 position = Vector2( 3101.83, 2184.01 )
+collision_layer = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

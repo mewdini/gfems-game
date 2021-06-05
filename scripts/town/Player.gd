@@ -17,6 +17,7 @@ func _on_ready():
 func get_input():
 	# NPC Interaction
 	if Input.is_action_pressed("ui_select"):
+		
 		var target = $RayCast2D.get_collider()
 		if target != null:
 			# Talk to NPC
