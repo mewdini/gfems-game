@@ -13,7 +13,7 @@
 		},
 		"1" : {
 			"actor" : "%player%",
-			"text" : "That's my plan.You went to Taiwan last year to work, right?",
+			"text" : "That's my plan. You went to Taiwan last year to work, right?",
 			"next" : [
 				{
 					"text" : "Next",
