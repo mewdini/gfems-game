@@ -69,3 +69,6 @@ func animation_manager(dir):
 				$AnimatedSprite.play("idle_up")
 			"run_down":
 				$AnimatedSprite.play("idle_down")
+				
+func update_currency(amount: int):
+	PlayerData.currency += amount
