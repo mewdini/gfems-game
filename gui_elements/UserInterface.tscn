@@ -74,3 +74,14 @@ next_scene_path = "res://gui_elements/TitleScreen.tscn"
 margin_top = 118.0
 margin_right = 191.0
 margin_bottom = 174.0
+
+[node name="ToolTipLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -139.518
+margin_right = 20.0
+margin_bottom = -102.518
+text = "%s"

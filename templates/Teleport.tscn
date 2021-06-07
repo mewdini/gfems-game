@@ -70,8 +70,8 @@ shape = SubResource( 1 )
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
-margin_right = 1024.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -80,4 +80,5 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/START = SubResource( 2 )
 anims/fade_in = SubResource( 3 )
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
