@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Conference_woman_48x48.png-8f5a3ec0d72f3d3cab32e2452d26a1be.stex"
+path="res://.import/Conference_woman_48x48.png-34d48dc6cfd0e6dac88659afd7901cc3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Conference_woman_48x48.png"
-dest_files=[ "res://.import/Conference_woman_48x48.png-8f5a3ec0d72f3d3cab32e2452d26a1be.stex" ]
+source_file="res://characters/NPCs/Conference_woman_48x48.png"
+dest_files=[ "res://.import/Conference_woman_48x48.png-34d48dc6cfd0e6dac88659afd7901cc3.stex" ]
 
 [params]
 
