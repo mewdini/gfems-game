@@ -1,11 +1,25 @@
-var dialogue_file = "res://dialogue/neighbor.json"
-var checkpoints = [[3075, 2304, 0, true], [1839, 2304, 0, true], [1839, 2117, 3, false], [1839,2304, 0, true], [3075,2304, 0, true], [3075,2174, 3, false]]
+extends KinematicBody2D
+class_name NPC
+
+export (int) var speed = 300
+export (String, FILE) var dialogue_file
+export (String) var npc_name
+
+# checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
+export (Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 1]]
+
 
 # pathfinding variables
 var velocity = Vector2()
-var going_home = true
-var inside_timer = 0
 
+
+
+var current_destination = 0
+var current_checkpoint
+var pause_timer = 0
+var x_dif
+var y_dif
+var current_check_viz
 # references
 var dialogue_popup
 var player
@@ -21,62 +35,76 @@ func _ready():
 # check position, then update seen/velocity
 func update_velocity(delta):
 	velocity = Vector2()
-	# check if NPC is inside
-	if (!self.visible):
-		inside_timer += delta
-		if (inside_timer >= time_inside):
-			going_home = !going_home
-			self.visible = true
-			inside_timer = 0
-	# update velocity here
-	elif (going_home):
-		# at door and should move up
-		if (self.position.x <= 1839):
-			# if at door, disappear and change bool
-			if (self.position.y <= 2117):
-				self.visible = false
-			else:
-				velocity.y -= 1
-			self.position.x = 1839
-		# else not aligned with door
-		else:
-			# see if should move left or move down
-			if (self.position.y >= 2304):
-				velocity.x -= 1
-				self.position.y = 2304
-			else:
-				velocity.y += 1
-	# if heading in other direction
+
+	# get info about current checkpoint and check how far npc is from there
+	current_checkpoint = checkpoints[current_destination]
+	x_dif = self.position.x - current_checkpoint[0]
+	y_dif = self.position.y - current_checkpoint[1]
+	if current_checkpoint[3] == 0:
+		current_check_viz = false
 	else:
-		# at door and should move up
-		if (self.position.x >= 3111):
-			# if at door, disappear and change bool
-			if (self.position.y <= 2174):
-				self.visible = false
+		current_check_viz = true
+
+	# uses a 3 pixel fudge factor, as otherwise the velocity can overshoot the destination
+	# move in direction of checkpoint
+	# could be optimized by using vector math
+	if x_dif >= 3:
+		velocity.x -= 1
+	elif x_dif <= -3:
+		velocity.x += 1
+	else:
+		self.position.x = current_checkpoint[0]
+
+	
+	if y_dif >= 3:
+		velocity.y -= 1
+	elif y_dif <= -3:
+		velocity.y += 1
+	else:
+		self.position.y = current_checkpoint[1]
+
+	
+
+	# if the character has arrived at the checkpoint, check if there is a delay
+	if self.position.x == current_checkpoint[0] and self.position.y == current_checkpoint[1]:
+		pause_timer += delta
+		if pause_timer > current_checkpoint[2]:
+			
+			if current_destination == checkpoints.size() - 1:
+				current_destination = 0
 			else:
-				velocity.y -= 1
-			self.position.x = 3111
-		# else not aligned with door
+				current_destination += 1
+			pause_timer = 0
+			current_checkpoint = checkpoints[current_destination]
+			if current_checkpoint[3] == 0:
+				current_check_viz = false
+			else:
+				current_check_viz = true
+			
+			
+			self.visible = current_check_viz
 		else:
-			# see if should move left or move down
-			if (self.position.y >= 2304):
-				velocity.x += 1
-				self.position.y = 2304
-			else:
-				velocity.y += 1
+			
+			self.visible = current_check_viz
+	else:
+		self.visible = true
+
 	velocity = velocity.normalized() * speed
 
+
 func _physics_process(delta):
+
 	update_velocity(delta)
 	velocity = move_and_slide(velocity)
 	
+	
 func talk(answer = ""):
 	# load file and parse JSON
-	var dialogue = load_file("res://dialogue/neighbor.json")
+	var dialogue = load_file(dialogue_file)
 	
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
-
+	
 	# Get state of dialogue
 	if answer != "":
 		var state_next = state_data.next
@@ -90,13 +118,13 @@ func talk(answer = ""):
 			dialogue_state = state_next[3].id
 		else:
 			dialogue_state = dialogue.start
-
+		
 	# Check if done
 	if dialogue_state == "-1":
 		dialogue_state = "0"
 		dialogue_popup.close()
 		return
-
+	
 	# Set possible buttons
 	# TODO don't hardcode this here
 	var buttons = ['Z', 'X', 'C', 'V']
