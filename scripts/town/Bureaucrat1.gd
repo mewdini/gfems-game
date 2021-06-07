@@ -78,7 +78,7 @@ func talk(answer = ""):
 	
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
-	
+
 	# Get state of dialogue
 	if answer != "":
 		var state_next = state_data.next
@@ -92,13 +92,13 @@ func talk(answer = ""):
 			dialogue_state = state_next[3].id
 		else:
 			dialogue_state = dialogue.start
-		
+
 	# Check if done
 	if dialogue_state == "-1":
 		dialogue_state = "0"
 		dialogue_popup.close()
 		return
-	
+
 	# Set possible buttons
 	# TODO don't hardcode this here
 	var buttons = ['Z', 'X', 'C', 'V']
