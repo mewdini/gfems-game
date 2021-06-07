@@ -3,6 +3,7 @@ extends Control
 onready var scene_tree: = get_tree()
 onready var pause_overlay: ColorRect = get_node("PauseMenuOverlay")
 onready var currency: Label = get_node("CurrencyLabel")
+onready var tooltip: Label = get_node("ToolTipLabel")
 
 var paused:= false setget set_paused
 

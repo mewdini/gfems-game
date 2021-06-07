@@ -76,12 +76,17 @@ margin_right = 191.0
 margin_bottom = 174.0
 
 [node name="ToolTipLabel" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -20.0
-margin_top = -139.518
-margin_right = 20.0
-margin_bottom = -102.518
-text = "%s"
+margin_left = -140.0
+margin_top = -136.525
+margin_right = 140.0
+margin_bottom = -99.525
+text = "Press Space to Interact"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
