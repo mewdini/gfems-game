@@ -93,10 +93,33 @@ func update_velocity(delta):
 
 
 func _physics_process(delta):
-
+	var direction = velocity.normalized()
+	
 	update_velocity(delta)
+	# Update player animation
+	animation_manager(direction)
+	
 	velocity = move_and_slide(velocity)
 	
+func animation_manager(dir):
+	if dir.x == 1:
+		$AnimatedSprite.play("run_right")
+	elif dir.x == -1:
+		$AnimatedSprite.play("run_left")
+	elif dir.y == 1:
+		$AnimatedSprite.play("run_down")
+	elif dir.y == -1:
+		$AnimatedSprite.play("run_up")
+	elif dir == Vector2.ZERO:
+		match $AnimatedSprite.animation:
+			"run_right":
+				$AnimatedSprite.play("idle_right")
+			"run_left":
+				$AnimatedSprite.play("idle_left")
+			"run_up":
+				$AnimatedSprite.play("idle_up")
+			"run_down":
+				$AnimatedSprite.play("idle_down")
 	
 func talk(answer = ""):
 	# load file and parse JSON

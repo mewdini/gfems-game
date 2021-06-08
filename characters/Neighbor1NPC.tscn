@@ -3,4 +3,8 @@
 [ext_resource path="res://characters/NPC.tscn" type="PackedScene" id=1]
 
 [node name="Neighbor" instance=ExtResource( 1 )]
+scale = Vector2( 1.75, 1.75 )
 dialogue_file = "res://dialogue/neighbor.json"
+
+[node name="AnimatedSprite" parent="." index="1"]
+frame = 4

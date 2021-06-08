@@ -59,7 +59,7 @@ func _physics_process(delta):
 		tool_tip.visible = true
 	else:
 		tool_tip.visible= false
-		print(tool_tip)
+		
 	get_input()
 	
 func animation_manager(dir):
