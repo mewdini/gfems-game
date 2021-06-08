@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://characters/Neighbor1NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/NPCs/Neighbor1NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=2]
 [ext_resource path="res://backgrounds/town.png" type="Texture" id=3]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/NPCs/Neighbor2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/NPCs/Neighbor3.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -144,8 +146,20 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 [node name="Neighbor" parent="NPCs" groups=[
 "NPCs",
 ] instance=ExtResource( 1 )]
-position = Vector2( 3101.83, 2184.01 )
 collision_layer = 4
+moves = true
+checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
+
+[node name="Neighbor2" parent="NPCs" instance=ExtResource( 5 )]
+position = Vector2( 1672.54, 1358.81 )
+dialogue_file = "res://dialogue/neighbor.json"
+checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
+
+[node name="Neighbor3" parent="NPCs" instance=ExtResource( 8 )]
+position = Vector2( 1057, 2366 )
+dialogue_file = "res://dialogue/neighbor.json"
+moves = true
+checkpoints = [ [ 1057, 1405, 0, 1 ], [ 1057, 4256, 0, 1 ] ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

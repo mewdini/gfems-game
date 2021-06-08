@@ -1,3 +1,4 @@
+tool
 extends KinematicBody2D
 class_name NPC
 
@@ -6,7 +7,8 @@ export (String, FILE) var dialogue_file
 export (String) var npc_name
 
 # checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
-export (Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 1]]
+export (bool) var moves = false
+export (Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 0]]
 
 
 # pathfinding variables
@@ -26,6 +28,9 @@ var player
 
 var dialogue_state = "0"
 var state_data
+
+func _get_configuration_warning():
+	return "dialogue_file must be set" if dialogue_file == "" else ""
 
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
@@ -94,12 +99,11 @@ func update_velocity(delta):
 
 func _physics_process(delta):
 	var direction = velocity.normalized()
-	
-	update_velocity(delta)
+	if moves:
+		update_velocity(delta)
+		velocity = move_and_slide(velocity)
 	# Update player animation
 	animation_manager(direction)
-	
-	velocity = move_and_slide(velocity)
 	
 func animation_manager(dir):
 	if dir.x == 1:
