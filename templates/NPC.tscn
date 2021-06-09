@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/NPCs/ConferenceWomanAnimated.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scripts/town/NPC.gd" type="Script" id=2]
+
+[node name="NPC" type="KinematicBody2D"]
+visible = false
+position = Vector2( 1839, 2117 )
+script = ExtResource( 2 )
+checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 1 ] ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32, -25.6, -25.6, -32, 25.6, -32, 32, -25.6, 32, 25.6, 25.6, 32, -25.6, 32, -32, 25.6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+pause_mode = 2
+position = Vector2( -0.338013, -14.8179 )
+frames = ExtResource( 1 )
+animation = "idle_down"
+frame = 2
+playing = true

@@ -6,6 +6,10 @@ export var start_animation = "idle_right" setget set_start_anim
 
 var velocity: Vector2
 var player_name = "Julia" # TODO add section where player inputs name at start of game
+var target  #= $RayCast2D.get_collider()
+
+
+onready var tool_tip: Label = get_node("../UserInterface/UserInterface/ToolTipLabel")
 
 func set_start_anim(anim):
 	start_animation = anim
@@ -17,11 +21,14 @@ func _on_ready():
 func get_input():
 	# NPC Interaction
 	if Input.is_action_pressed("ui_select"):
-		var target = $RayCast2D.get_collider()
+		
+		
 		if target != null:
 			# Talk to NPC
 			target.talk()
 			return
+		else:
+			tool_tip.visible = false
 
 func _physics_process(delta):
 	var direction: Vector2
@@ -36,7 +43,7 @@ func _physics_process(delta):
 	if abs(direction.x) == 1 and abs(direction.y) == 1:
 		direction = direction.normalized()
 	
-	# Apply movement
+	# Apply movementasaw
 	var movement = speed * direction * delta
 	move_and_collide(movement)
 	
@@ -46,7 +53,13 @@ func _physics_process(delta):
 	# Turn RayCast2D toward movement direction
 	if direction != Vector2.ZERO:
 		$RayCast2D.cast_to = direction.normalized() * detection_range
-	
+		
+	target = $RayCast2D.get_collider()
+	if target:
+		tool_tip.visible = true
+	else:
+		tool_tip.visible= false
+	print(self.position.x, ", ",self.position.y)
 	get_input()
 	
 func animation_manager(dir):
@@ -68,3 +81,6 @@ func animation_manager(dir):
 				$AnimatedSprite.play("idle_up")
 			"run_down":
 				$AnimatedSprite.play("idle_down")
+				
+func update_currency(amount: int):
+	PlayerData.currency += amount
