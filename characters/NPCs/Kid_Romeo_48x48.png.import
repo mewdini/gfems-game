@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kid_Romeo_48x48.png-5af85909f82281850b40030636fd364e.stex"
+path="res://.import/Kid_Romeo_48x48.png-549427d7126b58bd6965925c435d0493.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Kid_Romeo_48x48.png"
-dest_files=[ "res://.import/Kid_Romeo_48x48.png-5af85909f82281850b40030636fd364e.stex" ]
+source_file="res://characters/NPCs/Kid_Romeo_48x48.png"
+dest_files=[ "res://.import/Kid_Romeo_48x48.png-549427d7126b58bd6965925c435d0493.stex" ]
 
 [params]
 

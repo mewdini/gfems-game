@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nurse_2_48x48.png-cef92322b1f30b3b6c528e9902923548.stex"
+path="res://.import/Nurse_2_48x48.png-89f21f191665df03c2e6d14ded9be1a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Nurse_2_48x48.png"
-dest_files=[ "res://.import/Nurse_2_48x48.png-cef92322b1f30b3b6c528e9902923548.stex" ]
+source_file="res://characters/NPCs/Nurse_2_48x48.png"
+dest_files=[ "res://.import/Nurse_2_48x48.png-89f21f191665df03c2e6d14ded9be1a8.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://characters/NPCs/Neighbor1NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/NPCs/Neighbor3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/town/town.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -37,6 +38,7 @@ tracks/1/keys = {
 
 [node name="Root" type="Node2D"]
 position = Vector2( 0, -8 )
+script = ExtResource( 9 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 layer = 100
@@ -51,6 +53,7 @@ __meta__ = {
 }
 
 [node name="BuildingCollisions" type="Node2D" parent="."]
+position = Vector2( 0, 2.18298 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -60,7 +63,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/house"]
-polygon = PoolVector2Array( 481.491, 473.273, 477.927, 687.089, 158.985, 902.686, 158.985, 1276.86, 1119.37, 1275.08, 1117.59, 902.686, 955.449, 797.56, 957.231, 473.273, 718.47, 316.475, 481.491, 473.273 )
+polygon = PoolVector2Array( 481.491, 473.273, 477.927, 687.089, 158.985, 902.686, 158.985, 1276.86, 637.553, 1275.97, 637.553, 1110.88, 794.762, 1110.88, 793.953, 1275.68, 1119.37, 1275.08, 1117.59, 902.686, 955.449, 797.56, 957.231, 473.273, 718.47, 316.475, 481.491, 473.273 )
 
 [node name="neighbor house" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
@@ -116,21 +119,21 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 1"]
-polygon = PoolVector2Array( 158.578, 3157.34, 157.318, 3515.16, 796.098, 3513.9, 794.838, 3156.08 )
+polygon = PoolVector2Array( 158.578, 3157.34, 157.318, 3515.16, 478.327, 3514.53, 480, 3469.82, 632, 3469.82, 633.357, 3514.22, 796.098, 3513.9, 794.838, 3156.08 )
 
 [node name="broker 2" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 2"]
-polygon = PoolVector2Array( 157.318, 3957.36, 156.058, 4315.18, 796.098, 4313.92, 794.838, 3957.36 )
+polygon = PoolVector2Array( 157.318, 3957.36, 156.058, 4315.18, 480, 4317.82, 480, 4269.82, 632, 4269.82, 632, 4317.82, 796.098, 4313.92, 794.838, 3957.36 )
 
 [node name="broker 3" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/broker 3"]
-polygon = PoolVector2Array( 1598, 3475.75, 1598, 3835.75, 2236, 3834.75, 2237, 3476.75 )
+polygon = PoolVector2Array( 1598, 3475.75, 1598, 3835.75, 1756.77, 3835.5, 1760, 3789.82, 1912, 3789.82, 1915.24, 3835.25, 2236, 3834.75, 2237, 3476.75 )
 
 [node name="cousin house" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
@@ -146,6 +149,8 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 [node name="Neighbor" parent="NPCs" groups=[
 "NPCs",
 ] instance=ExtResource( 1 )]
+visible = true
+position = Vector2( 1860, 2304 )
 collision_layer = 4
 moves = true
 checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
@@ -156,7 +161,7 @@ dialogue_file = "res://dialogue/neighbor.json"
 checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
 [node name="Neighbor3" parent="NPCs" instance=ExtResource( 8 )]
-position = Vector2( 1057, 2366 )
+position = Vector2( 1057, 3350 )
 dialogue_file = "res://dialogue/neighbor.json"
 moves = true
 checkpoints = [ [ 1057, 1405, 0, 1 ], [ 1057, 4256, 0, 1 ] ]
@@ -222,10 +227,28 @@ anims/ShowDialogue = SubResource( 1 )
 
 [node name="Teleports" type="Node2D" parent="."]
 
+[node name="Home" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 717.762, 1220.54 )
+next_scene = "res://levels/Home.tscn"
+transition_name = "town_to_home"
+
 [node name="GovtTeleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 3272, 2104 )
 next_scene = "res://levels/Government.tscn"
+transition_name = "town_to_gov"
 size_x = 250
 size_y = 34
+
+[node name="Broker1Teleport" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 528, 3481 )
+next_scene = "res://levels/Broker1.tscn"
+
+[node name="Broker2Teleport" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 520, 4280 )
+next_scene = "res://levels/Broker2.tscn"
+
+[node name="Broker3" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 1872, 3800 )
+next_scene = "res://levels/Broker3.tscn"
 
 [connection signal="animation_finished" from="CanvasLayer/DialoguePopup/AnimationPlayer" to="CanvasLayer/DialoguePopup" method="_on_AnimationPlayer_animation_finished"]

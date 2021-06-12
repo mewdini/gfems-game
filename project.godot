@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="gfems-game"
-run/main_scene="res://gui_elements/TitleScreen.tscn"
+run/main_scene="res://screens/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -73,6 +73,7 @@ pause={
 2d_physics/layer_1="player"
 2d_physics/layer_2="buildings"
 2d_physics/layer_3="npcs"
+2d_physics/layer_4="objects"
 
 [rendering]
 

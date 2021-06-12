@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Doctor_1_48x48.png-7497bad5dd51d89bf133e9a8cde30dea.stex"
+path="res://.import/Doctor_1_48x48.png-bfffcc15c09751b348e3b0adc42c0d36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Doctor_1_48x48.png"
-dest_files=[ "res://.import/Doctor_1_48x48.png-7497bad5dd51d89bf133e9a8cde30dea.stex" ]
+source_file="res://characters/NPCs/Doctor_1_48x48.png"
+dest_files=[ "res://.import/Doctor_1_48x48.png-bfffcc15c09751b348e3b0adc42c0d36.stex" ]
 
 [params]
 

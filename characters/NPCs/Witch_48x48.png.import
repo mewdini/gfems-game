@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Witch_48x48.png-8e9bde2023be1f34bfc9e83dc85bfbf9.stex"
+path="res://.import/Witch_48x48.png-642e53cb797553b28445a4a266cbf327.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Witch_48x48.png"
-dest_files=[ "res://.import/Witch_48x48.png-8e9bde2023be1f34bfc9e83dc85bfbf9.stex" ]
+source_file="res://characters/NPCs/Witch_48x48.png"
+dest_files=[ "res://.import/Witch_48x48.png-642e53cb797553b28445a4a266cbf327.stex" ]
 
 [params]
 

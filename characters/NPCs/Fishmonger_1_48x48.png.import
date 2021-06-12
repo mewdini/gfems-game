@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fishmonger_1_48x48.png-fd56b55bfae33a327398c47c66338e4c.stex"
+path="res://.import/Fishmonger_1_48x48.png-6aeee4b1156396548e0398580297b20d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Fishmonger_1_48x48.png"
-dest_files=[ "res://.import/Fishmonger_1_48x48.png-fd56b55bfae33a327398c47c66338e4c.stex" ]
+source_file="res://characters/NPCs/Fishmonger_1_48x48.png"
+dest_files=[ "res://.import/Fishmonger_1_48x48.png-6aeee4b1156396548e0398580297b20d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Alex_48x48.png-690856834383ac22db39c04eda8c28cf.stex"
+path="res://.import/Chef_Alex_48x48.png-004cc5d9bdb1aee5f7b19e8fdca231a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Chef_Alex_48x48.png"
-dest_files=[ "res://.import/Chef_Alex_48x48.png-690856834383ac22db39c04eda8c28cf.stex" ]
+source_file="res://characters/NPCs/Chef_Alex_48x48.png"
+dest_files=[ "res://.import/Chef_Alex_48x48.png-004cc5d9bdb1aee5f7b19e8fdca231a0.stex" ]
 
 [params]
 
