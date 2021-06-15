@@ -1,7 +1,5 @@
-extends KinematicBody2D
-
-export (int) var speed = 300
-export (float) var time_inside = 3
+var dialogue_file = "res://dialogue/neighbor.json"
+var checkpoints = [[3075, 2304, 0, true], [1839, 2304, 0, true], [1839, 2117, 3, false], [1839,2304, 0, true], [3075,2304, 0, true], [3075,2174, 3, false]]
 
 # pathfinding variables
 var velocity = Vector2()

@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scripts/town/Bureaucrat1.gd" type="Script" id=1]
+[ext_resource path="res://characters/NPCs/Neighbor1NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=2]
 [ext_resource path="res://backgrounds/town.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/NPCs/Neighbor2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/NPCs/Neighbor3.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -35,6 +37,11 @@ tracks/1/keys = {
 
 [node name="Root" type="Node2D"]
 position = Vector2( 0, -8 )
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UserInterface" instance=ExtResource( 4 )]
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 3424, 2696 )
@@ -136,23 +143,23 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 
 [node name="NPCs" type="Node2D" parent="."]
 
-[node name="Bureaucrat1" type="KinematicBody2D" parent="NPCs" groups=[
+[node name="Neighbor" parent="NPCs" groups=[
 "NPCs",
-]]
-position = Vector2( 3112, 2176 )
-scale = Vector2( 1.25, 1.25 )
+] instance=ExtResource( 1 )]
 collision_layer = 4
-collision_mask = 7
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+moves = true
+checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NPCs/Bureaucrat1"]
-polygon = PoolVector2Array( -32, -25.6, -25.6, -32, 25.6, -32, 32, -25.6, 32, 25.6, 25.6, 32, -25.6, 32, -32, 25.6 )
+[node name="Neighbor2" parent="NPCs" instance=ExtResource( 5 )]
+position = Vector2( 1672.54, 1358.81 )
+dialogue_file = "res://dialogue/neighbor.json"
+checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
-[node name="Sprite" type="Sprite" parent="NPCs/Bureaucrat1"]
-texture = ExtResource( 4 )
+[node name="Neighbor3" parent="NPCs" instance=ExtResource( 8 )]
+position = Vector2( 1057, 2366 )
+dialogue_file = "res://dialogue/neighbor.json"
+moves = true
+checkpoints = [ [ 1057, 1405, 0, 1 ], [ 1057, 4256, 0, 1 ] ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -195,6 +202,9 @@ margin_bottom = 56.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/default_color = Color( 0.501961, 0.501961, 0.501961, 1 )
 bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Answers" type="RichTextLabel" parent="CanvasLayer/DialoguePopup/ColorRect"]
 margin_top = 77.0
@@ -217,4 +227,5 @@ position = Vector2( 3272, 2104 )
 next_scene = "res://levels/Government.tscn"
 size_x = 250
 size_y = 34
+
 [connection signal="animation_finished" from="CanvasLayer/DialoguePopup/AnimationPlayer" to="CanvasLayer/DialoguePopup" method="_on_AnimationPlayer_animation_finished"]

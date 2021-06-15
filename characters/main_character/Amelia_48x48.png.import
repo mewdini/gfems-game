@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Amelia_48x48.png-90a6e66481e0b795c1d40dbdc4e0fef6.stex"
+path="res://.import/Amelia_48x48.png-e822552dd80461375177dbf592760c93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Amelia_48x48.png"
-dest_files=[ "res://.import/Amelia_48x48.png-90a6e66481e0b795c1d40dbdc4e0fef6.stex" ]
+source_file="res://characters/main_character/Amelia_48x48.png"
+dest_files=[ "res://.import/Amelia_48x48.png-e822552dd80461375177dbf592760c93.stex" ]
 
 [params]
 
