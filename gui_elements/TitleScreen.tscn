@@ -44,6 +44,6 @@ __meta__ = {
 }
 
 [node name="PlayButton" parent="Menu" instance=ExtResource( 2 )]
-next_scene_path = "res://levels/Town.tscn"
+next_scene_path = "res://gui_elements/CharacterSelect.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 3 )]

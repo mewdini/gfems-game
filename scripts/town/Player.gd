@@ -5,24 +5,36 @@ export (int) var detection_range = 52
 export var start_animation = "idle_right" setget set_start_anim
 
 var velocity: Vector2
-var player_name = "Julia" # TODO add section where player inputs name at start of game
+onready var player_name = PlayerData.get_char_name()
+onready var sprite = PlayerData.get_sprite()
 var target  #= $RayCast2D.get_collider()
+var anim_sprite: AnimatedSprite
 
 
 onready var tool_tip: Label = get_node("../UserInterface/UserInterface/ToolTipLabel")
 
 func set_start_anim(anim):
 	start_animation = anim
-	$AnimatedSprite.play(anim)
+	anim_sprite.play(anim)
 
-func _on_ready():
-	$AnimatedSprite.play(start_animation)
+func _ready():
+	# get selected sprite
+	var sprite_enum = PlayerData.Sprite_Name.values()[PlayerData.get_sprite()]
+	if sprite_enum == PlayerData.Sprite_Name.DAN:
+		anim_sprite = $AnimatedSprites/DanAnimatedSprite
+	elif sprite_enum == PlayerData.Sprite_Name.AMELIA:
+		anim_sprite = $AnimatedSprites/AmeliaAnimatedSprite
+	anim_sprite.set_visible(true)
+	
+	for i in $AnimatedSprites.get_children():
+		if i != anim_sprite:
+			i.queue_free()
+	
+	anim_sprite.play(start_animation)
 
 func get_input():
 	# NPC Interaction
 	if Input.is_action_pressed("ui_select"):
-		
-		
 		if target != null:
 			# Talk to NPC
 			target.talk()
@@ -59,28 +71,27 @@ func _physics_process(delta):
 		tool_tip.visible = true
 	else:
 		tool_tip.visible= false
-	print(self.position.x, ", ",self.position.y)
 	get_input()
 	
 func animation_manager(dir):
 	if dir.x == 1:
-		$AnimatedSprite.play("run_right")
+		anim_sprite.play("run_right")
 	elif dir.x == -1:
-		$AnimatedSprite.play("run_left")
+		anim_sprite.play("run_left")
 	elif dir.y == 1:
-		$AnimatedSprite.play("run_down")
+		anim_sprite.play("run_down")
 	elif dir.y == -1:
-		$AnimatedSprite.play("run_up")
+		anim_sprite.play("run_up")
 	elif dir == Vector2.ZERO:
-		match $AnimatedSprite.animation:
+		match anim_sprite.animation:
 			"run_right":
-				$AnimatedSprite.play("idle_right")
+				anim_sprite.play("idle_right")
 			"run_left":
-				$AnimatedSprite.play("idle_left")
+				anim_sprite.play("idle_left")
 			"run_up":
-				$AnimatedSprite.play("idle_up")
+				anim_sprite.play("idle_up")
 			"run_down":
-				$AnimatedSprite.play("idle_down")
+				anim_sprite.play("idle_down")
 				
 func update_currency(amount: int):
 	PlayerData.currency += amount

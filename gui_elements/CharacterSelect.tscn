@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/garfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://characters/main_character/Dan_48x48_color_edited.png" type="Texture" id=2]
+[ext_resource path="res://characters/main_character/Amelia_48x48.png" type="Texture" id=3]
+[ext_resource path="res://gui_elements/ContButton.gd" type="Script" id=4]
+[ext_resource path="res://gui_elements/DanSprite.gd" type="Script" id=5]
+[ext_resource path="res://gui_elements/AmeliaSprite.gd" type="Script" id=6]
+
+[node name="CharacterSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.593872
+margin_right = 0.593872
+color = Color( 0.470588, 0.00784314, 0.788235, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="NameLabel" type="Label" parent="."]
+margin_left = 296.534
+margin_top = 60.9458
+margin_right = 506.534
+margin_bottom = 97.9458
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Character Name:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="NameLineEdit" type="LineEdit" parent="."]
+margin_left = 182.851
+margin_top = 183.67
+margin_right = 392.851
+margin_bottom = 207.67
+rect_scale = Vector2( 3, 3 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteLabel" type="Label" parent="."]
+margin_left = 295.195
+margin_top = 294.027
+margin_right = 505.195
+margin_bottom = 331.027
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Sprite:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpriteSelection" type="HBoxContainer" parent="."]
+margin_left = 286.679
+margin_top = 348.986
+margin_right = 357.679
+margin_bottom = 412.986
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AmeliaSprite" type="Sprite" parent="SpriteSelection"]
+position = Vector2( 117.466, 104.117 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 142.341, 25.9905, 50.1856, 69.5274 )
+script = ExtResource( 6 )
+
+[node name="DanSprite" type="Sprite" parent="SpriteSelection"]
+position = Vector2( 310.964, 109.353 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 142.703, 25, 50.4019, 75 )
+script = ExtResource( 5 )
+
+[node name="ContButton" type="Button" parent="."]
+margin_left = 408.461
+margin_top = 595.339
+margin_right = 477.461
+margin_bottom = 615.339
+rect_scale = Vector2( 3, 3 )
+text = "Continue"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="ContButton" to="ContButton" method="_on_button_up"]
