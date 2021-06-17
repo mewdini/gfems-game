@@ -12,13 +12,23 @@ position = Vector2( 688, 584 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Background"]
+collision_layer = 8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/StaticBody2D"]
+polygon = PoolVector2Array( -132, 260, -344, 260, -344, -288, 324, -288, 324, 260, 108, 260, 108, 240, 300, 240, 300, 0, 300, -48, 280, -48, 280, -132, 300, -132, 300, -164, 288, -160, 60, -160, 60, -48, 108, -48, 108, 48, 92, 48, 92, 68, -68, 68, -68, 48, -80, 48, -80, -44, -32, -44, -32, -196, -324, -196, -324, 0, -228, 0, -228, 92, -324, 92, -324, 240, -128, 240, -128, 260 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 600, 952 )
 start_animation = "idle_up"
 
 [node name="Teleport" parent="." instance=ExtResource( 3 )]
-position = Vector2( 666.832, 1084.22 )
+position = Vector2( 667.424, 1102.78 )
 next_scene = "res://levels/Town.tscn"
+transition_name = "gov_to_town"
 size_x = 240
 size_y = 20
 
@@ -26,3 +36,5 @@ size_y = 20
 layer = 100
 
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 5 )]
+anchor_left = -0.00195312
+anchor_right = 0.998047

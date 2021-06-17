@@ -4,11 +4,14 @@ extends Node
 
 signal currency_updated
 signal inventory_updated
+signal door_entered
 
 enum Sprite_Name {DAN, AMELIA}
 
 var currency: = 4000 setget set_currency
 var inventory: = []
+var last_door_entered: = "" setget set_door
+var last_location: = {"res://levels/town.tscn":Vector2(668,1196)}
 
 var char_name: = "missingno"
 
@@ -21,6 +24,10 @@ func set_currency(value: int) -> void:
 	currency = value
 	emit_signal("currency_updated")
 
+func set_door(value: String) -> void:
+	last_door_entered = value
+	emit_signal("door_entered")
+
 func set_name(value: String) -> void:
 	char_name = value
 
@@ -32,3 +39,4 @@ func get_char_name() -> String:
 
 func get_sprite() -> int:
 	return sprite_name
+

@@ -289,7 +289,7 @@ animations = [ {
 
 [node name="Player" type="KinematicBody2D"]
 pause_mode = 2
-position = Vector2( 88, 1504 )
+position = Vector2( 90.9161, 1507.45 )
 scale = Vector2( 1.75, 1.75 )
 collision_mask = 6
 script = ExtResource( 1 )
@@ -298,7 +298,7 @@ __meta__ = {
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 19.2, 0, 12.8, 6.40002, 6.4, 44.8, 12.8, 64, 51.2, 64, 57.6, 44.8, 51.2, 6.40002, 44.8, 0 )
+polygon = PoolVector2Array( 22.2623, 56.889, 21.6564, 62.191, 25.1405, 66.7355, 35.8959, 66.7355, 39.5315, 61.888, 38.7741, 56.889 )
 
 [node name="AnimatedSprites" type="Node2D" parent="."]
 scale = Vector2( 1, 1 )
