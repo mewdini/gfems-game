@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Old_man_Josh_48x48.png-383a0bb3abe20e54d7d50ac32e62266f.stex"
+path="res://.import/Old_man_Josh_48x48.png-0d703e7542396f5105e6b3dc5fc45ea2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Old_man_Josh_48x48.png"
-dest_files=[ "res://.import/Old_man_Josh_48x48.png-383a0bb3abe20e54d7d50ac32e62266f.stex" ]
+source_file="res://characters/NPCs/Old_man_Josh_48x48.png"
+dest_files=[ "res://.import/Old_man_Josh_48x48.png-0d703e7542396f5105e6b3dc5fc45ea2.stex" ]
 
 [params]
 

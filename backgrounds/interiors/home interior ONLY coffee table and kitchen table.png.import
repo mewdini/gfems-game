@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex"
+path="res://.import/home interior ONLY coffee table and kitchen table.png-669baf87bdee77c786ba2b3c2d04c114.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/NPCs/Chef_Molly_48x48.png"
-dest_files=[ "res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex" ]
+source_file="res://backgrounds/interiors/home interior ONLY coffee table and kitchen table.png"
+dest_files=[ "res://.import/home interior ONLY coffee table and kitchen table.png-669baf87bdee77c786ba2b3c2d04c114.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex"
+path="res://.import/boats interior ONLY chair in front of back of desk.png-5c30f34f00e5d92b8a7f333308baa8ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/NPCs/Chef_Molly_48x48.png"
-dest_files=[ "res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex" ]
+source_file="res://backgrounds/interiors/boats interior ONLY chair in front of back of desk.png"
+dest_files=[ "res://.import/boats interior ONLY chair in front of back of desk.png-5c30f34f00e5d92b8a7f333308baa8ff.stex" ]
 
 [params]
 

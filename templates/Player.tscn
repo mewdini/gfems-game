@@ -21,11 +21,7 @@ pause_mode = 2
 position = Vector2( 32, 19.2 )
 frames = ExtResource( 2 )
 animation = "idle_right"
-<<<<<<< HEAD
 frame = 4
-=======
-frame = 3
->>>>>>> 91a9af03749c5e440fec3c6dfa0b46adbad6c7b8
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

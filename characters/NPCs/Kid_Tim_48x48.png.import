@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kid_Tim_48x48.png-2525b489d847e747412bc9fa0a66a54c.stex"
+path="res://.import/Kid_Tim_48x48.png-643e7ba013933e02322fe8caad1f3690.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Kid_Tim_48x48.png"
-dest_files=[ "res://.import/Kid_Tim_48x48.png-2525b489d847e747412bc9fa0a66a54c.stex" ]
+source_file="res://characters/NPCs/Kid_Tim_48x48.png"
+dest_files=[ "res://.import/Kid_Tim_48x48.png-643e7ba013933e02322fe8caad1f3690.stex" ]
 
 [params]
 

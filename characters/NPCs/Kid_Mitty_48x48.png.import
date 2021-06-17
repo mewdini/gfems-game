@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kid_Mitty_48x48.png-8aa3d4e39091f67df8ca3b8fc0cd035c.stex"
+path="res://.import/Kid_Mitty_48x48.png-923e2f3ce65abfda2c77d989f6fc6a01.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Kid_Mitty_48x48.png"
-dest_files=[ "res://.import/Kid_Mitty_48x48.png-8aa3d4e39091f67df8ca3b8fc0cd035c.stex" ]
+source_file="res://characters/NPCs/Kid_Mitty_48x48.png"
+dest_files=[ "res://.import/Kid_Mitty_48x48.png-923e2f3ce65abfda2c77d989f6fc6a01.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Rob_48x48.png-b68cd30e2362dad5dab21204be463eb6.stex"
+path="res://.import/Chef_Rob_48x48.png-00c81463230c523dbd95f6361346b052.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Chef_Rob_48x48.png"
-dest_files=[ "res://.import/Chef_Rob_48x48.png-b68cd30e2362dad5dab21204be463eb6.stex" ]
+source_file="res://characters/NPCs/Chef_Rob_48x48.png"
+dest_files=[ "res://.import/Chef_Rob_48x48.png-00c81463230c523dbd95f6361346b052.stex" ]
 
 [params]
 
