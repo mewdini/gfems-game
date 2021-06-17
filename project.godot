@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="gfems-game"
-run/main_scene="res://screens/TitleScreen.tscn"
+run/main_scene="res://gui_elements/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
