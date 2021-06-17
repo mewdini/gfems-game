@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
 [ext_resource path="res://gui_elements/ChangeSceneButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui_elements/Title.tscn" type="PackedScene" id=6]
-[ext_resource path="res://screens/Credits.gd" type="Script" id=7]
+[ext_resource path="res://gui_elements/Credits.gd" type="Script" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
