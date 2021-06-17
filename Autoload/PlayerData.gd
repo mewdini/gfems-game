@@ -9,10 +9,10 @@ signal door_entered
 var currency: = 4000 setget set_currency
 var inventory: = []
 var last_door_entered: = "" setget set_door
+var last_location: = {"res://levels/town.tscn":Vector2(668,1196)}
 
 func reset():
 	currency = 0
-
 
 func set_currency(value: int):
 	currency = value
