@@ -15,4 +15,5 @@ func _ready():
 func set_player_loc(x, y, animation):
 	player.position.x = x
 	player.position.y = y
+	print(animation)
 	player.start_animation = animation

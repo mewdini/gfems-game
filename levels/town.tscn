@@ -150,7 +150,7 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 "NPCs",
 ] instance=ExtResource( 1 )]
 visible = true
-position = Vector2( 2905, 2304 )
+position = Vector2( 3075, 2214 )
 collision_layer = 4
 moves = true
 checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
@@ -165,7 +165,7 @@ checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ]
 [node name="Neighbor3" parent="NPCs" groups=[
 "NPCs",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1057, 1430 )
+position = Vector2( 1057, 2226 )
 dialogue_file = "res://dialogue/neighbor.json"
 moves = true
 checkpoints = [ [ 1057, 1405, 0, 1 ], [ 1057, 4256, 0, 1 ] ]

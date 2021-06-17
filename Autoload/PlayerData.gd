@@ -12,6 +12,7 @@ var currency: = 4000 setget set_currency
 var inventory: = []
 var last_door_entered: = "" setget set_door
 var last_location: = {"res://levels/town.tscn":Vector2(668,1196)}
+var start_animation = "idle_down" setget set_start_anim
 
 var char_name: = "missingno"
 
@@ -33,6 +34,9 @@ func set_name(value: String) -> void:
 
 func set_sprite(value: int) -> void:
 	sprite_name = value
+	
+func set_start_anim(value: String) -> void:
+	start_animation = value
 
 func get_char_name() -> String:
 	return char_name

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export (int) var speed = 500
 export (int) var detection_range = 52
-export var start_animation = "idle_right" setget set_start_anim
+export var start_animation = "idle_right" #setget set_start_anim
 
 var velocity: Vector2
 onready var player_name = PlayerData.get_char_name()
@@ -13,9 +13,9 @@ var anim_sprite: AnimatedSprite
 
 onready var tool_tip: Label = get_node("../UserInterface/UserInterface/ToolTipLabel")
 
-func set_start_anim(anim):
-	start_animation = anim
-	anim_sprite.play(anim)
+#func set_start_anim(anim):
+#	start_animation = anim
+#	anim_sprite.play(anim)
 
 func _ready():
 	# get selected sprite
@@ -30,7 +30,7 @@ func _ready():
 		if i != anim_sprite:
 			i.queue_free()
 	
-	anim_sprite.play(start_animation)
+	anim_sprite.play(PlayerData.start_animation)
 
 func get_input():
 	# NPC Interaction
@@ -71,10 +71,7 @@ func _physics_process(delta):
 		tool_tip.visible = true
 	else:
 		tool_tip.visible= false
-<<<<<<< HEAD
-=======
 	#print(self.position.x, ", ",self.position.y)
->>>>>>> newscenes
 	get_input()
 	
 func animation_manager(dir):
