@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Roki_48x48.png-bc603320c15d186e63a90c9466ea9e2a.stex"
+path="res://.import/Roki_48x48.png-e64a36458006557360176f19eb245d81.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Roki_48x48.png"
-dest_files=[ "res://.import/Roki_48x48.png-bc603320c15d186e63a90c9466ea9e2a.stex" ]
+source_file="res://characters/NPCs/Roki_48x48.png"
+dest_files=[ "res://.import/Roki_48x48.png-e64a36458006557360176f19eb245d81.stex" ]
 
 [params]
 

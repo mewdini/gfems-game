@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Butcher_2_48x48.png-151d4ad126082d0abd03a4db8d0a69d9.stex"
+path="res://.import/Butcher_2_48x48.png-3167c745b1ff6ef9dd89b8906e9d4315.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Butcher_2_48x48.png"
-dest_files=[ "res://.import/Butcher_2_48x48.png-151d4ad126082d0abd03a4db8d0a69d9.stex" ]
+source_file="res://characters/NPCs/Butcher_2_48x48.png"
+dest_files=[ "res://.import/Butcher_2_48x48.png-3167c745b1ff6ef9dd89b8906e9d4315.stex" ]
 
 [params]
 

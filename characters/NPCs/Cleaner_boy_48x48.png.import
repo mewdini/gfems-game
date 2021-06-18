@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cleaner_boy_48x48.png-3f07cdd64cb2f72a54cea54d75f81966.stex"
+path="res://.import/Cleaner_boy_48x48.png-638d0ecacc07300de5d24547d91f75c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Cleaner_boy_48x48.png"
-dest_files=[ "res://.import/Cleaner_boy_48x48.png-3f07cdd64cb2f72a54cea54d75f81966.stex" ]
+source_file="res://characters/NPCs/Cleaner_boy_48x48.png"
+dest_files=[ "res://.import/Cleaner_boy_48x48.png-638d0ecacc07300de5d24547d91f75c5.stex" ]
 
 [params]
 

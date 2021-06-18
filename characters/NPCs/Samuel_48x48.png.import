@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Samuel_48x48.png-4096fb974b15dd710917e6fd9661ba63.stex"
+path="res://.import/Samuel_48x48.png-f86452867a1b375c8d3fadbde654cdb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Samuel_48x48.png"
-dest_files=[ "res://.import/Samuel_48x48.png-4096fb974b15dd710917e6fd9661ba63.stex" ]
+source_file="res://characters/NPCs/Samuel_48x48.png"
+dest_files=[ "res://.import/Samuel_48x48.png-f86452867a1b375c8d3fadbde654cdb9.stex" ]
 
 [params]
 

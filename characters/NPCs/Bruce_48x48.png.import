@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bruce_48x48.png-d7423e82480bed3cbd46241db4d72c62.stex"
+path="res://.import/Bruce_48x48.png-01d65f0e0cee7983fd4bc14d023a5e4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Bruce_48x48.png"
-dest_files=[ "res://.import/Bruce_48x48.png-d7423e82480bed3cbd46241db4d72c62.stex" ]
+source_file="res://characters/NPCs/Bruce_48x48.png"
+dest_files=[ "res://.import/Bruce_48x48.png-01d65f0e0cee7983fd4bc14d023a5e4f.stex" ]
 
 [params]
 

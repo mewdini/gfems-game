@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Edward_48x48.png-9c4983c96bd8d9d9c8e60816d89e35a9.stex"
+path="res://.import/Edward_48x48.png-e560bc0e74478e891a7c4d5932d6f687.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Edward_48x48.png"
-dest_files=[ "res://.import/Edward_48x48.png-9c4983c96bd8d9d9c8e60816d89e35a9.stex" ]
+source_file="res://characters/NPCs/Edward_48x48.png"
+dest_files=[ "res://.import/Edward_48x48.png-e560bc0e74478e891a7c4d5932d6f687.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pier_48x48.png-d616de53cd6c7ff6571557679cb602d9.stex"
+path="res://.import/Pier_48x48.png-a5f4809009b9e59cc55827e436fc3225.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Pier_48x48.png"
-dest_files=[ "res://.import/Pier_48x48.png-d616de53cd6c7ff6571557679cb602d9.stex" ]
+source_file="res://characters/NPCs/Pier_48x48.png"
+dest_files=[ "res://.import/Pier_48x48.png-a5f4809009b9e59cc55827e436fc3225.stex" ]
 
 [params]
 

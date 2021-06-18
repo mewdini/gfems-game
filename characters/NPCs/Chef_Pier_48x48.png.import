@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Pier_48x48.png-590d9dfd1273a967bfbb40b18eda5b4c.stex"
+path="res://.import/Chef_Pier_48x48.png-64e37f6212c9c864ee2a53d8758a85a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Chef_Pier_48x48.png"
-dest_files=[ "res://.import/Chef_Pier_48x48.png-590d9dfd1273a967bfbb40b18eda5b4c.stex" ]
+source_file="res://characters/NPCs/Chef_Pier_48x48.png"
+dest_files=[ "res://.import/Chef_Pier_48x48.png-64e37f6212c9c864ee2a53d8758a85a0.stex" ]
 
 [params]
 

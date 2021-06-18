@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Lucy_48x48.png-c49834df485a5900b0b3e7ebba5b6e08.stex"
+path="res://.import/Chef_Lucy_48x48.png-9187e980df6eeba9de52393e316a80ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Chef_Lucy_48x48.png"
-dest_files=[ "res://.import/Chef_Lucy_48x48.png-c49834df485a5900b0b3e7ebba5b6e08.stex" ]
+source_file="res://characters/NPCs/Chef_Lucy_48x48.png"
+dest_files=[ "res://.import/Chef_Lucy_48x48.png-9187e980df6eeba9de52393e316a80ee.stex" ]
 
 [params]
 

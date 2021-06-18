@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ash_48x48.png-d110d8849d5dc0e83fc357bed5c858f2.stex"
+path="res://.import/Ash_48x48.png-24947f3bf7c7040d519ab9c81b2bc3b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Ash_48x48.png"
-dest_files=[ "res://.import/Ash_48x48.png-d110d8849d5dc0e83fc357bed5c858f2.stex" ]
+source_file="res://characters/NPCs/Ash_48x48.png"
+dest_files=[ "res://.import/Ash_48x48.png-24947f3bf7c7040d519ab9c81b2bc3b2.stex" ]
 
 [params]
 

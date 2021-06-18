@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chef_Molly_48x48.png-6297904aaf5b5fb5fba70f8570d4ec2f.stex"
+path="res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/48x48/Chef_Molly_48x48.png"
-dest_files=[ "res://.import/Chef_Molly_48x48.png-6297904aaf5b5fb5fba70f8570d4ec2f.stex" ]
+source_file="res://characters/NPCs/Chef_Molly_48x48.png"
+dest_files=[ "res://.import/Chef_Molly_48x48.png-3779a65c2f8154bff42983d2196fda13.stex" ]
 
 [params]
 

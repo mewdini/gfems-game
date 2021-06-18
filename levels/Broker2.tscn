@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://templates/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
+[ext_resource path="res://gui_elements/UserInterface.gd" type="Script" id=5]
+[ext_resource path="res://scripts/town/Player.gd" type="Script" id=6]
+[ext_resource path="res://scripts/town/Teleport.gd" type="Script" id=7]
+[ext_resource path="res://backgrounds/interiors/broker 02 interior wo desk and front chair.png" type="Texture" id=8]
+
+[node name="Root" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 888, 656 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
+polygon = PoolVector2Array( -144, 128, -260, 128, -260, -132, 260, -132, 260, 128, -48, 128, -48, 108, 240, 108, 240, -36, 128, -36, 128, -20, 88, -20, 88, -36, -160, -36, -240, -36, -240, 108, -144, 108 )
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" type="Control" parent="UserInterface" instance=ExtResource( 3 )]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+pause_mode = 2
+position = Vector2( 624, 752 )
+scale = Vector2( 1.75, 1.75 )
+collision_mask = 14
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+start_animation = "idle_up"
+
+[node name="Teleport" type="Area2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 712, 936 )
+monitorable = false
+collision_layer = 0
+script = ExtResource( 7 )
+next_scene = "res://levels/town.tscn"
+transition_name = "broker2_to_town"
+
+[connection signal="body_entered" from="Teleport" to="Teleport" method="_on_body_entered"]
