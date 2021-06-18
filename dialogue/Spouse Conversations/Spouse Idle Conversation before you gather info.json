@@ -1,0 +1,41 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "Right."
+                },
+                {
+                    "id": "2",
+                    "text": "Could you tell me who else to talk to again?"
+                }
+            ],
+            "text": "There’s a lot to figure out about your trip.  Be sure to check out the government center and broker offices."
+        },
+        "1": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "2": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "3",
+                    "text": ""
+                }
+            ],
+            "text": "After you check out visa options at the government office and brokers, I’d try to talk to our neighbor and your friend Thanh.  They have some experience of migrating for work."
+        },
+        "3": {
+            "actor": "%player%",
+            "next": [
+            ],
+            "text": "Thanks."
+        }
+    },
+    "start": "0"
+}
