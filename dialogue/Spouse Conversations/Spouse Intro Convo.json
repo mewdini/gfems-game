@@ -1,0 +1,191 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": ""
+                }
+            ],
+            "text": "It’s going to be hard having you away from home, but we could use the money."
+        },
+        "1": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "2",
+                    "text": ""
+                }
+            ],
+            "text": "I’ll be back before the year is over."
+        },
+        "10": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "12",
+                    "text": ""
+                }
+            ],
+            "text": "I’ll check them both out."
+        },
+        "11": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "16",
+                    "text": ""
+                }
+            ],
+            "text": "I’ll go find them.  They should have good advice."
+        },
+        "12": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "13",
+                    "text": "Who should I talk to?"
+                }
+            ],
+            "text": "You should head into town this afternoon to scope out your options."
+        },
+        "13": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "14",
+                    "text": ""
+                }
+            ],
+            "text": "Well, Duc worked in Taiwan last year, maybe you could ask them… It looks like they’re doing some laundry in front of their house right now.  And your friend Thanh is always around somewhere.  Didn’t they have a sister work in Japan?"
+        },
+        "14": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "I’ll go find them.  They should have good advice."
+        },
+        "15": {
+            "actor": "Linh",
+            "next": [
+            ],
+            "text": "Good luck.  Come find me once you know a little more and we can decide what you should do."
+        },
+        "16": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "17",
+                    "text": "Where do you think I should head first?"
+                }
+            ],
+            "text": "You should head into town this afternoon to scope out your options."
+        },
+        "17": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "18",
+                    "text": ""
+                }
+            ],
+            "text": "The government office has programs for finding work abroad downtown.  There’s also private brokers south of here.  I don’t know much about either one, so you should probably see what each of them has to offer."
+        },
+        "18": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "19",
+                    "text": ""
+                }
+            ],
+            "text": "I’ll check them both out."
+        },
+        "19": {
+            "actor": "Linh",
+            "next": [
+            ],
+            "text": "Good luck.  Come find me once you know a little more and we can decide what you should do."
+        },
+        "2": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "3",
+                    "text": ""
+                }
+            ],
+            "text": "Right.  It’ll just be... strange having you gone for months."
+        },
+        "3": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "4",
+                    "text": ""
+                }
+            ],
+            "text": "I know.  But working abroad will give me the chance to send home far more money than I could make here."
+        },
+        "4": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "5",
+                    "text": ""
+                }
+            ],
+            "text": "Yeah, you’re right.  We’re just going to miss you."
+        },
+        "5": {
+            "actor": "%player%",
+            "next": [
+                {
+                    "id": "6",
+                    "text": ""
+                }
+            ],
+            "text": "I’m going to miss you too...  But I’m not leaving just yet.  I still have to figure out what I’ll be doing.\n"
+        },
+        "6": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Who should I talk to?"
+                },
+                {
+                    "id": "9",
+                    "text": "Where do you think I should head first?"
+                }
+            ],
+            "text": "You should head into town this afternoon to scope out your options."
+        },
+        "8": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "11",
+                    "text": ""
+                }
+            ],
+            "text": "Well, Duc worked in Taiwan last year, maybe you could ask them… It looks like they’re doing some laundry in front of their house right now.  And your friend Thanh is always around somewhere.  Didn’t they have a sister work in Japan?"
+        },
+        "9": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "10",
+                    "text": ""
+                }
+            ],
+            "text": "The government office has programs for finding work abroad downtown.  There’s also private brokers south of here.  I don’t know much about either one, so you should probably see what each of them has to offer."
+        }
+    },
+    "start": "0"
+}
