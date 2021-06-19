@@ -1,0 +1,169 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "13",
+                    "text": "No."
+                },
+                {
+                    "id": "1",
+                    "text": "Yes."
+                }
+            ],
+            "text": "Welcome!  Have you decided to travel with our broker service?"
+        },
+        "1": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "Taiwan."
+                },
+                {
+                    "id": "3",
+                    "text": "Japan."
+                }
+            ],
+            "text": "Marvelous!  Now, do you want to travel to Japan or Taiwan?"
+        },
+        "10": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "11": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "12": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "13": {
+            "actor": "Trai",
+            "next": [
+            ],
+            "text": "Damn.  Did Ngai get to you first?  Ugh, doesn’t matter… Well, I’ll be here if you change your mind."
+        },
+        "2": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "I don’t have a preference."
+                },
+                {
+                    "id": "9",
+                    "text": "Healthcare."
+                },
+                {
+                    "id": "10",
+                    "text": "Fisheries."
+                },
+                {
+                    "id": "11",
+                    "text": "Manufacturing."
+                }
+            ],
+            "text": "I’ll write that down here.  And what industry were you hoping to work in?"
+        },
+        "3": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "4",
+                    "text": "Manufacturing."
+                },
+                {
+                    "id": "5",
+                    "text": "Healthcare."
+                },
+                {
+                    "id": "6",
+                    "text": "Fisheries."
+                },
+                {
+                    "id": "7",
+                    "text": "I don’t have a preference."
+                }
+            ],
+            "text": "I’ll write that down here.  And what industry were you hoping to work in?"
+        },
+        "4": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "5": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "6": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "7": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "8": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        },
+        "9": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "Thank you.  I’ll go do that now."
+                }
+            ],
+            "text": "Right, right, right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+        }
+    },
+    "start": "0"
+}

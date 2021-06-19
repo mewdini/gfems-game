@@ -1,0 +1,163 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "Hi Thanh.  Things are going well.  I’m planning to start working abroad soon."
+                }
+            ],
+            "text": "Hey %player%!  How’s it going?"
+        },
+        "1": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "Yeah, I wanted to ask you what you heard from her."
+                }
+            ],
+            "text": "Oh wow!  You know my sister worked in Japan last year."
+        },
+        "10": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "11",
+                    "text": "Thanks.  I'll be going now."
+                },
+                {
+                    "id": "2",
+                    "text": "Can I ask you another question?"
+                }
+            ],
+            "text": "That’s what my cousin said.  Maybe it was just some random thing, but… well, it made me more wary.  Still, it is cheaper and easier to get a job there than Japan by a long shot."
+        },
+        "11": {
+            "actor": "Thanh",
+            "next": [
+            ],
+            "text": "Talk to you later."
+        },
+        "13": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "14",
+                    "text": ""
+                }
+            ],
+            "text": "She used a private broker.  Someone a friend of hers had used."
+        },
+        "14": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "Can I ask you another question?"
+                },
+                {
+                    "id": "15",
+                    "text": "Thanks.  I'll be going now."
+                }
+            ],
+            "text": "They didn’t cause her much trouble.  Pretty reasonable with fees."
+        },
+        "15": {
+            "actor": "Thanh",
+            "next": [
+            ],
+            "text": "Talk to you later."
+        },
+        "16": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "Can I ask you another question?"
+                },
+                {
+                    "id": "17",
+                    "text": "Thanks.  I'll be going now."
+                }
+            ],
+            "text": "That’s how it is, sometimes.  In the end, she seemed glad she went, though."
+        },
+        "17": {
+            "actor": "Thanh",
+            "next": [
+            ],
+            "text": "Talk to you later."
+        },
+        "2": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "4",
+                    "text": "What made her decide to go to Japan?"
+                },
+                {
+                    "id": "6",
+                    "text": "What was it like?"
+                },
+                {
+                    "id": "13",
+                    "text": "Did she go through the government or a broker?"
+                }
+            ],
+            "text": "Sure, what do you want to know?"
+        },
+        "4": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "7",
+                    "text": "Really?"
+                }
+            ],
+            "text": "She did some research on working in Japan versus Taiwan.  Pay is a lot better for most of the Japanese jobs.  She spoke some Japanese too.  But it was more expensive than Taiwan."
+        },
+        "6": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "16",
+                    "text": "That’s frustrating."
+                }
+            ],
+            "text": "From what I recall, her employers would occasionally hold some of her overtime pay and weren’t very pleasant to deal with.  But she was able to get what she was owed with some arguing."
+        },
+        "7": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "I didn’t know that."
+                }
+            ],
+            "text": "There are more requirements, too.  There’s a lower threshold of skill levels for Taiwanese jobs, generally."
+        },
+        "8": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "9",
+                    "text": "Did she borrow a lot?"
+                }
+            ],
+            "text": "Yeah.  My sister had a trickier time finding work and dealing with the price.  She’s a bit younger than us, less commitments, so she could take her time to do it.  She had to borrow some money."
+        },
+        "9": {
+            "actor": "Thanh",
+            "next": [
+                {
+                    "id": "10",
+                    "text": "What?  Really?"
+                }
+            ],
+            "text": "A fair bit.  I think it was worth it, though.  I’ve heard that the work can be a lot rougher in Taiwan.  I had a cousin who went there and apparently got their identification papers taken while they were working."
+        }
+    },
+    "start": "0"
+}

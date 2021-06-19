@@ -1,0 +1,11 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Pleased Citizen",
+            "next": [
+            ],
+            "text": "The line isn’t so bad today."
+        }
+    },
+    "start": "0"
+}

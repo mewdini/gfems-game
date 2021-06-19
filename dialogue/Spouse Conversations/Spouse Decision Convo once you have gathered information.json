@@ -1,0 +1,367 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "Traveling via a private broker."
+                },
+                {
+                    "id": "2",
+                    "text": "Traveling via the government office."
+                },
+                {
+                    "id": "3",
+                    "text": "I’m not sure."
+                }
+            ],
+            "text": "Looks like you’ve heard a lot around town.  What are the best options for traveling for work?"
+        },
+        "1": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "What’s the price point? … 1600?  We can afford that."
+        },
+        "11": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "That’s settled then."
+        },
+        "12": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "That’s settled then."
+        },
+        "13": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "That’s settled then."
+        },
+        "14": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "That’s settled then."
+        },
+        "15": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "16",
+                    "text": "Taiwan."
+                },
+                {
+                    "id": "17",
+                    "text": "Japan."
+                },
+                {
+                    "id": "18",
+                    "text": "Not sure."
+                }
+            ],
+            "text": "So, which country seems to be the best for working?"
+        },
+        "16": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "19",
+                    "text": ""
+                }
+            ],
+            "text": "Taiwan.  You do speak some Mandarin.  How much does it cost to get paperwork to work there?  … 1500.  That’s still within our budget.  Great!"
+        },
+        "17": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "27",
+                    "text": "Maybe I should go to Taiwan instead…"
+                },
+                {
+                    "id": "28",
+                    "text": "Could we borrow some money?"
+                }
+            ],
+            "text": "Japan.  Sure, how much does it cost to travel there?  … 3000?  That’s more than we can pay right now since we also have the visa fee."
+        },
+        "18": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "23",
+                    "text": "Taiwan.  It’s 1500 while Japan is 3000."
+                }
+            ],
+            "text": "Which is more affordable?"
+        },
+        "19": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "20",
+                    "text": "Yes.  I’ll head to get my papers now!"
+                },
+                {
+                    "id": "21",
+                    "text": "No... Maybe not."
+                }
+            ],
+            "text": "Are you sure about Taiwan, then?"
+        },
+        "2": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "What’s the price point? … 1500?  We can afford that."
+        },
+        "20": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "22",
+                    "text": "Sounds good."
+                }
+            ],
+            "text": "Wow.  This is really happening.  After you get your paperwork sorted, you should either book a ticket for a plane or for a train to the ferry.  Then, come back here.  We can start packing your things and just spend time together."
+        },
+        "21": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "Sure.  We can think about other countries, too."
+        },
+        "22": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "23": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "24",
+                    "text": "I agree.  I’ll go to Taiwan.  I’ll head to get my papers now!"
+                },
+                {
+                    "id": "25",
+                    "text": ""
+                }
+            ],
+            "text": "Then, Taiwan would be my choice."
+        },
+        "24": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "26",
+                    "text": "Sounds good."
+                }
+            ],
+            "text": "Wow.  This is really happening.  After you get your paperwork sorted, you should either book a ticket for a plane or for a train to the ferry.  Then, come back here.  We can start packing your things and just spend time together."
+        },
+        "25": {
+            "actor": "",
+            "next": [
+                {
+                    "id": "15",
+                    "text": ""
+                }
+            ],
+            "text": "I'm not so sure.  Let me think some more."
+        },
+        "26": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "27": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "29",
+                    "text": "Taiwan it is.  I’ll head to get my papers now!"
+                },
+                {
+                    "id": "28",
+                    "text": "I still think Japan would be ideal… Thanh seemed to think it might be better for working than Taiwan.  Could we borrow some money?"
+                }
+            ],
+            "text": "You do speak some Mandarin.  Does it cost less?  … 1500?  It would be more cost effective for us."
+        },
+        "28": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "32",
+                    "text": "Maybe it isn’t."
+                },
+                {
+                    "id": "33",
+                    "text": "I’d like to ask Hien and see what they think."
+                }
+            ],
+            "text": "Maybe from your cousin Hien.  They’re very generous…  I just don’t know if having to get a loan from them is the best option."
+        },
+        "29": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "30",
+                    "text": "Sounds good."
+                }
+            ],
+            "text": "Wow.  This is really happening.  After you get your paperwork sorted, you should either book a ticket for a plane or for a train to the ferry.  Then, come back here.  We can start packing your things and just spend time together."
+        },
+        "3": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "6",
+                    "text": "Duc didn’t seem to have a high opinion of the government center."
+                },
+                {
+                    "id": "7",
+                    "text": "Thanh had some hesitations about private brokers."
+                }
+            ],
+            "text": "Let’s compare the prices.  Let’s see… 1500 for a government visa and 1600 for a private broker to do your paperwork.  The government visa is slightly cheaper, but both are in our budget.  Did you hear anything about either system?"
+        },
+        "30": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "32": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "34",
+                    "text": "Yes, Taiwan.  I’ll head to get my papers now!"
+                },
+                {
+                    "id": "33",
+                    "text": "Well, let me ask Hien and see what they think about giving us a loan."
+                }
+            ],
+            "text": "So, Taiwan?"
+        },
+        "33": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "37",
+                    "text": "Will do."
+                }
+            ],
+            "text": "Alright.  They live southeast of the brokers, don’t they?  Run over there and see."
+        },
+        "34": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "38",
+                    "text": "Sounds good."
+                }
+            ],
+            "text": "Wow.  This is really happening.  After you get your paperwork sorted, you should either book a ticket for a plane or for a train to the ferry.  Then, come back here.  We can start packing your things and just spend time together."
+        },
+        "37": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "38": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "6": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Thanh had some hesitations about private brokers."
+                }
+            ],
+            "text": "That’s… troubling.  What about the private brokers?"
+        },
+        "7": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "9",
+                    "text": "Duc didn’t seem to have a high opinion of the government center."
+                }
+            ],
+            "text": "That’s… troubling.  What about the government center?"
+        },
+        "8": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "11",
+                    "text": "Government system."
+                },
+                {
+                    "id": "12",
+                    "text": "Private broker."
+                }
+            ],
+            "text": "Hm.  Well, there’s no perfect option.  I’m okay with you pursuing either of them.  Which do you prefer?"
+        },
+        "9": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "13",
+                    "text": "Government system."
+                },
+                {
+                    "id": "14",
+                    "text": "Private broker."
+                }
+            ],
+            "text": "Hm.  Well, there’s no perfect option.  I’m okay with you pursuing either of them.  Which do you prefer?"
+        }
+    },
+    "start": "0"
+}

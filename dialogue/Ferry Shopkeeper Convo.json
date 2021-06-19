@@ -1,0 +1,51 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Shopkeeper",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "I’m hoping to get tickets for trains and a ticket for a ferry to get to %destination%."
+                }
+            ],
+            "text": "Hello there.  How can I help you?"
+        },
+        "1": {
+            "actor": "Shopkeeper",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "Yes."
+                },
+                {
+                    "id": "3",
+                    "text": "No."
+                }
+            ],
+            "text": "Sure.  For that trip, that’ll be… 100.  Is that alright?"
+        },
+        "2": {
+            "actor": "Shopkeeper",
+            "next": [
+                {
+                    "id": "4",
+                    "text": ""
+                }
+            ],
+            "text": "Perfect.  I’ll take that."
+        },
+        "3": {
+            "actor": "Shopkeeper",
+            "next": [
+            ],
+            "text": "I see.  If you do want to book a ticket later, please let me know."
+        },
+        "4": {
+            "actor": "Shopkeeper",
+            "next": [
+            ],
+            "text": "Here are your tickets.  You’ll be traveling next week.  Enjoy your trip!"
+        }
+    },
+    "start": "0"
+}

@@ -1,0 +1,11 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Elderly Citizen",
+            "next": [
+            ],
+            "text": "Hm.  I should have brought my reading glasses."
+        }
+    },
+    "start": "0"
+}

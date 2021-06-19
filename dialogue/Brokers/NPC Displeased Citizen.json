@@ -1,0 +1,11 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Displeased Citizen",
+            "next": [
+            ],
+            "text": "I can’t tell these brokers apart from the outside.  They need better signage."
+        }
+    },
+    "start": "0"
+}

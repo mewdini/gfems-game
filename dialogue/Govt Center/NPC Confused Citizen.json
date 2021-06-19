@@ -1,0 +1,11 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Confused Citizen",
+            "next": [
+            ],
+            "text": "Oh man… I need to find another form."
+        }
+    },
+    "start": "0"
+}

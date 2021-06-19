@@ -1,0 +1,187 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "I’m looking to migrate for work."
+                },
+                {
+                    "id": "17",
+                    "text": "Do… Do you give the same spiel as the other brokers?"
+                },
+                {
+                    "id": "19",
+                    "text": "What’s the difference between you and the other brokers?"
+                }
+            ],
+            "text": "Hello.  My name is Trai.  How can I help you today?"
+        },
+        "1": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "5",
+                    "text": "I don’t have a preference."
+                },
+                {
+                    "id": "4",
+                    "text": "Fisheries."
+                },
+                {
+                    "id": "3",
+                    "text": "Healthcare."
+                },
+                {
+                    "id": "2",
+                    "text": "Manufacturing."
+                }
+            ],
+            "text": "Great. We’d be happy to help you.  We facilitate a lot of people trying to work abroad.  What kind of industry would you work best in?"
+        },
+        "10": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "11",
+                    "text": "I speak some Mandarin."
+                }
+            ],
+            "text": "Let’s look at your skills, then.  Do you speak any other languages?"
+        },
+        "11": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "4000."
+                }
+            ],
+            "text": "Then, you might have an easier time living in Taiwan.  How about your price point?"
+        },
+        "12": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "13",
+                    "text": "I’m going to talk with my partner about this before I make any decisions."
+                }
+            ],
+            "text": "That should be enough for Taiwan, at 1500.  Japan would be harder at 3000.  Visa costs are higher there.  Of course, if you were able to get the money, we could consider it.  We’ve had previous customers get loans from the bank or friends."
+        },
+        "13": {
+            "actor": "Trai",
+            "next": [
+            ],
+            "text": "Of course."
+        },
+        "16": {
+            "actor": "Trai",
+            "next": [
+            ],
+            "text": " Fair enough.  If you do want to hear it again… let me know."
+        },
+        "17": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "18",
+                    "text": "Yes."
+                },
+                {
+                    "id": "16",
+                    "text": "No."
+                }
+            ],
+            "text": "Huh?  Well, yes.  We offer the same services.  But I can assure you that ours is the best!  Do you want to hear what we can do again?"
+        },
+        "18": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "0",
+                    "text": ""
+                }
+            ],
+            "text": "Alright, then.  From the top..."
+        },
+        "19": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "20",
+                    "text": "Right..."
+                }
+            ],
+            "text": "Well, Ngai is a real piece of work.  I mean it, a REAL piece of work.  Danh is a decent guy, but I think I’m more efficient than he is, you know."
+        },
+        "2": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Could you tell me more about them?"
+                }
+            ],
+            "text": "Excellent.  There are positions in both Japan and Taiwan for that kind of work.  Which country are you hoping to travel to?"
+        },
+        "20": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "3": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Could you tell me more about them?"
+                }
+            ],
+            "text": "Excellent.  There are positions in both Japan and Taiwan for that kind of work.  Which country are you hoping to travel to?"
+        },
+        "4": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Could you tell me more about them?"
+                }
+            ],
+            "text": "Excellent.  There are positions in both Japan and Taiwan for that kind of work.  Which country are you hoping to travel to?"
+        },
+        "5": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Could you tell me more about them?"
+                }
+            ],
+            "text": "Flexibility is good.  The initial paperwork costs 1600, with additional cost based on your destination.  There are job positions in both Japan and Taiwan.  Which country are you hoping to travel to?"
+        },
+        "8": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "9",
+                    "text": ""
+                }
+            ],
+            "text": "Sure.  Going to Japan is more expensive than Taiwan.  Different regulations and fees make it a little pricer.  The language barriers are different of course.  If you don’t have any Japanese, Japan may be a harder adjustment… or if you don’t have Mandarin, a harder adjustment to Taiwan."
+        },
+        "9": {
+            "actor": "Trai",
+            "next": [
+                {
+                    "id": "10",
+                    "text": ""
+                }
+            ],
+            "text": "If you don’t have either…  Well, it’s going to be an adjustment anyway!  Ha!"
+        }
+    },
+    "start": "0"
+}

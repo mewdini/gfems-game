@@ -1,0 +1,111 @@
+{
+    "lines": {
+        "1": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "4",
+                    "text": "Well… not exactly."
+                }
+            ],
+            "text": "Hiya %player%.  Your trip planning going well?"
+        },
+        "10": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "11",
+                    "text": "Thank you so much, Hien.  Once I’m abroad, I’ll start paying you back."
+                }
+            ],
+            "text": "It was, but I know you want to get traveling as soon as you can."
+        },
+        "11": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "12",
+                    "text": "I can’t thank you enough."
+                }
+            ],
+            "text": "Take your time.  Be sure to send money to your family, first and foremost."
+        },
+        "12": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "13",
+                    "text": "I’ll be sure to come say goodbye before I leave."
+                }
+            ],
+            "text": "You can start thanking me by getting your visa!  I know how much this will mean to you and your family."
+        },
+        "13": {
+            "actor": "Hien",
+            "next": [
+            ],
+            "text": "Then, I’ll see you soon.  Good luck."
+        },
+        "4": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "5",
+                    "text": "I had hoped to work abroad in Japan, but our family doesn’t have enough money.  It’s more costly than traveling to Taiwan."
+                }
+            ],
+            "text": "Oh?  What’s wrong?"
+        },
+        "5": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "6",
+                    "text": "I had heard some things from our neighbor and from Thanh that made me think Japan would be better."
+                }
+            ],
+            "text": "And you don’t want to go to Taiwan?"
+        },
+        "6": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "8",
+                    "text": "Yes.  I understand if you can’t, of course."
+                },
+                {
+                    "id": "7",
+                    "text": "No, actually.  I changed my mind."
+                }
+            ],
+            "text": "Right.  Let me guess--you want me to loan you what you need?"
+        },
+        "7": {
+            "actor": "Hien",
+            "next": [
+            ],
+            "text": "Sure, no problem.  If you change your mind again, I’ll be here.  Good luck deciding where to go."
+        },
+        "8": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "9",
+                    "text": "About 1000."
+                }
+            ],
+            "text": "I’d be happy to.  You’re family, and we’ve been fortunate with our income the past few years.  How much?"
+        },
+        "9": {
+            "actor": "Hien",
+            "next": [
+                {
+                    "id": "10",
+                    "text": "Woah! That was fast!"
+                }
+            ],
+            "text": "Alright.  Let me transfer that to you…"
+        }
+    },
+    "start": "1"
+}

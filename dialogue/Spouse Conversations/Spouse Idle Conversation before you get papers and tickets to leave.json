@@ -1,0 +1,21 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "Right."
+                }
+            ],
+            "text": "After you get your papers, be sure to book a ticket for your trip, too.  Whatever we can afford--there’s planes or trains plus ferries."
+        },
+        "1": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        }
+    },
+    "start": "0"
+}

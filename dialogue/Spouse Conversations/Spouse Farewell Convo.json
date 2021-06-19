@@ -1,0 +1,81 @@
+{
+    "lines": {
+        "0": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "1",
+                    "text": "I did.  I'm %travelmethod%."
+                }
+            ],
+            "text": "You booked a ticket?"
+        },
+        "1": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "I have %currencystatus%"
+                }
+            ],
+            "text": "That was quick!  After all the paperwork, do you have any money left?"
+        },
+        "2": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "3",
+                    "text": "Right."
+                }
+            ],
+            "text": " How about you keep that to take with you abroad?  It’s not much, but just in case you’ll need some extra.%loanacknowledgement%"
+        },
+        "3": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "4",
+                    "text": "I know.  But the sooner I’m working, the sooner I can send money back here."
+                }
+            ],
+            "text": "Let me look at your ticket… Next week, huh?  So soon."
+        },
+        "4": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "5",
+                    "text": ""
+                }
+            ],
+            "text": "..."
+        },
+        "5": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "6",
+                    "text": "I’m going to miss you a lot.  And the kids.  Being home."
+                }
+            ],
+            "text": "We do need it.  And it isn’t too long you’ll be gone.  Hopefully, just half a year."
+        },
+        "6": {
+            "actor": "Linh",
+            "next": [
+                {
+                    "id": "7",
+                    "text": "Haha, I wouldn’t want that.  I’ll call as often as I possibly can."
+                }
+            ],
+            "text": "You can call us.  In fact, you have to call us every day or Bao said you’re going to be in “big trouble.”"
+        },
+        "7": {
+            "actor": "Linh",
+            "next": [
+            ],
+            "text": "Good.  Now, let’s make some dinner.  You’ve had a busy day, and we’ve got a busy week to get you ready for traveling."
+        }
+    },
+    "start": "0"
+}

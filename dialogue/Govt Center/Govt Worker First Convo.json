@@ -1,0 +1,123 @@
+{
+    "lines": {
+        "1": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "2",
+                    "text": "I’m planning to work abroad, and I wanted to hear more about traveling through a government broker."
+                }
+            ],
+            "text": "Good morning.  How can I help you today?"
+        },
+        "10": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "11",
+                    "text": "Thank you."
+                }
+            ],
+            "text": "Of course.  Come back if you end up wanting to travel through us."
+        },
+        "11": {
+            "actor": "",
+            "next": [
+            ],
+            "text": ""
+        },
+        "2": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "3",
+                    "text": "Japan is much more expensive than Taiwan."
+                }
+            ],
+            "text": "Ah, yes.  Lots of people are migrating for work these days.  You can get your visa and papers done through the government office.  Our visa costs 1500.  Further costs are dependent on where you want to go.  The most common destinations are Taiwan and Japan.  Taiwan costs 1500 and Japan costs 3000."
+        },
+        "3": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "4",
+                    "text": "I see."
+                }
+            ],
+            "text": "There are more rules about traveling to Japan as a worker.  We’ll have to evaluate your skills and education to make sure you met their requirements before you could get a visa to work there.  Taiwan has more lower-skilled positions, and less red tape for us."
+        },
+        "4": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "5",
+                    "text": "Manufacturing."
+                },
+                {
+                    "id": "6",
+                    "text": "Healthcare."
+                },
+                {
+                    "id": "7",
+                    "text": "Fisheries."
+                },
+                {
+                    "id": "8",
+                    "text": "I don’t have a preference."
+                }
+            ],
+            "text": "Do you have any preference as to what industry you’d like to work in?"
+        },
+        "5": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "9",
+                    "text": ""
+                }
+            ],
+            "text": "Right.   There are open positions in both Japan and Taiwan for those industries."
+        },
+        "6": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "9",
+                    "text": ""
+                }
+            ],
+            "text": "Right.   There are open positions in both Japan and Taiwan for those industries."
+        },
+        "7": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "9",
+                    "text": ""
+                }
+            ],
+            "text": "Right.   There are open positions in both Japan and Taiwan for those industries."
+        },
+        "8": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "9",
+                    "text": ""
+                }
+            ],
+            "text": "Right.  We’ll find a spot for you somewhere, then."
+        },
+        "9": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "10",
+                    "text": "No, I have to consult my spouse first."
+                }
+            ],
+            "text": "Would you like to begin the visa process through the government center right now?"
+        }
+    },
+    "start": "1"
+}
