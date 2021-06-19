@@ -11,7 +11,7 @@ enum Sprite_Name {DAN, AMELIA}
 var currency: = 4000 setget set_currency
 var inventory: = []
 var last_door_entered: = "" setget set_door
-var last_location: = {"res://levels/town.tscn":Vector2(668,1196)}
+var last_location: = {"res://levels/town.tscn":Vector2(717, 1325)}
 var start_animation = "idle_down" setget set_start_anim
 
 var char_name: = "missingno"

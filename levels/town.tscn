@@ -54,16 +54,14 @@ __meta__ = {
 
 [node name="BuildingCollisions" type="Node2D" parent="."]
 position = Vector2( 0, 2.18298 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="house" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/house"]
-polygon = PoolVector2Array( 481.491, 473.273, 477.927, 687.089, 158.985, 902.686, 158.985, 1276.86, 637.553, 1275.97, 637.553, 1110.88, 794.762, 1110.88, 793.953, 1275.68, 1119.37, 1275.08, 1117.59, 902.686, 955.449, 797.56, 957.231, 473.273, 718.47, 316.475, 481.491, 473.273 )
+position = Vector2( 0, -2.18298 )
+polygon = PoolVector2Array( 481.491, 473.273, 477.927, 687.089, 158.985, 902.686, 158.985, 1276.86, 656.206, 1275.53, 656, 1215.08, 776, 1214.62, 775.945, 1275.71, 1119.37, 1275.08, 1117.59, 902.686, 955.449, 797.56, 957.231, 473.273, 718.47, 316.475, 481.491, 473.273 )
 
 [node name="neighbor house" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
@@ -112,7 +110,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/planes shop"]
-polygon = PoolVector2Array( 3676.38, 954.282, 3678.27, 296.401, 4316.33, 296.401, 4315.38, 956.17 )
+polygon = PoolVector2Array( 3676.38, 954.282, 3678.27, 296.401, 4316.33, 296.401, 4315.38, 956.17, 4136.17, 955.641, 4135.11, 898.284, 4018.99, 900.059, 4017.56, 955.29 )
 
 [node name="broker 1" type="StaticBody2D" parent="BuildingCollisions"]
 collision_layer = 2
@@ -142,33 +140,37 @@ collision_mask = 0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildingCollisions/cousin house"]
 polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96, 2878.38, 3670.28, 2876.7, 3508.83, 3186.15, 3354.1, 3211.38, 3352.42, 3517.46, 3508.83, 3517.46, 3749.32, 3677.23, 3828.37, 3678.92, 4154.64 )
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
+[node name="YSort" type="YSort" parent="."]
 
-[node name="NPCs" type="Node2D" parent="."]
-
-[node name="Neighbor" parent="NPCs" groups=[
+[node name="Neighbor" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 1 )]
-visible = true
-position = Vector2( 3075, 2214 )
+visible = false
+position = Vector2( 3075, 2174 )
 collision_layer = 4
 moves = true
 checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
-[node name="Neighbor2" parent="NPCs" groups=[
+[node name="Neighbor2" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 5 )]
-position = Vector2( 1672.54, 1358.81 )
+position = Vector2( 1542.23, 1325.18 )
 dialogue_file = "res://dialogue/neighbor.json"
 checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
-[node name="Neighbor3" parent="NPCs" groups=[
+[node name="Neighbor3" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1057, 2226 )
+position = Vector2( 1100, 2705 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
 dialogue_file = "res://dialogue/neighbor.json"
 moves = true
-checkpoints = [ [ 1057, 1405, 0, 1 ], [ 1057, 4256, 0, 1 ] ]
+checkpoints = [ [ 1100, 2000, 0, 1 ], [ 1100, 4000, 0, 1 ] ]
+
+[node name="Player" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 717.762, 1325.18 )
+scale = Vector2( 1.75, 1.75 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -251,8 +253,18 @@ next_scene = "res://levels/Broker1.tscn"
 position = Vector2( 520, 4280 )
 next_scene = "res://levels/Broker2.tscn"
 
-[node name="Broker3" parent="Teleports" instance=ExtResource( 6 )]
+[node name="Broker3Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 1872, 3800 )
 next_scene = "res://levels/Broker3.tscn"
+
+[node name="BoatTeleport" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 5129.04, 2187.47 )
+next_scene = "res://levels/Boat.tscn"
+transition_name = "town_to_boat"
+
+[node name="PlaneTeleport" parent="Teleports" instance=ExtResource( 6 )]
+position = Vector2( 4052.72, 917.158 )
+next_scene = "res://levels/Planes.tscn"
+transition_name = "town_to_plane"
 
 [connection signal="animation_finished" from="CanvasLayer/DialoguePopup/AnimationPlayer" to="CanvasLayer/DialoguePopup" method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://backgrounds/interiors/broker 02 interior ONLY desk and front chair.png" type="Texture" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -72 )
+scale = Vector2( 2, 2 )
+polygon = PoolVector2Array( 57, -74, 57, 25, 60, 25, 60, 28, 63, 28, 63, 31, 225, 31, 225, 28, 228, 28, 228, 25, 231, 25, 231, -74, 192, -74, 192, -14, 96, -14, 96, -74 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -72 )
+scale = Vector2( 2, 2 )
+polygon = PoolVector2Array( -240, 32, -240, 103, -201, 103, -201, 64, -204, 64, -204, 61, -228, 61, -228, 29, -240, 29 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -72 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )

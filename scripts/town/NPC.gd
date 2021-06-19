@@ -34,7 +34,7 @@ func _get_configuration_warning():
 
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
-	player = get_tree().root.get_node("Root/Player")
+	player = get_tree().root.get_node("Root/YSort/Player")
 
 # state machine
 # check position, then update seen/velocity

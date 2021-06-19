@@ -6,5 +6,5 @@
 scale = Vector2( 1.75, 1.75 )
 dialogue_file = "res://dialogue/neighbor.json"
 
-[node name="AnimatedSprite" parent="." index="1"]
-frame = 4
+[node name="AnimatedSprite" parent="." index="0"]
+frame = 3

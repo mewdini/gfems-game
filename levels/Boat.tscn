@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/town/Player.gd" type="Script" id=1]
+[ext_resource path="res://gui_elements/UserInterface.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=3]
+[ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=4]
+[ext_resource path="res://templates/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/town/Teleport.gd" type="Script" id=6]
+[ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=7]
+[ext_resource path="res://backgrounds/interiors/boats interior wo desk.png" type="Texture" id=8]
+
+[node name="Root" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 568, 424 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
+polygon = PoolVector2Array( -96, 240, -240, 240, -240, 137.468, -203, 139, -203, 40, -225, 40, -224, 10, -240, 9, -240, -58.9519, -162, -60, -156, -66, -156, -78, -150, -78, -150, -81, -147, -81, -147, -96, -132, -96, 144, -96, 179.9, -96, 180, -78, 183, -75, 213, -75, 216.346, -77.6026, 216, -96, 240, -96, 240, 139, 143, 138, 143, 193, 159, 192, 159, 222, 193, 222, 193.124, 240, 96, 240, 96, 256, 256, 256, 260, 256, 260, -192, -260, -192, -260, 256, -96, 256 )
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" type="Control" parent="UserInterface" instance=ExtResource( 7 )]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" type="KinematicBody2D" parent="YSort" instance=ExtResource( 5 )]
+pause_mode = 2
+position = Vector2( 544, 872 )
+scale = Vector2( 1.75, 1.75 )
+collision_mask = 14
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Teleport" type="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 984 )
+scale = Vector2( 1.75, 1.75 )
+monitorable = false
+collision_layer = 0
+script = ExtResource( 6 )
+next_scene = "res://levels/town.tscn"
+transition_name = "boat_to_town"
+transition_type = "down"
+
+[connection signal="body_entered" from="Teleport" to="Teleport" method="_on_body_entered"]

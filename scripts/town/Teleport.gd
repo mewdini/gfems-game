@@ -5,6 +5,7 @@ onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 export (String, FILE) var next_scene = ""
 export (String) var transition_name = ""
+export (String) var transition_type = "up"
 
 export (int) var size_x setget set_x
 export (int) var size_y setget set_y
@@ -49,5 +50,9 @@ func teleport(player_position: Vector2) -> void:
 	anim_player.play("fade_in")
 	PlayerData.last_door_entered = transition_name
 	PlayerData.last_location[get_tree().current_scene.filename.to_lower()] = player_position
+	if transition_type == "down":
+		PlayerData.start_animation = "idle_down"
+	elif transition_type == "up":
+		PlayerData.start_animation = "idle_up"
 	yield(anim_player, "animation_finished")
 	get_tree().change_scene(next_scene)

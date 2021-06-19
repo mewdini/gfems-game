@@ -15,7 +15,7 @@ layer = 100
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 3 )]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 888, 656 )
+position = Vector2( 896, 656 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -28,12 +28,15 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Borders"]
 position = Vector2( -408.198, -83.3586 )
-polygon = PoolVector2Array( 384, 340, -20, 340, -20, -232, 832, -236, 836, 340, 480, 340, 480, 324, 816, 324, 816, 148, 628, 148, 628, 140, 624, 140, 624, 120, 620, 120, 620, 80, 624, 80, 624, -20, 532, -20, 532, -60, 448, -60, 448, -68, 544, -132, 624, -132, 624, -228, 544, -228, 544, -188, 432, -112, 336, -112, 336, -84, 240, -84, 240, -108, 240, -112, 144, -112, 144, -12, 92, -12, 92, -60, 52, -60, 52, -12, 0, -12, 0, 36, 28, 36, 28, 240, 0, 240, 0, 324, 404, 324, 404, 340 )
+polygon = PoolVector2Array( 384, 340, -20, 340, -20, -232, 832, -236, 836, 340, 480, 340, 480, 324, 816, 324, 816, 148, 628, 148, 628, 140, 624, 140, 624, 120, 620, 120, 620, 80, 624, 80, 624, -20, 532, -20, 532, -60, 448, -60, 448, -68, 544, -132, 624, -132, 624, -228, 544, -228, 544, -188, 432, -112, 336, -112, 336, -84, 240, -84, 240, -108, 240, -112, 144, -112, 144, -12, 92, -12, 92, -60, 52, -60, 52, -12, 0, -12, 0, 36, 28, 36, 28, 240, 0, 240, 0, 324, 384.198, 323.359 )
 
 [node name="Teleport" parent="." instance=ExtResource( 7 )]
 position = Vector2( 936, 1192 )
 next_scene = "res://levels/town.tscn"
 transition_name = "home_to_town"
+transition_type = "down"
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 584.382, 740.757 )

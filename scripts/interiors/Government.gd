@@ -9,10 +9,13 @@ func _ready():
 	var scene = get_tree().current_scene.filename.to_lower()
 	if scene in last_loc:
 		var scene_loc = last_loc[scene]
-		set_player_loc(scene_loc.x, scene_loc.y + 50, "idle_down")
+		set_player_loc(scene_loc.x, scene_loc.y - 20, "idle_up")
 
 # deal with player location
 func set_player_loc(x, y, animation):
+	print('test')
 	player.position.x = x
 	player.position.y = y
+	print(player.start_animation)
 	PlayerData.start_animation = animation
+	print(player.start_animation)
