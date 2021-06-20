@@ -13,9 +13,6 @@ func _ready():
 
 # deal with player location
 func set_player_loc(x, y, animation):
-	print('test')
 	player.position.x = x
 	player.position.y = y
-	print(player.start_animation)
 	PlayerData.start_animation = animation
-	print(player.start_animation)

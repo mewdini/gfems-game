@@ -33,7 +33,7 @@ func _get_configuration_warning():
 	return "dialogue_file must be set" if dialogue_file == "" else ""
 
 func _ready():
-	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
+	dialogue_popup = get_tree().root.get_node("Root/DialogueLayer/DialoguePopup")
 	player = get_tree().root.get_node("Root/YSort/Player")
 
 # state machine

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://backgrounds/interiors/home interior wo coffee table and kitchen table.png" type="Texture" id=1]
 [ext_resource path="res://scripts/town/Home.gd" type="Script" id=2]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/NPCs/Spouse.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=7]
 
 [node name="Root" type="Node2D"]
@@ -35,8 +37,21 @@ position = Vector2( 936, 1192 )
 next_scene = "res://levels/town.tscn"
 transition_name = "home_to_town"
 transition_type = "down"
+size_x = 0
+size_y = 0
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Spouse" parent="YSort" groups=[
+"NPCs",
+] instance=ExtResource( 5 )]
+position = Vector2( 248, 960 )
+collision_layer = 4
+collision_mask = 2147483648
+dialogue_file = "res://dialogue/spouse/spouse_intro.json"
+npc_name = "Linh"
+
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 584.382, 740.757 )
+
+[node name="DialogueLayer" parent="." instance=ExtResource( 6 )]

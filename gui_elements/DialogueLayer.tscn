@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/Dialogue:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect/Answers:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="DialogueLayer" type="CanvasLayer"]
+
+[node name="DialoguePopup" type="Popup" parent="."]
+pause_mode = 2
+margin_right = 40.0
+margin_bottom = 40.0
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="DialoguePopup"]
+margin_left = 112.0
+margin_top = 584.0
+margin_right = 912.0
+margin_bottom = 684.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterName" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 535.0
+margin_bottom = 17.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
+margin_left = 5.0
+margin_top = 24.0
+margin_right = 535.0
+margin_bottom = 56.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+bbcode_enabled = true
+visible_characters = 0
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answers" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
+visible = false
+margin_top = 77.0
+margin_right = 533.0
+margin_bottom = 92.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialoguePopup"]
+anims/ShowDialogue = SubResource( 1 )
+[connection signal="animation_finished" from="DialoguePopup/AnimationPlayer" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
