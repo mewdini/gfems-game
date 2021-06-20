@@ -309,7 +309,6 @@ visible = false
 position = Vector2( 32, 19.2 )
 frames = ExtResource( 2 )
 animation = "idle_down"
-frame = 2
 playing = true
 
 [node name="AmeliaAnimatedSprite" type="AnimatedSprite" parent="AnimatedSprites"]

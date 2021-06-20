@@ -14,6 +14,10 @@ var last_door_entered: = "" setget set_door
 var last_location: = {"res://levels/town.tscn":Vector2(717, 1325)}
 var start_animation = "idle_down" setget set_start_anim
 
+# variable to keep track of how many conversations character has had with each 
+# NPC
+var conversations_held = {}
+
 var char_name: = "missingno"
 
 var sprite_name = Sprite_Name.DAN
