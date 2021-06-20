@@ -132,6 +132,15 @@ func talk(answer = ""):
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
 	
+	# set animation to idle in direction of player
+	if player.position.x < self.position.x:
+		$AnimatedSprite.play("idle_left")
+	elif player.position.x > self.position.x:
+		$AnimatedSprite.play("idle_right")
+	elif player.position.y < self.position.y:
+		$AnimatedSprite.play("idle_up")
+	elif player.position.y < self.position.y:
+		$AnimatedSprite.play("idle_down")
 	# Get state of dialogue
 	if answer != "":
 		var state_next = state_data.next
