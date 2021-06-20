@@ -119,7 +119,7 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 [node name="Neighbor" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 1 )]
-position = Vector2( 2294, 2304 )
+position = Vector2( 2270, 2304 )
 collision_layer = 4
 npc_name = "Neighbor"
 moves = true
@@ -136,7 +136,7 @@ checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ]
 [node name="Neighbor3" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1100, 2600 )
+position = Vector2( 1100, 2290 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
 dialogue_file = "res://dialogue/neighbor.json"

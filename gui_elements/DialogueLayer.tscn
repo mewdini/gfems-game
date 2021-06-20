@@ -1,31 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://gui_elements/DialoguePopup.gd" type="Script" id=1]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect/Dialogue:percent_visible")
+tracks/0/path = NodePath(".:percent_visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("ColorRect/Answers:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
+
+[sub_resource type="Animation" id=2]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ 0.0, 1.0 ]
 }
 
 [node name="DialogueLayer" type="CanvasLayer"]
@@ -33,67 +35,111 @@ tracks/1/keys = {
 [node name="DialoguePopup" type="Popup" parent="."]
 pause_mode = 2
 visible = true
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 19.0
-margin_top = -109.0
-margin_right = -22.0
-margin_bottom = -3.0
+anchor_left = 0.0205078
+anchor_top = 0.723611
+anchor_right = 0.980469
+anchor_bottom = 0.925
 popup_exclusive = true
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="ColorRect" type="ColorRect" parent="DialoguePopup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0741
-margin_bottom = -20.0741
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CharacterName" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePopup/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 5.0
-margin_top = 5.461
-margin_right = 535.0
-margin_bottom = 20.461
-rect_scale = Vector2( 1.5, 1.5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialogue" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
-margin_left = 5.0
-margin_top = 24.0
-margin_right = 653.0
-margin_bottom = 59.0
-rect_scale = Vector2( 1.5, 1.5 )
+[node name="Dialogue" type="RichTextLabel" parent="DialoguePopup/ColorRect/MarginContainer"]
+margin_right = 973.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_colors/default_color = Color( 0.501961, 0.501961, 0.501961, 1 )
 bbcode_enabled = true
 visible_characters = 0
 percent_visible = 0.0
+text = "\\"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DialogueAnimation" type="AnimationPlayer" parent="DialoguePopup/ColorRect/MarginContainer/Dialogue"]
+anims/ShowDialogue = SubResource( 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="DialoguePopup"]
+margin_top = -45.0
+margin_right = 337.0
+margin_bottom = -5.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Answers" type="RichTextLabel" parent="DialoguePopup/ColorRect"]
-margin_left = 3.0
-margin_top = 77.0
-margin_right = 652.0
-margin_bottom = 92.0
-rect_scale = Vector2( 1.5, 1.5 )
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePopup/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterName" type="RichTextLabel" parent="DialoguePopup/ColorRect2/MarginContainer"]
+margin_right = 327.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialoguePopup"]
-anims/ShowDialogue = SubResource( 1 )
+[node name="ColorRect3" type="ColorRect" parent="DialoguePopup"]
+margin_top = 145.0
+margin_right = 983.0
+margin_bottom = 185.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="animation_finished" from="DialoguePopup/AnimationPlayer" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePopup/ColorRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answers" type="RichTextLabel" parent="DialoguePopup/ColorRect3/MarginContainer"]
+margin_right = 973.0
+margin_bottom = 30.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialoguePopup/ColorRect3/MarginContainer/Answers"]
+anims/ShowDialogue = SubResource( 2 )
+
+[connection signal="animation_finished" from="DialoguePopup/ColorRect/MarginContainer/Dialogue/DialogueAnimation" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="DialoguePopup/ColorRect3/MarginContainer/Answers/AnimationPlayer" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
