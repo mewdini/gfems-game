@@ -159,6 +159,8 @@ func talk(answer = ""):
 			dialogue_state = state_next[2].id
 		elif answer == 'V' and len(state_next) > 3:
 			dialogue_state = state_next[3].id
+		elif answer == 'B':
+			dialogue_state = "-1"
 		else:
 			dialogue_state = dialogue.start
 		

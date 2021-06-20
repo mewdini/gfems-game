@@ -20,13 +20,10 @@ func answers_set(new_value):
 func open():
 	get_tree().paused = true
 	popup()
-
 	$ColorRect/MarginContainer/Dialogue/DialogueAnimation.playback_speed = 60.0 / dialogue.length()
-	print(dialogue)
 	$ColorRect/MarginContainer/Dialogue/DialogueAnimation.play("ShowDialogue")
 
 	$ColorRect3/MarginContainer/Answers/AnimationPlayer.playback_speed = 60.0 / answers.length()
-	print(answers)
 	$ColorRect3/MarginContainer/Answers/AnimationPlayer.play("ShowDialogue")
 
 
@@ -55,3 +52,6 @@ func _input(event):
 		elif event.scancode == KEY_V:
 			set_process_input(false)
 			npc.talk('V')
+		elif event.scancode == KEY_B:
+			set_process_input(false)
+			npc.talk('B')
