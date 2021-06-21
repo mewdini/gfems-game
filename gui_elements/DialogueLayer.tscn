@@ -84,7 +84,7 @@ __meta__ = {
 anims/ShowDialogue = SubResource( 1 )
 
 [node name="ColorRect2" type="ColorRect" parent="DialoguePopup"]
-margin_top = -45.0
+margin_top = -58.0
 margin_right = 337.0
 margin_bottom = -5.0
 __meta__ = {
@@ -104,7 +104,7 @@ __meta__ = {
 
 [node name="CharacterName" type="RichTextLabel" parent="DialoguePopup/ColorRect2/MarginContainer"]
 margin_right = 327.0
-margin_bottom = 30.0
+margin_bottom = 43.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/default_color = Color( 0, 0, 0, 1 )

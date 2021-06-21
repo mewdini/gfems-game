@@ -25,6 +25,7 @@ var current_check_viz
 # references
 var dialogue_popup
 var player
+var tool_tip
 
 var dialogue_state = "0"
 var state_data
@@ -35,7 +36,7 @@ func _get_configuration_warning():
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/DialogueLayer/DialoguePopup")
 	player = get_tree().root.get_node("Root/YSort/Player")
-
+	
 # state machine
 # check position, then update seen/velocity
 func update_velocity(delta):
@@ -168,6 +169,7 @@ func talk(answer = ""):
 	if dialogue_state == "-1":
 		dialogue_state = "0"
 		dialogue_popup.close()
+		
 		# Keep track of the number of interactions between player and NPCs. Set
 		# to add when the conversation ends.
 		if npc_name in PlayerData.conversations_held:

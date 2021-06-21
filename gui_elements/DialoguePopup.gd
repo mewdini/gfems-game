@@ -4,6 +4,7 @@ var npc_name setget name_set
 var dialogue setget dialogue_set
 var answers setget answers_set
 var npc
+var tool_tip
 
 func name_set(new_value):
 	npc_name = new_value
@@ -25,13 +26,15 @@ func open():
 
 	$ColorRect3/MarginContainer/Answers/AnimationPlayer.playback_speed = 60.0 / answers.length()
 	$ColorRect3/MarginContainer/Answers/AnimationPlayer.play("ShowDialogue")
-
+	tool_tip.percent_visible = 0
 
 func close():
 	get_tree().paused = false
+	tool_tip.percent_visible = 1
 	hide()
 	
 func _ready():
+	tool_tip = get_tree().root.get_node("Root/UserInterface/UserInterface/ToolTipLabel")
 	set_process_input(false)
 
 
