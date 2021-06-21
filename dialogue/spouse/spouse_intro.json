@@ -73,6 +73,10 @@
 		"15": {
 			"actor": "Linh",
 			"next": [
+				{
+					"id": "-1",
+					"text": "*Leave*"
+				}
 			],
 			"text": "Good luck.  Come find me once you know a little more and we can decide what you should do."
 		},
@@ -109,6 +113,10 @@
 		"19": {
 			"actor": "Linh",
 			"next": [
+				{
+					"id": "-1",
+					"text": "*Leave*"
+				}
 			],
 			"text": "Good luck.  Come find me once you know a little more and we can decide what you should do."
 		},

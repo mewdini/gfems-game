@@ -5,15 +5,15 @@
             "next": [
                 {
                     "id": "1",
-                    "text": "I’m looking to migrate for work."
+                    "text": "Iâ€™m looking to migrate for work."
                 },
                 {
                     "id": "17",
-                    "text": "Do… Do you give the same spiel as the other brokers?"
+                    "text": "Doâ€¦ Do you give the same spiel as the other brokers?"
                 },
                 {
                     "id": "19",
-                    "text": "What’s the difference between you and the other brokers?"
+                    "text": "Whatâ€™s the difference between you and the other brokers?"
                 }
             ],
             "text": "Hello.  My name is Trai.  How can I help you today?"
@@ -23,7 +23,7 @@
             "next": [
                 {
                     "id": "5",
-                    "text": "I don’t have a preference."
+                    "text": "I donâ€™t have a preference."
                 },
                 {
                     "id": "4",
@@ -38,7 +38,7 @@
                     "text": "Manufacturing."
                 }
             ],
-            "text": "Great. We’d be happy to help you.  We facilitate a lot of people trying to work abroad.  What kind of industry would you work best in?"
+            "text": "Great. Weâ€™d be happy to help you.  We facilitate a lot of people trying to work abroad.  What kind of industry would you work best in?"
         },
         "10": {
             "actor": "Trai",
@@ -48,7 +48,7 @@
                     "text": "I speak some Mandarin."
                 }
             ],
-            "text": "Let’s look at your skills, then.  Do you speak any other languages?"
+            "text": "Letâ€™s look at your skills, then.  Do you speak any other languages?"
         },
         "11": {
             "actor": "Trai",
@@ -65,22 +65,30 @@
             "next": [
                 {
                     "id": "13",
-                    "text": "I’m going to talk with my partner about this before I make any decisions."
+                    "text": "Iâ€™m going to talk with my partner about this before I make any decisions."
                 }
             ],
-            "text": "That should be enough for Taiwan, at 1500.  Japan would be harder at 3000.  Visa costs are higher there.  Of course, if you were able to get the money, we could consider it.  We’ve had previous customers get loans from the bank or friends."
+            "text": "That should be enough for Taiwan, at 1500.  Japan would be harder at 3000.  Visa costs are higher there.  Of course, if you were able to get the money, we could consider it.  Weâ€™ve had previous customers get loans from the bank or friends."
         },
         "13": {
             "actor": "Trai",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Of course."
         },
         "16": {
             "actor": "Trai",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
-            "text": " Fair enough.  If you do want to hear it again… let me know."
+            "text": " Fair enough.  If you do want to hear it againâ€¦ let me know."
         },
         "17": {
             "actor": "Trai",
@@ -114,7 +122,7 @@
                     "text": "Right..."
                 }
             ],
-            "text": "Well, Ngai is a real piece of work.  I mean it, a REAL piece of work.  Danh is a decent guy, but I think I’m more efficient than he is, you know."
+            "text": "Well, Ngai is a real piece of work.  I mean it, a REAL piece of work.  Danh is a decent guy, but I think Iâ€™m more efficient than he is, you know."
         },
         "2": {
             "actor": "Trai",
@@ -129,6 +137,10 @@
         "20": {
             "actor": "",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": ""
         },
@@ -170,7 +182,7 @@
                     "text": ""
                 }
             ],
-            "text": "Sure.  Going to Japan is more expensive than Taiwan.  Different regulations and fees make it a little pricer.  The language barriers are different of course.  If you don’t have any Japanese, Japan may be a harder adjustment… or if you don’t have Mandarin, a harder adjustment to Taiwan."
+            "text": "Sure.  Going to Japan is more expensive than Taiwan.  Different regulations and fees make it a little pricer.  The language barriers are different of course.  If you donâ€™t have any Japanese, Japan may be a harder adjustmentâ€¦ or if you donâ€™t have Mandarin, a harder adjustment to Taiwan."
         },
         "9": {
             "actor": "Trai",
@@ -180,7 +192,7 @@
                     "text": ""
                 }
             ],
-            "text": "If you don’t have either…  Well, it’s going to be an adjustment anyway!  Ha!"
+            "text": "If you donâ€™t have eitherâ€¦  Well, itâ€™s going to be an adjustment anyway!  Ha!"
         }
     },
     "start": "0"

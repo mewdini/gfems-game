@@ -73,6 +73,10 @@
         "7": {
             "actor": "Linh",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Good.  Now, let’s make some dinner.  You’ve had a busy day, and we’ve got a busy week to get you ready for traveling."
         }

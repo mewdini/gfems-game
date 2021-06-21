@@ -3,6 +3,10 @@
         "0": {
             "actor": "Eager Citizen",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "My friend recommended this office."
         }

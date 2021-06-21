@@ -3,8 +3,12 @@
         "0": {
             "actor": "Displeased Citizen",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
-            "text": "I can’t tell these brokers apart from the outside.  They need better signage."
+            "text": "I canâ€™t tell these brokers apart from the outside.  They need better signage."
         }
     },
     "start": "0"

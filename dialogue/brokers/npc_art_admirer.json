@@ -3,6 +3,10 @@
         "0": {
             "actor": "Art Aficionado Citizen",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "I like the artwork in here."
         }

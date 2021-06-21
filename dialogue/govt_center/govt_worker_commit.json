@@ -26,55 +26,67 @@
                     "text": "Japan."
                 }
             ],
-            "text": "Wonderful.  Let’s see… Do you want to travel to Japan or Taiwan?"
+            "text": "Wonderful.  Letâ€™s seeâ€¦ Do you want to travel to Japan or Taiwan?"
         },
         "10": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "13",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "11": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "13",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "12": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "13",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "13": {
             "actor": "",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": ""
         },
         "14": {
             "actor": "",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": ""
         },
         "2": {
             "actor": "Govt Worker",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
-            "text": "Oh.  Well, uh, if you change your mind… we’ll still be here."
+            "text": "Oh.  Well, uh, if you change your mindâ€¦ weâ€™ll still be here."
         },
         "3": {
             "actor": "Govt Worker",
@@ -85,7 +97,7 @@
                 },
                 {
                     "id": "7",
-                    "text": "I didn’t have one."
+                    "text": "I didnâ€™t have one."
                 },
                 {
                     "id": "5",
@@ -96,7 +108,7 @@
                     "text": "Manufacturing."
                 }
             ],
-            "text": "I’ll write that down here.  And your industry preference was…?"
+            "text": "Iâ€™ll write that down here.  And your industry preference wasâ€¦?"
         },
         "4": {
             "actor": "Govt Worker",
@@ -115,60 +127,60 @@
                 },
                 {
                     "id": "12",
-                    "text": "I didn’t have one."
+                    "text": "I didnâ€™t have one."
                 }
             ],
-            "text": "I’ll write that down here.  And your industry preference was…?"
+            "text": "Iâ€™ll write that down here.  And your industry preference wasâ€¦?"
         },
         "5": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "14",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "6": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "14",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "7": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "14",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "8": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "14",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         },
         "9": {
             "actor": "Govt Worker",
             "next": [
                 {
                     "id": "13",
-                    "text": "Thank you.  I’ll go do that now."
+                    "text": "Thank you.  Iâ€™ll go do that now."
                 }
             ],
-            "text": "That was right.  Well, I’ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isn’t included in our services."
+            "text": "That was right.  Well, Iâ€™ll file this immediately.  It should be processed within a week or so.  You should begin looking for tickets to travel.  That isnâ€™t included in our services."
         }
     },
     "start": "0"

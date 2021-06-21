@@ -5,7 +5,7 @@
             "next": [
                 {
                     "id": "1",
-                    "text": "I’m looking to migrate for work."
+                    "text": "Iâ€™m looking to migrate for work."
                 }
             ],
             "text": "Hello.  My name is Danh.  How can I help you today?"
@@ -15,7 +15,7 @@
             "next": [
                 {
                     "id": "5",
-                    "text": "I don’t have a preference."
+                    "text": "I donâ€™t have a preference."
                 },
                 {
                     "id": "4",
@@ -30,7 +30,7 @@
                     "text": "Manufacturing."
                 }
             ],
-            "text": "Great. We’d be happy to help you.  We facilitate a lot of people trying to work abroad.  What kind of industry would you work best in?"
+            "text": "Great. Weâ€™d be happy to help you.  We facilitate a lot of people trying to work abroad.  What kind of industry would you work best in?"
         },
         "10": {
             "actor": "Danh",
@@ -40,7 +40,7 @@
                     "text": "I speak some Mandarin."
                 }
             ],
-            "text": "Let’s look at your skills, then.  Do you speak any other languages?"
+            "text": "Letâ€™s look at your skills, then.  Do you speak any other languages?"
         },
         "11": {
             "actor": "Danh",
@@ -57,14 +57,18 @@
             "next": [
                 {
                     "id": "13",
-                    "text": "I’m going to talk with my partner about this before I make any decisions."
+                    "text": "Iâ€™m going to talk with my partner about this before I make any decisions."
                 }
             ],
-            "text": "That should be enough for Taiwan, at 1500.  Japan would be harder at 3000.  Visa costs are higher there.  Of course, if you were able to get the money, we could consider it.  We’ve had previous customers get loans from the bank or friends."
+            "text": "That should be enough for Taiwan, at 1500.  Japan would be harder at 3000.  Visa costs are higher there.  Of course, if you were able to get the money, we could consider it.  Weâ€™ve had previous customers get loans from the bank or friends."
         },
         "13": {
             "actor": "Danh",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Of course."
         },
@@ -116,7 +120,7 @@
                     "text": ""
                 }
             ],
-            "text": "Sure.  Going to Japan is more expensive than Taiwan.  Different regulations and fees make it a little pricer.  The language barriers are different of course.  If you don’t have any Japanese, Japan may be a harder adjustment… or if you don’t have Mandarin, a harder adjustment to Taiwan."
+            "text": "Sure.  Going to Japan is more expensive than Taiwan.  Different regulations and fees make it a little pricer.  The language barriers are different of course.  If you donâ€™t have any Japanese, Japan may be a harder adjustmentâ€¦ or if you donâ€™t have Mandarin, a harder adjustment to Taiwan."
         },
         "9": {
             "actor": "Danh",
@@ -126,7 +130,7 @@
                     "text": ""
                 }
             ],
-            "text": "If you don’t have either…  Well, it’s going to be an adjustment anyway!  Ha!"
+            "text": "If you donâ€™t have eitherâ€¦  Well, itâ€™s going to be an adjustment anyway!  Ha!"
         }
     },
     "start": "0"

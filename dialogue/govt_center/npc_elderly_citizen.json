@@ -3,6 +3,10 @@
         "0": {
             "actor": "Elderly Citizen",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Hm.  I should have brought my reading glasses."
         }

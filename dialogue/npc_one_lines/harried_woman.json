@@ -3,6 +3,10 @@
         "0": {
             "actor": "Harried Woman",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "I have so many errands to run."
         }

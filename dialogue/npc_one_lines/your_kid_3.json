@@ -3,8 +3,12 @@
         "0": {
             "actor": "Mai",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
-            "text": "You’re going to be gone a while… Weird."
+            "text": "Youâ€™re going to be gone a whileâ€¦ Weird."
         }
     },
     "start": "0"

@@ -5,7 +5,7 @@
             "next": [
                 {
                     "id": "1",
-                    "text": "I’m hoping to book a flight to  %destination%."
+                    "text": "Iâ€™m hoping to book a flight to  %destination%."
                 }
             ],
             "text": "Welcome to our ticket center.  What can I do for you?"
@@ -22,7 +22,7 @@
                     "text": "No."
                 }
             ],
-            "text": "Of course!  For that trip, that’ll be… 100.  Does that sound okay?"
+            "text": "Of course!  For that trip, thatâ€™ll beâ€¦ 100.  Does that sound okay?"
         },
         "2": {
             "actor": "Ticketmaster",
@@ -32,17 +32,25 @@
                     "text": ""
                 }
             ],
-            "text": "Fantastic.  Then, I’ll charge that."
+            "text": "Fantastic.  Then, Iâ€™ll charge that."
         },
         "3": {
             "actor": "Ticketmaster",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Ah, well.  We have lots of seats open if you change your mind."
         },
         "4": {
             "actor": "Ticketmaster",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Here is your ticket.  Your flight is next week.  Enjoy your trip!"
         }

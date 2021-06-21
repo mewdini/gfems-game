@@ -17,6 +17,10 @@
         "1": {
             "actor": "",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": ""
         },
@@ -33,6 +37,10 @@
         "3": {
             "actor": "%player%",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Thanks."
         }

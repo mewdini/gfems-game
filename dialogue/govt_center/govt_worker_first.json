@@ -5,7 +5,7 @@
             "next": [
                 {
                     "id": "2",
-                    "text": "I’m planning to work abroad, and I wanted to hear more about traveling through a government broker."
+                    "text": "Iâ€™m planning to work abroad, and I wanted to hear more about traveling through a government broker."
                 }
             ],
             "text": "Good morning.  How can I help you today?"
@@ -23,6 +23,10 @@
         "11": {
             "actor": "",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": ""
         },
@@ -44,7 +48,7 @@
                     "text": "I see."
                 }
             ],
-            "text": "There are more rules about traveling to Japan as a worker.  We’ll have to evaluate your skills and education to make sure you met their requirements before you could get a visa to work there.  Taiwan has more lower-skilled positions, and less red tape for us."
+            "text": "There are more rules about traveling to Japan as a worker.  Weâ€™ll have to evaluate your skills and education to make sure you met their requirements before you could get a visa to work there.  Taiwan has more lower-skilled positions, and less red tape for us."
         },
         "4": {
             "actor": "Govt Worker",
@@ -63,10 +67,10 @@
                 },
                 {
                     "id": "8",
-                    "text": "I don’t have a preference."
+                    "text": "I donâ€™t have a preference."
                 }
             ],
-            "text": "Do you have any preference as to what industry you’d like to work in?"
+            "text": "Do you have any preference as to what industry youâ€™d like to work in?"
         },
         "5": {
             "actor": "Govt Worker",
@@ -106,7 +110,7 @@
                     "text": ""
                 }
             ],
-            "text": "Right.  We’ll find a spot for you somewhere, then."
+            "text": "Right.  Weâ€™ll find a spot for you somewhere, then."
         },
         "9": {
             "actor": "Govt Worker",

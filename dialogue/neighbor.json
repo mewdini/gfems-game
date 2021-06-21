@@ -1,203 +1,203 @@
 {
-	"start" : "0",
-	"lines" : {
-		"0" : {
-			"actor" : "Neighbor",
-			"text" : "Hey %player%. I heard you might be migrating for work soon.",
-			"next" : [
-				{
-					"text" : "Yes",
-					"id" : "1"
-				}
-			]
-		},
-		"1" : {
-			"actor" : "%player%",
-			"text" : "That's my plan. You went to Taiwan last year to work, right?",
-			"next" : [
-				{
-					"text" : "Next",
-					"id" : "2"
-				}
-			]
-		},
-		"2" : {
-			"actor" : "Neighbor",
-			"text" : "That’s right.",
-			"next" : [
-				{
-					"text" : "Why?",
-					"id" : "3"
-				},
-				{
-					"text" : "How?",
-					"id" : "4"
-				},
-				{
-					"text" : "Details?",
-					"id" : "5"
-				},
-				{
-					"text" : "Goodbye.",
-					"id" : "16"
-				}
-			]
-		},
-		"3" : {
-			"actor" : "%player%",
-			"text" : "What made you decide to go to Taiwan?",
-			"next" : [
-				{
-					"text" : "Next",
-					"id" : "6"
-				}
-			]
-		},
-		"4" : {
-			"actor" : "%player%",
-			"text" : "Did you go through the government or a broker?",
-			"next" : [
-				{
-					"text" : "Next",
-					"id" : "7"
-				}
-			]
-		},
-		"5" : {
-			"actor" : "%player%",
-			"text" : "What was it like?",
-			"next" : [
-				{
-					"text" : "Next",
-					"id" : "8"
-				}
-			]
-		},
-		"6" : {
-			"actor" : "Neighbor",
-			"text" : "Honestly, price. There's good money to be made in Japan, but the visa cost... It can cost a lot just to go in the first place, I didn't want to go into any debt.",
-			"next" : [
-				{
-					"text" : "Japan?",
-					"id" : "9"
-				}
-			]
-		},
-		"9" : {
-			"actor" : "%player%",
-			"text" : "Would you have gone to Japan if you could have?",
-			"next" : [
-				{
-					"text" : "Next",
-					"id" : "10"
-				}
-			]
-		},
-		"10" : {
-			"actor" : "Neighbor",
-			"text" : "Maybe... another thing was the language barrier. I spoke some Mandarin.",
-			"next" : [
-				{
-					"text" : "Makes sense.",
-					"id" : "15"
-				}
-			]
-		},
-		"7" : {
-			"actor" : "Neighbor",
-			"text" : "The government. They're more cost effective, but they've got their issues.",
-			"next" : [
-				{
-					"text" : "Issues?",
-					"id" : "11"
-				}
-			]
-		},
-		"11" : {
-			"actor" : "Neighbor",
-			"text" : "I won't bog you down with details... just be careful.",
-			"next" : [
-				{
-					"text" : "Ominous...",
-					"id" : "15"
-				}
-			]
-		},
-		"8" : {
-			"actor" : "Neighbor",
-			"text" : "Do you really want to know?",
-			"next" : [
-				{
-					"text" : "Yes",
-					"id" : "12"
-				},
-				{
-					"text" : "No",
-					"id" : "13"
-				}
-			]
-		},
-		"12" : {
-			"actor" : "Neighbor",
-			"text" : "It's rough. I know I didn't have it as bad as some people, but the hours were incredibly long with very few breaks. No vacation.",
-			"next" : [
-				{
-					"text" : "No vacation?",
-					"id" : "14"
-				}
-			]
-		},
-		"14" : {
-			"actor" : "Neighbor",
-			"text" : "I've heard lots of people do get vacation, but there's always something to watch out for. Employers messing with your paperwork or hidden program fees... you have to be careful.",
-			"next" : [
-				{
-					"text" : "Good to know.",
-					"id" : "15"
-				}
-			]
-		},
-		"13" : {
-			"actor" : "Neighbor",
-			"text" : "[i]Ha[/i]. Well, ignorance is bliss. But you should ask someone before you leave.",
-			"next" : [
-				{
-					"text" : "Maybe...",
-					"id" : "15"
-				}
-			]
-		},
-		"15" : {
-			"actor" : "Neighbor",
-			"text" : "Anything else?",
-			"next" : [
-				{
-					"text" : "Why?",
-					"id" : "3"
-				},
-				{
-					"text" : "How?",
-					"id" : "4"
-				},
-				{
-					"text" : "Details?",
-					"id" : "5"
-				},
-				{
-					"text" : "Goodbye.",
-					"id" : "16"
-				}
-			]
-		},
-		"16" : {
-			"actor" : "Neighbor",
-			"text" : "Good luck.",
-			"next" : [
-				{
-					"text" : "*Leave*",
-					"id" : "-1"
-				}
-			]
-		}
-	}
+    "start": "0",
+    "lines": {
+        "0": {
+            "actor": "Neighbor",
+            "text": "Hey %player%. I heard you might be migrating for work soon.",
+            "next": [
+                {
+                    "text": "Yes",
+                    "id": "1"
+                }
+            ]
+        },
+        "1": {
+            "actor": "%player%",
+            "text": "That's my plan. You went to Taiwan last year to work, right?",
+            "next": [
+                {
+                    "text": "Next",
+                    "id": "2"
+                }
+            ]
+        },
+        "2": {
+            "actor": "Neighbor",
+            "text": "Thatâ€™s right.",
+            "next": [
+                {
+                    "text": "Why?",
+                    "id": "3"
+                },
+                {
+                    "text": "How?",
+                    "id": "4"
+                },
+                {
+                    "text": "Details?",
+                    "id": "5"
+                },
+                {
+                    "text": "Goodbye.",
+                    "id": "16"
+                }
+            ]
+        },
+        "3": {
+            "actor": "%player%",
+            "text": "What made you decide to go to Taiwan?",
+            "next": [
+                {
+                    "text": "Next",
+                    "id": "6"
+                }
+            ]
+        },
+        "4": {
+            "actor": "%player%",
+            "text": "Did you go through the government or a broker?",
+            "next": [
+                {
+                    "text": "Next",
+                    "id": "7"
+                }
+            ]
+        },
+        "5": {
+            "actor": "%player%",
+            "text": "What was it like?",
+            "next": [
+                {
+                    "text": "Next",
+                    "id": "8"
+                }
+            ]
+        },
+        "6": {
+            "actor": "Neighbor",
+            "text": "Honestly, price. There's good money to be made in Japan, but the visa cost... It can cost a lot just to go in the first place, I didn't want to go into any debt.",
+            "next": [
+                {
+                    "text": "Japan?",
+                    "id": "9"
+                }
+            ]
+        },
+        "9": {
+            "actor": "%player%",
+            "text": "Would you have gone to Japan if you could have?",
+            "next": [
+                {
+                    "text": "Next",
+                    "id": "10"
+                }
+            ]
+        },
+        "10": {
+            "actor": "Neighbor",
+            "text": "Maybe... another thing was the language barrier. I spoke some Mandarin.",
+            "next": [
+                {
+                    "text": "Makes sense.",
+                    "id": "15"
+                }
+            ]
+        },
+        "7": {
+            "actor": "Neighbor",
+            "text": "The government. They're more cost effective, but they've got their issues.",
+            "next": [
+                {
+                    "text": "Issues?",
+                    "id": "11"
+                }
+            ]
+        },
+        "11": {
+            "actor": "Neighbor",
+            "text": "I won't bog you down with details... just be careful.",
+            "next": [
+                {
+                    "text": "Ominous...",
+                    "id": "15"
+                }
+            ]
+        },
+        "8": {
+            "actor": "Neighbor",
+            "text": "Do you really want to know?",
+            "next": [
+                {
+                    "text": "Yes",
+                    "id": "12"
+                },
+                {
+                    "text": "No",
+                    "id": "13"
+                }
+            ]
+        },
+        "12": {
+            "actor": "Neighbor",
+            "text": "It's rough. I know I didn't have it as bad as some people, but the hours were incredibly long with very few breaks. No vacation.",
+            "next": [
+                {
+                    "text": "No vacation?",
+                    "id": "14"
+                }
+            ]
+        },
+        "14": {
+            "actor": "Neighbor",
+            "text": "I've heard lots of people do get vacation, but there's always something to watch out for. Employers messing with your paperwork or hidden program fees... you have to be careful.",
+            "next": [
+                {
+                    "text": "Good to know.",
+                    "id": "15"
+                }
+            ]
+        },
+        "13": {
+            "actor": "Neighbor",
+            "text": "[i]Ha[/i]. Well, ignorance is bliss. But you should ask someone before you leave.",
+            "next": [
+                {
+                    "text": "Maybe...",
+                    "id": "15"
+                }
+            ]
+        },
+        "15": {
+            "actor": "Neighbor",
+            "text": "Anything else?",
+            "next": [
+                {
+                    "text": "Why?",
+                    "id": "3"
+                },
+                {
+                    "text": "How?",
+                    "id": "4"
+                },
+                {
+                    "text": "Details?",
+                    "id": "5"
+                },
+                {
+                    "text": "Goodbye.",
+                    "id": "16"
+                }
+            ]
+        },
+        "16": {
+            "actor": "Neighbor",
+            "text": "Good luck.",
+            "next": [
+                {
+                    "text": "*Leave*",
+                    "id": "-1"
+                }
+            ]
+        }
+    }
 }

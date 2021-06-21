@@ -3,6 +3,10 @@
         "0": {
             "actor": "Young Woman",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Maybe I should move to a bigger city.  Might have more work there."
         }

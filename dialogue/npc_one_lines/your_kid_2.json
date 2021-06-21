@@ -3,6 +3,10 @@
         "0": {
             "actor": "Lien",
             "next": [
+                {
+                    "id": "-1",
+                    "text": "*Leave*"
+                }
             ],
             "text": "Our neighbor worked abroad too!  Maybe everyone on the street will go soon."
         }
