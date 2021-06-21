@@ -5,7 +5,7 @@
             "next": [
                 {
                     "id": "4",
-                    "text": "Wellâ€¦ not exactly."
+                    "text": "Well... not exactly."
                 }
             ],
             "text": "Hiya %player%.  Your trip planning going well?"
@@ -15,7 +15,7 @@
             "next": [
                 {
                     "id": "11",
-                    "text": "Thank you so much, Hien.  Once Iâ€™m abroad, Iâ€™ll start paying you back."
+                    "text": "Thank you so much, Hien.  Once I'm abroad, I'll start paying you back."
                 }
             ],
             "text": "It was, but I know you want to get traveling as soon as you can."
@@ -25,7 +25,7 @@
             "next": [
                 {
                     "id": "12",
-                    "text": "I canâ€™t thank you enough."
+                    "text": "I can't thank you enough."
                 }
             ],
             "text": "Take your time.  Be sure to send money to your family, first and foremost."
@@ -35,7 +35,7 @@
             "next": [
                 {
                     "id": "13",
-                    "text": "Iâ€™ll be sure to come say goodbye before I leave."
+                    "text": "I'll be sure to come say goodbye before I leave."
                 }
             ],
             "text": "You can start thanking me by getting your visa!  I know how much this will mean to you and your family."
@@ -48,17 +48,17 @@
                     "text": "*Leave*"
                 }
             ],
-            "text": "Then, Iâ€™ll see you soon.  Good luck."
+            "text": "Then, I'll see you soon.  Good luck."
         },
         "4": {
             "actor": "Hien",
             "next": [
                 {
                     "id": "5",
-                    "text": "I had hoped to work abroad in Japan, but our family doesnâ€™t have enough money.  Itâ€™s more costly than traveling to Taiwan."
+                    "text": "I had hoped to work abroad in Japan, but our family doesn't have enough money.  It's more costly than traveling to Taiwan."
                 }
             ],
-            "text": "Oh?  Whatâ€™s wrong?"
+            "text": "Oh?  What's wrong?"
         },
         "5": {
             "actor": "Hien",
@@ -68,14 +68,14 @@
                     "text": "I had heard some things from our neighbor and from Thanh that made me think Japan would be better."
                 }
             ],
-            "text": "And you donâ€™t want to go to Taiwan?"
+            "text": "And you don't want to go to Taiwan?"
         },
         "6": {
             "actor": "Hien",
             "next": [
                 {
                     "id": "8",
-                    "text": "Yes.  I understand if you canâ€™t, of course."
+                    "text": "Yes.  I understand if you can't, of course."
                 },
                 {
                     "id": "7",
@@ -92,7 +92,7 @@
                     "text": "*Leave*"
                 }
             ],
-            "text": "Sure, no problem.  If you change your mind again, Iâ€™ll be here.  Good luck deciding where to go."
+            "text": "Sure, no problem.  If you change your mind again, I'll be here.  Good luck deciding where to go."
         },
         "8": {
             "actor": "Hien",
@@ -102,7 +102,7 @@
                     "text": "About 1000."
                 }
             ],
-            "text": "Iâ€™d be happy to.  Youâ€™re family, and weâ€™ve been fortunate with our income the past few years.  How much?"
+            "text": "I'd be happy to.  You're family, and we've been fortunate with our income the past few years.  How much?"
         },
         "9": {
             "actor": "Hien",
@@ -112,7 +112,7 @@
                     "text": "Woah! That was fast!"
                 }
             ],
-            "text": "Alright.  Let me transfer that to youâ€¦"
+            "text": "Alright.  Let me transfer that to you..."
         }
     },
     "start": "1"

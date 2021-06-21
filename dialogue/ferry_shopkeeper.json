@@ -5,7 +5,7 @@
             "next": [
                 {
                     "id": "1",
-                    "text": "Iâ€™m hoping to get tickets for trains and a ticket for a ferry to get to %destination%."
+                    "text": "I'm hoping to get tickets for trains and a ticket for a ferry to get to %destination%."
                 }
             ],
             "text": "Hello there.  How can I help you?"
@@ -22,7 +22,7 @@
                     "text": "No."
                 }
             ],
-            "text": "Sure.  For that trip, thatâ€™ll beâ€¦ 100.  Is that alright?"
+            "text": "Sure.  For that trip, that'll be... 100.  Is that alright?"
         },
         "2": {
             "actor": "Shopkeeper",
@@ -32,7 +32,7 @@
                     "text": ""
                 }
             ],
-            "text": "Perfect.  Iâ€™ll take that."
+            "text": "Perfect.  I'll take that."
         },
         "3": {
             "actor": "Shopkeeper",
@@ -52,7 +52,7 @@
                     "text": "*Leave*"
                 }
             ],
-            "text": "Here are your tickets.  Youâ€™ll be traveling next week.  Enjoy your trip!"
+            "text": "Here are your tickets.  You'll be traveling next week.  Enjoy your trip!"
         }
     },
     "start": "0"

@@ -18,7 +18,7 @@
                     "text": "I appreciate that.  Thanks, Hien.  How are you doing today?"
                 }
             ],
-            "text": "Gotcha.  Let me know if you ever need any help.  Weâ€™re cousins; Iâ€™m in your corner."
+            "text": "Gotcha.  Let me know if you ever need any help.  We're cousins; I'm in your corner."
         },
         "3": {
             "actor": "Hien",
@@ -28,7 +28,7 @@
                     "text": "*Leave*"
                 }
             ],
-            "text": "Good!  Such nice weather, Iâ€™m just enjoying it.  Maybe Iâ€™ll head to the beach later."
+            "text": "Good!  Such nice weather, I'm just enjoying it.  Maybe I'll head to the beach later."
         }
     },
     "start": "1"
