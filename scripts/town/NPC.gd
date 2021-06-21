@@ -129,9 +129,25 @@ func talk(answer = ""):
 	# load file and parse JSON
 	var dialogue = load_file(dialogue_file)
 	
+	
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
 	
+	# set animation to idle in direction of player
+	var player_to_npc_x_delta = player.position.x - self.position.x
+	var player_to_npc_y_delta = player.position.y - self.position.y
+	
+	# if player is further on the x axis, then the rotation should be on x axis
+	if abs(player_to_npc_x_delta) >= abs(player_to_npc_y_delta):
+		if player_to_npc_x_delta < 0:
+			$AnimatedSprite.play("idle_left")
+		elif player_to_npc_x_delta > 0:
+			$AnimatedSprite.play("idle_right")
+	else:
+		if player_to_npc_y_delta < 0:
+			$AnimatedSprite.play("idle_up")
+		elif player_to_npc_y_delta > 0:
+			$AnimatedSprite.play("idle_down")
 	# Get state of dialogue
 	if answer != "":
 		var state_next = state_data.next
@@ -143,6 +159,8 @@ func talk(answer = ""):
 			dialogue_state = state_next[2].id
 		elif answer == 'V' and len(state_next) > 3:
 			dialogue_state = state_next[3].id
+		elif answer == 'B':
+			dialogue_state = "-1"
 		else:
 			dialogue_state = dialogue.start
 		
@@ -150,11 +168,19 @@ func talk(answer = ""):
 	if dialogue_state == "-1":
 		dialogue_state = "0"
 		dialogue_popup.close()
+		# Keep track of the number of interactions between player and NPCs. Set
+		# to add when the conversation ends.
+		if npc_name in PlayerData.conversations_held:
+			PlayerData.conversations_held[npc_name] += 1
+		else:
+			PlayerData.conversations_held[npc_name] = 1
 		return
+	
+	
 	
 	# Set possible buttons
 	# TODO don't hardcode this here
-	var buttons = ['Z', 'X', 'C', 'V']
+	var buttons = ['Z', 'X', 'C', 'V', 'B']
 	
 	var ans
 	

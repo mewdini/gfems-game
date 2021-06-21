@@ -18,7 +18,7 @@ pause_mode = 2
 position = Vector2( 0, -48 )
 frames = ExtResource( 1 )
 animation = "idle_down"
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

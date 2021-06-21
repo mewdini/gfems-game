@@ -7,21 +7,25 @@ var npc
 
 func name_set(new_value):
 	npc_name = new_value
-	$ColorRect/CharacterName.bbcode_text = new_value
+	$ColorRect2/MarginContainer/CharacterName.bbcode_text = new_value
 
 func dialogue_set(new_value):
 	dialogue = new_value
-	$ColorRect/Dialogue.bbcode_text = new_value
+	$ColorRect/MarginContainer/Dialogue.bbcode_text = new_value
 
 func answers_set(new_value):
 	answers = new_value
-	$ColorRect/Answers.bbcode_text = new_value
+	$ColorRect3/MarginContainer/Answers.bbcode_text = new_value
 
 func open():
 	get_tree().paused = true
 	popup()
-	$AnimationPlayer.playback_speed = 60.0 / dialogue.length()
-	$AnimationPlayer.play("ShowDialogue")
+	$ColorRect/MarginContainer/Dialogue/DialogueAnimation.playback_speed = 60.0 / dialogue.length()
+	$ColorRect/MarginContainer/Dialogue/DialogueAnimation.play("ShowDialogue")
+
+	$ColorRect3/MarginContainer/Answers/AnimationPlayer.playback_speed = 60.0 / answers.length()
+	$ColorRect3/MarginContainer/Answers/AnimationPlayer.play("ShowDialogue")
+
 
 func close():
 	get_tree().paused = false
@@ -48,3 +52,6 @@ func _input(event):
 		elif event.scancode == KEY_V:
 			set_process_input(false)
 			npc.talk('V')
+		elif event.scancode == KEY_B:
+			set_process_input(false)
+			npc.talk('B')
