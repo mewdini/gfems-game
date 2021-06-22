@@ -26,6 +26,8 @@ var current_check_viz
 var dialogue_popup
 var player
 var tool_tip
+var detection
+var collision
 
 var response_num = "0"
 var curr_data
@@ -36,6 +38,8 @@ func _get_configuration_warning():
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/DialogueLayer/DialoguePopup")
 	player = get_tree().root.get_node("Root/YSort/Player")
+	detection = get_node("NPCDetection")
+	collision = get_node("CollisionShape2D")
 	
 # state machine
 # check position, then update seen/velocity
@@ -94,6 +98,14 @@ func update_velocity(delta):
 			self.visible = current_check_viz
 	else:
 		self.visible = true
+
+	if self.visible:
+		collision.disabled = false
+		detection.disabled = false
+	else:
+		collision.disabled = true
+		detection.disabled = true
+		
 
 	velocity = velocity.normalized() * speed
 
