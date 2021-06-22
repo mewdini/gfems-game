@@ -29,7 +29,7 @@ func open():
 		$ColorRect3/MarginContainer/Answers/AnimationPlayer.playback_speed = 60.0 / answers.length()
 		$ColorRect3/MarginContainer/Answers/AnimationPlayer.play("ShowDialogue")
 	tool_tip.percent_visible = 0
-
+	
 func close():
 	get_tree().paused = false
 	tool_tip.percent_visible = 1
