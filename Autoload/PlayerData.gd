@@ -67,6 +67,6 @@ func load(save_data) -> void:
 func save() -> void:
 	var save_data = [char_name, sprite_name, currency, last_door_entered, inventory, conversations_held, current_scene]
 	var file = File.new()
-	file.open('save/state.json', file.WRITE)
+	file.open('user://state.json', file.WRITE)
 	file.store_line(to_json(save_data))
 	file.close()

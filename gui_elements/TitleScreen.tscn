@@ -67,13 +67,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="NewGameSceneButton" parent="Menu" instance=ExtResource( 2 )]
-margin_bottom = 96.0
 text = "New Game"
 next_scene_path = "res://gui_elements/CharacterSelect.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 4 )]
-margin_top = 100.0
-margin_bottom = 196.0
 
 [node name="Credits" parent="." instance=ExtResource( 2 )]
 anchor_left = 1.0
@@ -85,3 +82,4 @@ margin_top = -73.3706
 margin_right = -21.1779
 margin_bottom = -14.3706
 text = "Credits"
+next_scene_path = "res://gui_elements/TitleScreen.tscn"
