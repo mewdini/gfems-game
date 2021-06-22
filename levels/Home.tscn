@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://backgrounds/interiors/home interior wo coffee table and kitchen table.png" type="Texture" id=1]
 [ext_resource path="res://scripts/levels/Home.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://characters/NPCs/Spouse.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/npcs/spouse.gd" type="Script" id=8]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 2 )
@@ -46,6 +47,7 @@ transition_type = "down"
 position = Vector2( 248, 960 )
 collision_layer = 4
 collision_mask = 2147483648
+script = ExtResource( 8 )
 dialogue_file = "res://dialogue/spouse/spouse_intro.json"
 extra_dialogue = [ "res://dialogue/spouse/spouse_idle_before_you_gather_info.json", "res://dialogue/spouse/spouse_decision_once_you_have_gathered_information.json", "res://dialogue/spouse/spouse_idle_before_you_get_papers_and_tickets_to_leave.json", "res://dialogue/spouse/spouse_farewell.json" ]
 npc_name = "Linh"

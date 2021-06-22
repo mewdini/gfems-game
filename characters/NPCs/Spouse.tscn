@@ -4,4 +4,6 @@
 
 [node name="Neighbor" instance=ExtResource( 1 )]
 scale = Vector2( 1.75, 1.75 )
-checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
+
+[node name="AnimatedSprite" parent="." index="0"]
+frame = 2

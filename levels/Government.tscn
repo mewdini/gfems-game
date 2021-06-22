@@ -63,6 +63,7 @@ scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
 dialogue_file = "res://dialogue/govt_center/govt_worker_first.json"
 extra_dialogue = [ "res://dialogue/govt_center/govt_worker_return_pre_decision.json", "res://dialogue/govt_center/govt_worker_commit.json" ]
+npc_name = "Government Worker"
 
 [node name="Teleport" parent="." instance=ExtResource( 3 )]
 position = Vector2( 667.424, 1102.78 )

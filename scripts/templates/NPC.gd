@@ -141,13 +141,33 @@ func animation_manager(dir):
 			"run_down":
 				$AnimatedSprite.play("idle_down")
 	
+# logic to select conversation, returns an integer depending on how conversation
+# is selected. Each NPC can have a different funciton here
+func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) -> String:
+
+	if randomize_conversation:
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var conversation = rng.randi(0, len(extra_dialogue))
+		
+		# if conversation is the length of dialogue, then keep regular dialogue_file
+		# otherwise, set to one of the extra_dialogues
+		if conversation != len(extra_dialogue):
+			dialogue_file = extra_dialogue[conversation]
+	
+	if (npc_name in PlayerData.conversations_held) and (len(extra_dialogue) > 0):
+		# logic to select the dialogue file to load goes here.
+		dialogue_file = extra_dialogue[0]
+	
+	return dialogue_file	
+
 func talk(answer = "") -> void:
 	# load file and parse JSON
-	dialogue_file = select_conversation(dialogue_file, extra_dialogue, randomize_conversation)
+	var use_file = select_conversation(dialogue_file, extra_dialogue, randomize_conversation)
 	
-	dialogue = load_file(dialogue_file)
+	dialogue = load_file(use_file)
 		
-	filename = dialogue_file.split('/')[-1].split('.')[0]
+	filename = use_file.split('/')[-1].split('.')[0]
 	
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
@@ -205,7 +225,7 @@ func talk(answer = "") -> void:
 	var ans
 	
 	var answers = ""
-	print(dialogue_file)
+
 	if response_num in dialogue.lines:
 		curr_data = dialogue.lines[response_num]
 	else:
@@ -223,27 +243,6 @@ func talk(answer = "") -> void:
 # load file and parse JSON
 func load_file(file_path: String):
 	var file = File.new()
-	print(file_path)
 	assert (file.file_exists(file_path))
 	file.open(file_path, file.READ)
 	return parse_json(file.get_as_text())
-	
-# logic to select conversation, returns an integer depending on how conversation
-# is selected. Each NPC can have a different funciton here
-func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) -> String:
-
-	if randomize_conversation:
-		var rng = RandomNumberGenerator.new()
-		rng.randomize()
-		var conversation = rng.randi(0, len(extra_dialogue))
-		
-		# if conversation is the length of dialogue, then keep regular dialogue_file
-		# otherwise, set to one of the extra_dialogues
-		if conversation != len(extra_dialogue):
-			dialogue_file = extra_dialogue[conversation]
-	
-	if (npc_name in PlayerData.conversations_held) and (len(extra_dialogue) > 0):
-		# logic to select the dialogue file to load goes here.
-		dialogue_file = extra_dialogue[0]
-	
-	return dialogue_file
