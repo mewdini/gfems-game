@@ -13,10 +13,10 @@
                 },
                 {
                     "id": "3",
-                    "text": "Iâ€™m not sure."
+                    "text": "I'm not sure."
                 }
             ],
-            "text": "Looks like youâ€™ve heard a lot around town.  What are the best options for traveling for work?"
+            "text": "Looks like you've heard a lot around town.  What are the best options for traveling for work?"
         },
         "1": {
             "actor": "Linh",
@@ -26,7 +26,7 @@
                     "text": ""
                 }
             ],
-            "text": "Whatâ€™s the price point? â€¦ 1600?  We can afford that."
+            "text": "What's the price point? ... 1600?  We can afford that."
         },
         "11": {
             "actor": "Linh",
@@ -36,7 +36,7 @@
                     "text": ""
                 }
             ],
-            "text": "Thatâ€™s settled then."
+            "text": "That's settled then."
         },
         "12": {
             "actor": "Linh",
@@ -46,7 +46,7 @@
                     "text": ""
                 }
             ],
-            "text": "Thatâ€™s settled then."
+            "text": "That's settled then."
         },
         "13": {
             "actor": "Linh",
@@ -56,7 +56,7 @@
                     "text": ""
                 }
             ],
-            "text": "Thatâ€™s settled then."
+            "text": "That's settled then."
         },
         "14": {
             "actor": "Linh",
@@ -66,7 +66,7 @@
                     "text": ""
                 }
             ],
-            "text": "Thatâ€™s settled then."
+            "text": "That's settled then."
         },
         "15": {
             "actor": "Linh",
@@ -94,28 +94,28 @@
                     "text": ""
                 }
             ],
-            "text": "Taiwan.  You do speak some Mandarin.  How much does it cost to get paperwork to work there?  â€¦ 1500.  Thatâ€™s still within our budget.  Great!"
+            "text": "Taiwan.  You do speak some Mandarin.  How much does it cost to get paperwork to work there?  ... 1500.  That's still within our budget.  Great!"
         },
         "17": {
             "actor": "Linh",
             "next": [
                 {
                     "id": "27",
-                    "text": "Maybe I should go to Taiwan insteadâ€¦"
+                    "text": "Maybe I should go to Taiwan instead..."
                 },
                 {
                     "id": "28",
                     "text": "Could we borrow some money?"
                 }
             ],
-            "text": "Japan.  Sure, how much does it cost to travel there?  â€¦ 3000?  Thatâ€™s more than we can pay right now since we also have the visa fee."
+            "text": "Japan.  Sure, how much does it cost to travel there?  ... 3000?  That's more than we can pay right now since we also have the visa fee."
         },
         "18": {
             "actor": "Linh",
             "next": [
                 {
                     "id": "23",
-                    "text": "Taiwan.  Itâ€™s 1500 while Japan is 3000."
+                    "text": "Taiwan.  It's 1500 while Japan is 3000."
                 }
             ],
             "text": "Which is more affordable?"
@@ -125,7 +125,7 @@
             "next": [
                 {
                     "id": "20",
-                    "text": "Yes.  Iâ€™ll head to get my papers now!"
+                    "text": "Yes.  I'll head to get my papers now!"
                 },
                 {
                     "id": "21",
@@ -142,7 +142,7 @@
                     "text": ""
                 }
             ],
-            "text": "Whatâ€™s the price point? â€¦ 1500?  We can afford that."
+            "text": "What's the price point? ... 1500?  We can afford that."
         },
         "20": {
             "actor": "Linh",
@@ -179,7 +179,7 @@
             "next": [
                 {
                     "id": "24",
-                    "text": "I agree.  Iâ€™ll go to Taiwan.  Iâ€™ll head to get my papers now!"
+                    "text": "I agree.  I'll go to Taiwan.  I'll head to get my papers now!"
                 },
                 {
                     "id": "25",
@@ -223,28 +223,28 @@
             "next": [
                 {
                     "id": "29",
-                    "text": "Taiwan it is.  Iâ€™ll head to get my papers now!"
+                    "text": "Taiwan it is.  I'll head to get my papers now!"
                 },
                 {
                     "id": "28",
-                    "text": "I still think Japan would be idealâ€¦ Thanh seemed to think it might be better for working than Taiwan.  Could we borrow some money?"
+                    "text": "I still think Japan would be ideal... Thanh seemed to think it might be better for working than Taiwan.  Could we borrow some money?"
                 }
             ],
-            "text": "You do speak some Mandarin.  Does it cost less?  â€¦ 1500?  It would be more cost effective for us."
+            "text": "You do speak some Mandarin.  Does it cost less?  ... 1500?  It would be more cost effective for us."
         },
         "28": {
             "actor": "Linh",
             "next": [
                 {
                     "id": "32",
-                    "text": "Maybe it isnâ€™t."
+                    "text": "Maybe it isn't."
                 },
                 {
                     "id": "33",
-                    "text": "Iâ€™d like to ask Hien and see what they think."
+                    "text": "I'd like to ask Hien and see what they think."
                 }
             ],
-            "text": "Maybe from your cousin Hien.  Theyâ€™re very generousâ€¦  I just donâ€™t know if having to get a loan from them is the best option."
+            "text": "Maybe from your cousin Hien.  They're very generous...  I just don't know if having to get a loan from them is the best option."
         },
         "29": {
             "actor": "Linh",
@@ -261,14 +261,14 @@
             "next": [
                 {
                     "id": "6",
-                    "text": "Duc didnâ€™t seem to have a high opinion of the government center."
+                    "text": "Duc didn't seem to have a high opinion of the government center."
                 },
                 {
                     "id": "7",
                     "text": "Thanh had some hesitations about private brokers."
                 }
             ],
-            "text": "Letâ€™s compare the prices.  Letâ€™s seeâ€¦ 1500 for a government visa and 1600 for a private broker to do your paperwork.  The government visa is slightly cheaper, but both are in our budget.  Did you hear anything about either system?"
+            "text": "Let's compare the prices.  Let's see... 1500 for a government visa and 1600 for a private broker to do your paperwork.  The government visa is slightly cheaper, but both are in our budget.  Did you hear anything about either system?"
         },
         "30": {
             "actor": "",
@@ -285,7 +285,7 @@
             "next": [
                 {
                     "id": "34",
-                    "text": "Yes, Taiwan.  Iâ€™ll head to get my papers now!"
+                    "text": "Yes, Taiwan.  I'll head to get my papers now!"
                 },
                 {
                     "id": "33",
@@ -302,7 +302,7 @@
                     "text": "Will do."
                 }
             ],
-            "text": "Alright.  They live southeast of the brokers, donâ€™t they?  Run over there and see."
+            "text": "Alright.  They live southeast of the brokers, don't they?  Run over there and see."
         },
         "34": {
             "actor": "Linh",
@@ -342,17 +342,17 @@
                     "text": "Thanh had some hesitations about private brokers."
                 }
             ],
-            "text": "Thatâ€™sâ€¦ troubling.  What about the private brokers?"
+            "text": "That's... troubling.  What about the private brokers?"
         },
         "7": {
             "actor": "Linh",
             "next": [
                 {
                     "id": "9",
-                    "text": "Duc didnâ€™t seem to have a high opinion of the government center."
+                    "text": "Duc didn't seem to have a high opinion of the government center."
                 }
             ],
-            "text": "Thatâ€™sâ€¦ troubling.  What about the government center?"
+            "text": "That's... troubling.  What about the government center?"
         },
         "8": {
             "actor": "Linh",
@@ -366,7 +366,7 @@
                     "text": "Private broker."
                 }
             ],
-            "text": "Hm.  Well, thereâ€™s no perfect option.  Iâ€™m okay with you pursuing either of them.  Which do you prefer?"
+            "text": "Hm.  Well, there's no perfect option.  I'm okay with you pursuing either of them.  Which do you prefer?"
         },
         "9": {
             "actor": "Linh",
@@ -380,7 +380,7 @@
                     "text": "Private broker."
                 }
             ],
-            "text": "Hm.  Well, thereâ€™s no perfect option.  Iâ€™m okay with you pursuing either of them.  Which do you prefer?"
+            "text": "Hm.  Well, there's no perfect option.  I'm okay with you pursuing either of them.  Which do you prefer?"
         }
     },
     "start": "0"

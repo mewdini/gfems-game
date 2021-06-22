@@ -5,10 +5,10 @@
             "next": [
                 {
                     "id": "1",
-                    "text": "Hi Thanh.  Things are going well.  Iâ€™m planning to start working abroad soon."
+                    "text": "Hi Thanh.  Things are going well.  I'm planning to start working abroad soon."
                 }
             ],
-            "text": "Hey %player%!  Howâ€™s it going?"
+            "text": "Hey %player%!  How's it going?"
         },
         "1": {
             "actor": "Thanh",
@@ -32,7 +32,7 @@
                     "text": "Can I ask you another question?"
                 }
             ],
-            "text": "Thatâ€™s what my cousin said.  Maybe it was just some random thing, butâ€¦ well, it made me more wary.  Still, it is cheaper and easier to get a job there than Japan by a long shot."
+            "text": "That's what my cousin said.  Maybe it was just some random thing, but... well, it made me more wary.  Still, it is cheaper and easier to get a job there than Japan by a long shot."
         },
         "11": {
             "actor": "Thanh",
@@ -66,7 +66,7 @@
                     "text": "Thanks.  I'll be going now."
                 }
             ],
-            "text": "They didnâ€™t cause her much trouble.  Pretty reasonable with fees."
+            "text": "They didn't cause her much trouble.  Pretty reasonable with fees."
         },
         "15": {
             "actor": "Thanh",
@@ -90,7 +90,7 @@
                     "text": "Thanks.  I'll be going now."
                 }
             ],
-            "text": "Thatâ€™s how it is, sometimes.  In the end, she seemed glad she went, though."
+            "text": "That's how it is, sometimes.  In the end, she seemed glad she went, though."
         },
         "17": {
             "actor": "Thanh",
@@ -135,20 +135,20 @@
             "next": [
                 {
                     "id": "16",
-                    "text": "Thatâ€™s frustrating."
+                    "text": "That's frustrating."
                 }
             ],
-            "text": "From what I recall, her employers would occasionally hold some of her overtime pay and werenâ€™t very pleasant to deal with.  But she was able to get what she was owed with some arguing."
+            "text": "From what I recall, her employers would occasionally hold some of her overtime pay and weren't very pleasant to deal with.  But she was able to get what she was owed with some arguing."
         },
         "7": {
             "actor": "Thanh",
             "next": [
                 {
                     "id": "8",
-                    "text": "I didnâ€™t know that."
+                    "text": "I didn't know that."
                 }
             ],
-            "text": "There are more requirements, too.  Thereâ€™s a lower threshold of skill levels for Taiwanese jobs, generally."
+            "text": "There are more requirements, too.  There's a lower threshold of skill levels for Taiwanese jobs, generally."
         },
         "8": {
             "actor": "Thanh",
@@ -158,7 +158,7 @@
                     "text": "Did she borrow a lot?"
                 }
             ],
-            "text": "Yeah.  My sister had a trickier time finding work and dealing with the price.  Sheâ€™s a bit younger than us, less commitments, so she could take her time to do it.  She had to borrow some money."
+            "text": "Yeah.  My sister had a trickier time finding work and dealing with the price.  She's a bit younger than us, less commitments, so she could take her time to do it.  She had to borrow some money."
         },
         "9": {
             "actor": "Thanh",
@@ -168,7 +168,7 @@
                     "text": "What?  Really?"
                 }
             ],
-            "text": "A fair bit.  I think it was worth it, though.  Iâ€™ve heard that the work can be a lot rougher in Taiwan.  I had a cousin who went there and apparently got their identification papers taken while they were working."
+            "text": "A fair bit.  I think it was worth it, though.  I've heard that the work can be a lot rougher in Taiwan.  I had a cousin who went there and apparently got their identification papers taken while they were working."
         }
     },
     "start": "0"
