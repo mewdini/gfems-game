@@ -14,3 +14,6 @@ data_*/
 
 # OS Specific Files
 .DS_Store
+
+# Ignore save file
+save/state.json
