@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://backgrounds/interiors/broker 03 interior wo table and chair.png" type="Texture" id=1]
 [ext_resource path="res://backgrounds/Table.tscn" type="PackedScene" id=2]
 [ext_resource path="res://backgrounds/Stool.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/NPCs/Broker3NPC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=7]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=8]
@@ -44,7 +46,19 @@ position = Vector2( 520, -48 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -8, -64 )
+detection_range = 100
 start_animation = "idle_up"
+
+[node name="Dahn" parent="YSort" groups=[
+"NPCs",
+] instance=ExtResource( 4 )]
+position = Vector2( 608, -176 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/brokers/broker_3_danh_first.json"
+npc_name = "Dahn"
 
 [node name="Stool2" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 408, -200 )
+
+[node name="DialogueLayer" parent="." instance=ExtResource( 5 )]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=3]
 [ext_resource path="res://backgrounds/ChairAndDesk.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/NPCs/Broker2NPC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://backgrounds/interiors/broker 02 interior wo desk and front chair.png" type="Texture" id=8]
 
 [node name="Root" type="Node2D"]
@@ -38,5 +40,17 @@ transition_type = "down"
 position = Vector2( 688, 864 )
 start_animation = "idle_up"
 
+[node name="Ngai" parent="YSort" groups=[
+"NPCs",
+] instance=ExtResource( 6 )]
+position = Vector2( 1152, 640 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/brokers/broker_2_ngai_first.json"
+extra_dialogue = [ "res://dialogue/brokers/broker_2_ngai_commit.json", "res://dialogue/brokers/broker_2_ngai_talked_to_at_least_1_other_broker.json" ]
+npc_name = "Ngai"
+
 [node name="StaticBody2D" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 888, 740 )
+
+[node name="DialogueLayer" parent="." instance=ExtResource( 5 )]

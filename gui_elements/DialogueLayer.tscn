@@ -36,7 +36,6 @@ tracks/0/keys = {
 
 [node name="DialoguePopup" type="Popup" parent="."]
 pause_mode = 2
-visible = true
 anchor_left = 0.0205078
 anchor_top = 0.723611
 anchor_right = 0.980469
@@ -148,5 +147,6 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialoguePopup/ColorRect3/MarginContainer/Answers"]
 anims/ShowDialogue = SubResource( 2 )
+
 [connection signal="animation_finished" from="DialoguePopup/ColorRect/MarginContainer/Dialogue/DialogueAnimation" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="DialoguePopup/ColorRect3/MarginContainer/Answers/AnimationPlayer" to="DialoguePopup" method="_on_AnimationPlayer_animation_finished"]

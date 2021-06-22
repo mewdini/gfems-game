@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://backgrounds/interiors/broker 01 interior wo desk.png" type="Texture" id=1]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=4]
 [ext_resource path="res://backgrounds/Broker1Desk.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/NPCs/Broker1NPC.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Root" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 880, 656 )
@@ -36,7 +38,21 @@ transition_type = "down"
 
 [node name="StaticBody2D" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 840, 736 )
+collision_layer = 8
+
+[node name="Broker1Trai" parent="YSort" groups=[
+"NPCs",
+] instance=ExtResource( 6 )]
+position = Vector2( 760, 648 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/brokers/broker_1_trai_first.json"
+extra_dialogue = [ "res://dialogue/brokers/broker_1_trai_talked_to_at_least_1_other_broker.json", "res://dialogue/brokers/broker_1_trai_commit.json" ]
+npc_name = "Trai"
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 688, 864 )
+detection_range = 60
 start_animation = "idle_up"
+
+[node name="DialogueLayer" parent="." instance=ExtResource( 7 )]

@@ -4,11 +4,13 @@ class_name NPC
 
 export (int) var speed = 300
 export (String, FILE) var dialogue_file
+export (Array, String, FILE) var extra_dialogue
 export (String) var npc_name
+export (bool) var randomize_conversation = false
 
 # checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
 export (bool) var moves = false
-export (Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 0]]
+export (Array, Array, int) var checkpoints = [[3075, 2304, 0, 1], [1839, 2304, 0, 1], [1839, 2117, 3, 0], [1839,2304, 0, 1], [3075,2304, 0, 1], [3075,2174, 3, 0]]
 
 
 # pathfinding variables
@@ -28,6 +30,7 @@ var player
 var tool_tip
 var detection
 var collision
+var dialogue
 
 var response_num = "0"
 var curr_data
@@ -140,7 +143,24 @@ func animation_manager(dir):
 	
 func talk(answer = "") -> void:
 	# load file and parse JSON
-	var dialogue = load_file(dialogue_file)
+	
+	# get random conversation of specified
+	if randomize_conversation:
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var conversation = rng.randi(0, len(extra_dialogue))
+		
+		# if conversation is the length of dialogue, then keep regular dialogue_file
+		# otherwise, set to one of the extra_dialogues
+		if conversation != len(extra_dialogue):
+			dialogue_file = extra_dialogue[conversation]
+	
+	if (npc_name in PlayerData.conversations_held) and (len(extra_dialogue) > 0):
+		# logic to select the dialogue file to load goes here.
+		dialogue_file = extra_dialogue[0]
+			
+	dialogue = load_file(dialogue_file)
+		
 	filename = dialogue_file.split('/')[-1].split('.')[0]
 	
 	# Set dialoguePopup npc to neighbor
@@ -186,7 +206,8 @@ func talk(answer = "") -> void:
 		# Keep track of the number of interactions between player and NPCs. Set
 		# to add when the conversation ends.
 		if npc_name in PlayerData.conversations_held:
-			PlayerData.conversations_held[npc_name].append(filename)
+			if !(filename in PlayerData.conversations_held[npc_name]):
+				PlayerData.conversations_held[npc_name].append(filename)
 		else:
 			PlayerData.conversations_held[npc_name] = [filename]
 		return

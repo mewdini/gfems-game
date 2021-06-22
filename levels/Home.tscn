@@ -37,8 +37,6 @@ position = Vector2( 936, 1192 )
 next_scene = "res://levels/town.tscn"
 transition_name = "home_to_town"
 transition_type = "down"
-size_x = 0
-size_y = 0
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -49,6 +47,7 @@ position = Vector2( 248, 960 )
 collision_layer = 4
 collision_mask = 2147483648
 dialogue_file = "res://dialogue/spouse/spouse_intro.json"
+extra_dialogue = [ "res://dialogue/spouse/spouse_idle_before_you_gather_info.json", "res://dialogue/spouse/spouse_decision_once_you_have_gathered_information.json", "res://dialogue/spouse/spouse_idle_before_you_get_papers_and_tickets_to_leave.json", "res://dialogue/spouse/spouse_farewell.json" ]
 npc_name = "Linh"
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
