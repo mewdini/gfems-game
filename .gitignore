@@ -16,4 +16,4 @@ data_*/
 .DS_Store
 
 # Ignore save file
-save/state.json
+state.json
