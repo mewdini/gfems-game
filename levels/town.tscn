@@ -137,9 +137,10 @@ checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ]
 [node name="Neighbor3" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1100, 3140 )
+position = Vector2( 1100, 3107.5 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
+speed = 150
 dialogue_file = "res://dialogue/neighbor.json"
 npc_name = "Neighbor 3"
 moves = true
