@@ -8,7 +8,7 @@
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/NPCs/Neighbor3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scripts/town/town.gd" type="Script" id=9]
+[ext_resource path="res://scripts/levels/town.gd" type="Script" id=9]
 
 [node name="Root" type="Node2D"]
 position = Vector2( 0, -8 )
@@ -119,32 +119,25 @@ polygon = PoolVector2Array( 2557.16, 4154.64, 2557.16, 3828.37, 2873.34, 3671.96
 [node name="Neighbor" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 1839, 2117 )
+position = Vector2( 2264.11, 2304 )
 collision_layer = 4
-npc_name = "Neighbor"
 moves = true
-checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
 [node name="Duc" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 5 )]
 position = Vector2( 1542.23, 1325.18 )
 dialogue_file = "res://dialogue/friend.json"
-npc_name = "Neighbor 2"
-checkpoints = [ [ 3075, 2304, 0, 1 ], [ 1839, 2304, 0, 1 ], [ 1839, 2117, 3, 0 ], [ 1839, 2304, 0, 1 ], [ 3075, 2304, 0, 1 ], [ 3075, 2174, 3, 0 ] ]
 
 [node name="Neighbor3" parent="YSort" groups=[
 "NPCs",
 ] instance=ExtResource( 8 )]
-position = Vector2( 1100, 3107.5 )
+position = Vector2( 1175.61, 2404.43 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
-speed = 150
 dialogue_file = "res://dialogue/neighbor.json"
-npc_name = "Neighbor 3"
 moves = true
-checkpoints = [ [ 1100, 2000, 0, 1 ], [ 1100, 4000, 0, 1 ] ]
+checkpoints = [ [ 1050, 1900, 2, 1 ], [ 1050, 4200, 2, 1 ] ]
 
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 717.762, 1325.18 )
@@ -168,14 +161,17 @@ size_y = 34
 [node name="Broker1Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 528, 3481 )
 next_scene = "res://levels/Broker1.tscn"
+transition_name = "town_to_broker_1"
 
 [node name="Broker2Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 520, 4280 )
 next_scene = "res://levels/Broker2.tscn"
+transition_name = "town_to_broker_2"
 
 [node name="Broker3Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 1872, 3800 )
 next_scene = "res://levels/Broker3.tscn"
+transition_name = "town_to_broker_3"
 
 [node name="BoatTeleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 5129.04, 2187.47 )

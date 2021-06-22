@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://backgrounds/interiors/gov't interior.png" type="Texture" id=1]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://characters/NPCs/PleasedCitizen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://characters/NPCs/ElderlyCitizen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scripts/town/NPC.gd" type="Script" id=11]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 4 )
@@ -35,21 +36,19 @@ position = Vector2( 6.10352e-05, 0.00012207 )
 position = Vector2( 971.054, 920.476 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
-dialogue_file = "res://dialogue/govt_center/npc_elderly_citizen.json"
+script = ExtResource( 11 )
 
 [node name="ConfusedCitizen" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 346.526, 425.249 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
-dialogue_file = "res://dialogue/govt_center/npc_confused_citizen.json"
-npc_name = "Confused"
+script = ExtResource( 11 )
 
 [node name="PleasedCitizen" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1027.95, 395.51 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
-dialogue_file = "res://dialogue/govt_center/npc_pleased_citizen.json"
-npc_name = "Pleased"
+script = ExtResource( 11 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 669.089, 1038.7 )
@@ -60,9 +59,7 @@ start_animation = "idle_up"
 position = Vector2( 192.085, 904.627 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
-dialogue_file = "res://dialogue/govt_center/govt_worker_first.json"
-extra_dialogue = [ "res://dialogue/govt_center/govt_worker_return_pre_decision.json", "res://dialogue/govt_center/govt_worker_commit.json" ]
-npc_name = "GovernmentWorker"
+script = ExtResource( 11 )
 
 [node name="Teleport" parent="." instance=ExtResource( 3 )]
 position = Vector2( 667.424, 1102.78 )
