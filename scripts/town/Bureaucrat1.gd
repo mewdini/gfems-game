@@ -10,8 +10,8 @@ var inside_timer = 0
 var dialogue_popup
 var player
 
-var dialogue_state = "0"
-var state_data
+var response_num = "0"
+var curr_data
 
 func _ready():
 	dialogue_popup = get_tree().root.get_node("Root/CanvasLayer/DialoguePopup")
@@ -79,21 +79,21 @@ func talk(answer = ""):
 
 	# Get state of dialogue
 	if answer != "":
-		var state_next = state_data.next
+		var next_data = curr_data.next
 		if answer == 'Z':
-			dialogue_state = state_next[0].id
-		elif answer == 'X' and len(state_next) > 1:
-			dialogue_state = state_next[1].id
-		elif answer == 'C' and len(state_next) > 2:
-			dialogue_state = state_next[2].id
-		elif answer == 'V' and len(state_next) > 3:
-			dialogue_state = state_next[3].id
+			response_num = next_data[0].id
+		elif answer == 'X' and len(next_data) > 1:
+			response_num = next_data[1].id
+		elif answer == 'C' and len(next_data) > 2:
+			response_num = next_data[2].id
+		elif answer == 'V' and len(next_data) > 3:
+			response_num = next_data[3].id
 		else:
-			dialogue_state = dialogue.start
+			response_num = dialogue.start
 
 	# Check if done
-	if dialogue_state == "-1":
-		dialogue_state = "0"
+	if response_num == "-1":
+		response_num = "0"
 		dialogue_popup.close()
 		return
 
@@ -104,11 +104,11 @@ func talk(answer = ""):
 	var ans
 	
 	var answers = ""
-	state_data = dialogue.lines[dialogue_state]
-	dialogue_popup.npc_name = state_data.actor.replace("%player%", player.player_name)
-	dialogue_popup.dialogue = state_data.text.replace("%player%", player.player_name)
-	for i in range(len(state_data.next)):
-		ans = state_data.next[i]
+	curr_data = dialogue.lines[response_num]
+	dialogue_popup.npc_name = curr_data.actor.replace("%player%", player.player_name)
+	dialogue_popup.dialogue = curr_data.text.replace("%player%", player.player_name)
+	for i in range(len(curr_data.next)):
+		ans = curr_data.next[i]
 		answers += '[' + buttons[i] + "] " + ans.text + "  "
 	dialogue_popup.answers = "[center]%s[/center]" % answers
 	dialogue_popup.answers = dialogue_popup.answers.replace("%player%", player.player_name)

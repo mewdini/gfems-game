@@ -26,8 +26,8 @@ var current_check_viz
 var dialogue_popup
 var player
 
-var dialogue_state = "0"
-var state_data
+var response_num = "0"
+var curr_data
 
 func _get_configuration_warning():
 	return "dialogue_file must be set" if dialogue_file == "" else ""
@@ -125,10 +125,10 @@ func animation_manager(dir):
 			"run_down":
 				$AnimatedSprite.play("idle_down")
 	
-func talk(answer = ""):
+func talk(answer = "") -> void:
 	# load file and parse JSON
 	var dialogue = load_file(dialogue_file)
-	
+	filename = dialogue_file.split('/')[-1].split('.')[0]
 	
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
@@ -148,35 +148,34 @@ func talk(answer = ""):
 			$AnimatedSprite.play("idle_up")
 		elif player_to_npc_y_delta > 0:
 			$AnimatedSprite.play("idle_down")
-	# Get state of dialogue
+
+	# Get player's dialogue choice
 	if answer != "":
-		var state_next = state_data.next
+		var next_data = curr_data.next
 		if answer == 'Z':
-			dialogue_state = state_next[0].id
-		elif answer == 'X' and len(state_next) > 1:
-			dialogue_state = state_next[1].id
-		elif answer == 'C' and len(state_next) > 2:
-			dialogue_state = state_next[2].id
-		elif answer == 'V' and len(state_next) > 3:
-			dialogue_state = state_next[3].id
+			response_num = next_data[0].id
+		elif answer == 'X' and len(next_data) > 1:
+			response_num = next_data[1].id
+		elif answer == 'C' and len(next_data) > 2:
+			response_num = next_data[2].id
+		elif answer == 'V' and len(next_data) > 3:
+			response_num = next_data[3].id
 		elif answer == 'B':
-			dialogue_state = "-1"
+			response_num = "-1"
 		else:
-			dialogue_state = dialogue.start
-		
+			response_num = dialogue.start
+
 	# Check if done
-	if dialogue_state == "-1":
-		dialogue_state = "0"
+	if response_num == "-1":
+		response_num = "0"
 		dialogue_popup.close()
 		# Keep track of the number of interactions between player and NPCs. Set
 		# to add when the conversation ends.
 		if npc_name in PlayerData.conversations_held:
-			PlayerData.conversations_held[npc_name] += 1
+			PlayerData.conversations_held[npc_name].append(filename)
 		else:
-			PlayerData.conversations_held[npc_name] = 1
+			PlayerData.conversations_held[npc_name] = [filename]
 		return
-	
-	
 	
 	# Set possible buttons
 	# TODO don't hardcode this here
@@ -185,11 +184,11 @@ func talk(answer = ""):
 	var ans
 	
 	var answers = ""
-	state_data = dialogue.lines[dialogue_state]
-	dialogue_popup.npc_name = state_data.actor.replace("%player%", player.player_name)
-	dialogue_popup.dialogue = state_data.text.replace("%player%", player.player_name)
-	for i in range(len(state_data.next)):
-		ans = state_data.next[i]
+	curr_data = dialogue.lines[response_num]
+	dialogue_popup.npc_name = curr_data.actor.replace("%player%", player.player_name)
+	dialogue_popup.dialogue = curr_data.text.replace("%player%", player.player_name)
+	for i in range(len(curr_data.next)):
+		ans = curr_data.next[i]
 		answers += '[' + buttons[i] + "] " + ans.text + "  "
 	dialogue_popup.answers = "[center]%s[/center]" % answers
 	dialogue_popup.answers = dialogue_popup.answers.replace("%player%", player.player_name)
