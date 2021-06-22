@@ -50,9 +50,13 @@ func teleport(player_position: Vector2) -> void:
 	anim_player.play("fade_in")
 	PlayerData.last_door_entered = transition_name
 	PlayerData.last_location[get_tree().current_scene.filename.to_lower()] = player_position
+	PlayerData.current_scene = next_scene
+	PlayerData.save()
+	print('saving data')
 	if transition_type == "down":
 		PlayerData.start_animation = "idle_down"
 	elif transition_type == "up":
 		PlayerData.start_animation = "idle_up"
 	yield(anim_player, "animation_finished")
 	get_tree().change_scene(next_scene)
+	
