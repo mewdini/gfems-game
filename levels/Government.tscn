@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://backgrounds/interiors/gov't interior.png" type="Texture" id=1]
 [ext_resource path="res://templates/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/interiors/Government.gd" type="Script" id=4]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/NPCs/GovtWorker.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/NPCs/ConfusedCitizen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/NPCs/PleasedCitizen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/NPCs/ElderlyCitizen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=10]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 4 )
@@ -26,9 +31,38 @@ polygon = PoolVector2Array( -132, 260, -344, 260, -344, -288, 324, -288, 324, 26
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 6.10352e-05, 0.00012207 )
 
+[node name="ElderlyCitizen" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 971.054, 920.476 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/govt_center/npc_elderly_citizen.json"
+
+[node name="ConfusedCitizen" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 346.526, 425.249 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/govt_center/npc_confused_citizen.json"
+npc_name = "Confused"
+
+[node name="PleasedCitizen" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1027.95, 395.51 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/govt_center/npc_pleased_citizen.json"
+npc_name = "Pleased"
+
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 669.089, 1038.7 )
+detection_range = 100
 start_animation = "idle_up"
+
+[node name="GovtWorker" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 192.085, 904.627 )
+scale = Vector2( 1.75, 1.75 )
+collision_layer = 4
+dialogue_file = "res://dialogue/govt_center/govt_worker_first.json"
+extra_dialogue = [ "res://dialogue/govt_center/govt_worker_return_pre_decision.json", "res://dialogue/govt_center/govt_worker_commit.json" ]
+npc_name = "GovernmentWorker"
 
 [node name="Teleport" parent="." instance=ExtResource( 3 )]
 position = Vector2( 667.424, 1102.78 )
@@ -44,3 +78,5 @@ layer = 100
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 5 )]
 anchor_left = -0.00195312
 anchor_right = 0.998047
+
+[node name="DialogueLayer" parent="." instance=ExtResource( 10 )]

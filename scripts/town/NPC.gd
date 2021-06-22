@@ -219,6 +219,7 @@ func talk(answer = "") -> void:
 	var ans
 	
 	var answers = ""
+	print(dialogue_file)
 	curr_data = dialogue.lines[response_num]
 	dialogue_popup.npc_name = curr_data.actor.replace("%player%", player.player_name)
 	dialogue_popup.dialogue = curr_data.text.replace("%player%", player.player_name)
