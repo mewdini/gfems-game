@@ -1,5 +1,15 @@
 {
     "lines": {
+        "0": {
+            "actor": "Govt Worker",
+            "next": [
+                {
+                    "id": "1",
+                    "text": ""
+                }
+            ],
+            "text": "Welcome to the Government Center!"
+        },
         "1": {
             "actor": "Govt Worker",
             "next": [
@@ -8,7 +18,7 @@
                     "text": "I'm planning to work abroad, and I wanted to hear more about traveling through a government broker."
                 }
             ],
-            "text": "Good morning.  How can I help you today?"
+            "text": "How can I help you today?"
         },
         "10": {
             "actor": "Govt Worker",

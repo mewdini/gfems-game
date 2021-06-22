@@ -220,7 +220,11 @@ func talk(answer = "") -> void:
 	
 	var answers = ""
 	print(dialogue_file)
-	curr_data = dialogue.lines[response_num]
+	if response_num in dialogue.lines:
+		curr_data = dialogue.lines[response_num]
+	else:
+		print("no such response number in file ", dialogue_file, " ", response_num)
+		
 	dialogue_popup.npc_name = curr_data.actor.replace("%player%", player.player_name)
 	dialogue_popup.dialogue = curr_data.text.replace("%player%", player.player_name)
 	for i in range(len(curr_data.next)):
