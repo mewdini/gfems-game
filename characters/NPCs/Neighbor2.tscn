@@ -9,3 +9,4 @@ collision_layer = 4
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = ExtResource( 2 )
+frame = 4
