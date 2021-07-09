@@ -54,4 +54,4 @@ margin_top = -72.3931
 margin_right = -9.82153
 margin_bottom = -13.3931
 text = "Title Screen"
-next_scene_path = "res://screens/TitleScreen.tscn"
+next_scene_path = "res://gui_elements/TitleScreen.tscn"

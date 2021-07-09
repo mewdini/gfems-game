@@ -82,4 +82,4 @@ margin_top = -73.3706
 margin_right = -21.1779
 margin_bottom = -14.3706
 text = "Credits"
-next_scene_path = "res://gui_elements/TitleScreen.tscn"
+next_scene_path = "res://gui_elements/Credits.tscn"
