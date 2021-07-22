@@ -27,10 +27,14 @@ __meta__ = {
 }
 
 [node name="NameLabel" type="Label" parent="."]
-margin_left = 296.534
-margin_top = 60.9458
-margin_right = 506.534
-margin_bottom = 97.9458
+anchor_left = 0.488
+anchor_top = 0.5
+anchor_right = 0.488
+anchor_bottom = 0.5
+margin_left = -238.456
+margin_top = -287.715
+margin_right = -0.45575
+margin_bottom = -247.715
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 1 )
 text = "Character Name:"
@@ -41,35 +45,47 @@ __meta__ = {
 }
 
 [node name="NameLineEdit" type="LineEdit" parent="."]
-margin_left = 182.851
-margin_top = 183.67
-margin_right = 392.851
-margin_bottom = 207.67
+anchor_left = 0.486
+anchor_top = 0.5
+anchor_right = 0.486
+anchor_bottom = 0.5
+margin_left = -314.813
+margin_top = -176.33
+margin_right = -104.813
+margin_bottom = -152.33
 rect_scale = Vector2( 3, 3 )
 align = 1
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="SpriteLabel" type="Label" parent="."]
-margin_left = 295.195
-margin_top = 294.027
-margin_right = 505.195
-margin_bottom = 331.027
+anchor_left = 0.5
+anchor_top = 0.519
+anchor_right = 0.5
+anchor_bottom = 0.519
+margin_left = -216.805
+margin_top = -79.653
+margin_right = -6.80499
+margin_bottom = -42.653
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 1 )
 text = "Sprite:"
 align = 1
 __meta__ = {
-"_edit_use_anchors_": false,
+"_edit_use_anchors_": true,
 "_editor_description_": ""
 }
 
 [node name="SpriteSelection" type="HBoxContainer" parent="."]
-margin_left = 286.679
-margin_top = 348.986
-margin_right = 357.679
-margin_bottom = 412.986
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.321
+margin_top = -11.014
+margin_right = -154.321
+margin_bottom = 52.986
 alignment = 1
 __meta__ = {
 "_edit_group_": true,
@@ -93,10 +109,14 @@ region_rect = Rect2( 142.703, 25, 50.4019, 75 )
 script = ExtResource( 5 )
 
 [node name="ContButton" type="Button" parent="."]
-margin_left = 408.461
-margin_top = 595.339
-margin_right = 477.461
-margin_bottom = 615.339
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.539
+margin_top = 235.339
+margin_right = -34.539
+margin_bottom = 255.339
 rect_scale = Vector2( 3, 3 )
 text = "Continue"
 script = ExtResource( 4 )

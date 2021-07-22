@@ -10,7 +10,7 @@ margin_top = 163.925
 margin_right = 226.0
 margin_bottom = 200.925
 custom_fonts/font = ExtResource( 1 )
-text = "Knowledge Transfer"
+text = "Following the Bell"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
