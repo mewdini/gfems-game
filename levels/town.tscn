@@ -155,15 +155,11 @@ position = Vector2( 717.762, 1325.18 )
 position = Vector2( 717.762, 1220.54 )
 next_scene = "res://levels/Home.tscn"
 transition_name = "town_to_home"
-transition_type = "up"
-size_x = 0
-size_y = 0
 
 [node name="GovtTeleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 3272, 2104 )
 next_scene = "res://levels/Government.tscn"
 transition_name = "town_to_gov"
-transition_type = "up"
 size_x = 250
 size_y = 34
 
@@ -171,38 +167,23 @@ size_y = 34
 position = Vector2( 528, 3481 )
 next_scene = "res://levels/Broker1.tscn"
 transition_name = "town_to_broker_1"
-transition_type = "up"
-size_x = 0
-size_y = 0
 
 [node name="Broker2Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 520, 4280 )
 next_scene = "res://levels/Broker2.tscn"
 transition_name = "town_to_broker_2"
-transition_type = "up"
-size_x = 0
-size_y = 0
 
 [node name="Broker3Teleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 1872, 3800 )
 next_scene = "res://levels/Broker3.tscn"
 transition_name = "town_to_broker_3"
-transition_type = "up"
-size_x = 0
-size_y = 0
 
 [node name="BoatTeleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 5129.04, 2187.47 )
 next_scene = "res://levels/Boat.tscn"
 transition_name = "town_to_boat"
-transition_type = "up"
-size_x = 0
-size_y = 0
 
 [node name="PlaneTeleport" parent="Teleports" instance=ExtResource( 6 )]
 position = Vector2( 4052.72, 917.158 )
 next_scene = "res://levels/Planes.tscn"
 transition_name = "town_to_plane"
-transition_type = "up"
-size_x = 0
-size_y = 0

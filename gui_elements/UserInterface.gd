@@ -17,7 +17,7 @@ func _unhandled_input(event: InputEvent):
 		scene_tree.set_input_as_handled()
 		
 func update_interface():
-	 currency.text = "Currency: %s" % PlayerData.currency
+	 currency.text = "Currency: %s₫" % PlayerData.currency
 
 func set_paused(value: bool):
 	paused = value
