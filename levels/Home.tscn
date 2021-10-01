@@ -38,8 +38,6 @@ position = Vector2( 936, 1192 )
 next_scene = "res://levels/town.tscn"
 transition_name = "home_to_town"
 transition_type = "down"
-size_x = 0
-size_y = 0
 
 [node name="YSort" type="YSort" parent="."]
 
