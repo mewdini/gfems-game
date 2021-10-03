@@ -114,4 +114,4 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-zoom_out = 300.0
+zoom_out = 750.0

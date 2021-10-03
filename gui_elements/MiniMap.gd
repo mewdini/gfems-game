@@ -12,6 +12,7 @@ func _ready():
 	if mm_visible:
 		# scale the texture to fit the node's bounding rectangle, but maintain the texture's aspect ratio.
 		set_stretch_mode(STRETCH_KEEP_ASPECT)
+		set_expand(true)
 		# init atlas
 		mm_cropped = AtlasTexture.new()
 		mm_cropped.set_atlas(mm_texture)
