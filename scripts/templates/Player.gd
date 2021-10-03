@@ -13,10 +13,6 @@ var anim_sprite: AnimatedSprite
 
 onready var tool_tip: Label = get_node("../../UserInterface/UserInterface/ToolTipLabel")
 
-#func set_start_anim(anim):
-#	start_animation = anim
-#	anim_sprite.play(anim)
-
 func _ready():
 	# get selected sprite
 	var sprite_enum = PlayerData.Sprite_Name.values()[PlayerData.get_sprite()]
@@ -71,7 +67,6 @@ func _physics_process(delta):
 		tool_tip.visible = true
 	else:
 		tool_tip.visible= false
-	#print(self.position.x, " ", self.position.y)
 	get_input()
 	
 func animation_manager(dir):

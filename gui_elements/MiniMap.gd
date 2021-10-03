@@ -1,19 +1,41 @@
+# TODO
+# add border to minimap
+# add toggle to turn off minimap (default is off)
+# turn on minimap for overworld
+
 extends TextureRect
 
-export var zoom_out: float  
-onready var player: KinematicBody2D = find_node("Player")
-# TODO make texture from full image
-func _update():
+export var zoom_out: float
+var player: KinematicBody2D
+var mm_cropped: AtlasTexture
+
+# Make texture of full minimap
+var mm_texture: Texture = preload("res://assets/town_map.png")
+
+func _ready():
+	# scale the texture to fit the node's bounding rectangle, but maintain the texture's aspect ratio.
+	set_stretch_mode(STRETCH_KEEP_ASPECT)
+	# init atlas
+	mm_cropped = AtlasTexture.new()
+	mm_cropped.set_atlas(mm_texture)
+	player = get_tree().get_root().find_node("Player", true, false)
+	
+func _process(delta):
+	var width = zoom_out
+	var height = zoom_out * float(2)/3
 	# get player coordinates
 	var player_pos: Vector2 = player.global_position
 	# find relative minimap coordinates
 	var mini_pos: Vector2 = player_pos / 5
+	# center player on minimap
+	mini_pos.x -= width/2
+	mini_pos.y -= height/2
 	# make rectangle based on player (center) coordinates
-	var width = zoom_out
-	var height = zoom_out
 	var view_rect: Rect2 = Rect2(mini_pos.x, mini_pos.y, width, height)
+	
 	# TODO offset so coordinates are not outside of minimap bounds
 	# make atlastexture from rectangle and texture
-	#
+	mm_cropped.set_region(view_rect)
+	
 	# draw texture on this node
-	# self.set_value(texture)
+	set_texture(mm_cropped)
