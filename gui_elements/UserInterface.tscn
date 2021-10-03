@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://gui_elements/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui_elements/ChangeSceneButton.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://gui_elements/ResumeButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui_elements/UserInterface.gd" type="Script" id=6]
 [ext_resource path="res://gui_elements/MiniMap.gd" type="Script" id=7]
+[ext_resource path="res://gui_elements/ColorRect.gd" type="Script" id=8]
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -88,6 +89,18 @@ margin_right = 140.0
 margin_bottom = -99.525
 text = "Press Space to Interact"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiniMapBorder" type="ColorRect" parent="."]
+visible = false
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 45.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

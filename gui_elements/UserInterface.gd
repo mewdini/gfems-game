@@ -1,5 +1,7 @@
 extends Control
 
+export var map_visible: bool = false
+
 onready var scene_tree: = get_tree()
 onready var pause_overlay: ColorRect = get_node("PauseMenuOverlay")
 onready var currency: Label = get_node("CurrencyLabel")
