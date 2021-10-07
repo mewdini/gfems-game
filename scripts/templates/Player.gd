@@ -5,6 +5,7 @@ export (int) var detection_range = 52
 export var start_animation = "idle_right" #setget set_start_anim
 
 var velocity: Vector2
+var direction: Vector2
 onready var player_name = PlayerData.get_char_name()
 onready var sprite = PlayerData.get_sprite()
 var target  #= $RayCast2D.get_collider()
@@ -39,7 +40,6 @@ func get_input():
 			tool_tip.visible = false
 
 func _physics_process(delta):
-	var direction: Vector2
 	if !get_tree().paused:
 		# Get player input
 		direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
