@@ -41,15 +41,13 @@ transition_type = "down"
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Spouse" parent="YSort" groups=[
-"NPCs",
-] instance=ExtResource( 5 )]
+[node name="Spouse" parent="YSort" groups=["NPCs"] instance=ExtResource( 5 )]
 position = Vector2( 248, 960 )
 collision_layer = 4
 collision_mask = 2147483648
 script = ExtResource( 8 )
 dialogue_file = "res://dialogue/spouse/spouse_intro.json"
-extra_dialogue = [ "res://dialogue/spouse/spouse_idle_before_you_gather_info.json", "res://dialogue/spouse/spouse_decision_once_you_have_gathered_information.json", "res://dialogue/spouse/spouse_idle_before_you_get_papers_and_tickets_to_leave.json", "res://dialogue/spouse/spouse_farewell.json" ]
+extra_dialogue = [ "res://dialogue/spouse/spouse_intro.json", "res://dialogue/spouse/spouse_idle_before_you_gather_info.json", "res://dialogue/spouse/spouse_decision_once_you_have_gathered_information.json", "res://dialogue/spouse/spouse_idle_before_you_get_papers_and_tickets_to_leave.json", "res://dialogue/spouse/spouse_farewell.json" ]
 npc_name = "Linh"
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
