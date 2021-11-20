@@ -49,13 +49,12 @@ position = Vector2( -8, -64 )
 detection_range = 100
 start_animation = "idle_up"
 
-[node name="Dahn" parent="YSort" groups=[
-"NPCs",
-] instance=ExtResource( 4 )]
+[node name="Dahn" parent="YSort" groups=["NPCs"] instance=ExtResource( 4 )]
 position = Vector2( 608, -176 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
 dialogue_file = "res://dialogue/brokers/broker_3_danh_first.json"
+extra_dialogue = [ "res://dialogue/brokers/broker_3_danh_talked_to_at_least_1_other_broker.json", "res://dialogue/brokers/broker_3_danh_commit.json" ]
 npc_name = "Dahn"
 
 [node name="Stool2" parent="YSort" instance=ExtResource( 3 )]

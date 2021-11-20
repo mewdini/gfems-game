@@ -1,19 +1,19 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://templates/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://backgrounds/interiors/broker 01 interior wo desk.png" type="Texture" id=1]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gui_elements/UserInterface.tscn" type="PackedScene" id=3]
-[ext_resource path="res://backgrounds/ChairAndDesk.tscn" type="PackedScene" id=4]
-[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://backgrounds/Broker1Desk.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/NPCs/Broker2NPC.tscn" type="PackedScene" id=6]
-[ext_resource path="res://backgrounds/interiors/broker 02 interior wo desk and front chair.png" type="Texture" id=8]
+[ext_resource path="res://templates/Player.tscn" type="PackedScene" id=7]
 
 [node name="Root" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 888, 656 )
+position = Vector2( 880, 656 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -21,7 +21,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
-polygon = PoolVector2Array( -144, 128, -260, 128, -260, -132, 260, -132, 260, 128, -48, 128, -48, 108, 240, 108, 240, -36, 128, -36, 88, -36, -6, -36, -6, -10, -96, -10, -95.9975, -36, -160, -36, -240, -36, -240, 108, -144, 108 )
+polygon = PoolVector2Array( -144, 128, -260, 128, -260, -132, 260, -132, 260, 128, -48, 128, -48, 108, 240, 108, 240, -36, 128, -36, 128, -20, 88, -20, 88, -36, -160, -36, -240, -36, -240, 108, -144, 108 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 layer = 100
@@ -31,26 +31,26 @@ layer = 100
 [node name="Teleport" parent="." instance=ExtResource( 2 )]
 position = Vector2( 712, 936 )
 next_scene = "res://levels/town.tscn"
-transition_name = "broker2_to_town"
+transition_name = "broker1_to_town"
 transition_type = "down"
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 688, 864 )
-start_animation = "idle_up"
+[node name="StaticBody2D" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 840, 736 )
+collision_layer = 8
 
-[node name="Ngai" parent="YSort" groups=[
-"NPCs",
-] instance=ExtResource( 6 )]
-position = Vector2( 1152, 640 )
+[node name="Ngai" parent="YSort" groups=["NPCs"] instance=ExtResource( 6 )]
+position = Vector2( 816, 636 )
 scale = Vector2( 1.75, 1.75 )
 collision_layer = 4
 dialogue_file = "res://dialogue/brokers/broker_2_ngai_first.json"
-extra_dialogue = [ "res://dialogue/brokers/broker_2_ngai_commit.json", "res://dialogue/brokers/broker_2_ngai_talked_to_at_least_1_other_broker.json" ]
+extra_dialogue = [ "res://dialogue/brokers/broker_2_ngai_talked_to_at_least_1_other_broker.json", "res://dialogue/brokers/broker_2_ngai_commit.json" ]
 npc_name = "Ngai"
 
-[node name="StaticBody2D" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 888, 740 )
+[node name="Player" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 688, 864 )
+detection_range = 60
+start_animation = "idle_up"
 
-[node name="DialogueLayer" parent="." instance=ExtResource( 5 )]
+[node name="DialogueLayer" parent="." instance=ExtResource( 4 )]

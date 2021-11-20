@@ -145,6 +145,9 @@ func animation_manager(dir):
 # is selected. Each NPC can have a different funciton here
 func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) -> String:
 
+	####################################
+	# Logic for randomize_conversation #
+	####################################
 	if randomize_conversation:
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
@@ -155,11 +158,15 @@ func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) 
 		if conversation != len(extra_dialogue):
 			dialogue_file = extra_dialogue[conversation]
 	
+	#############################################################################################################
+	# Default NPC behavior for getting extra dialogue 															#
+	# If not the first time talking to character and there is extra_dialogue, get the first extra dialogue file #
+	#############################################################################################################
 	if (npc_name in PlayerData.conversations_held) and (len(extra_dialogue) > 0):
 		# logic to select the dialogue file to load goes here.
 		dialogue_file = extra_dialogue[0]
 	
-	return dialogue_file	
+	return dialogue_file
 
 func talk(answer = "") -> void:
 	# load file and parse JSON
