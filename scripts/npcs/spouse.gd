@@ -20,3 +20,9 @@ func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) 
 		dialogue_file = extra_dialogue[1]
 
 	return dialogue_file
+	
+	# spouse_decision_once_you_have_gathered_information.json                    |  NOT DONE 1
+	# spouse_farewell.json                                                       |  not done 3
+	# spouse_idle_before_you_gather_info.json                                    |  NOT DONE 0
+	# spouse_idle_before_you_get_papers_and_tickets_to_leave.json                |  not done 2
+	# spouse_intro.json                                                          |  not done

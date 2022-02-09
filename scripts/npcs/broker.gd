@@ -8,7 +8,6 @@ func get_other_brokers():
 	return brokers
 
 func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) -> String:
-	print(other_brokers)
 	# if other broker has been talked to
 	for c in other_brokers:
 		if c in PlayerData.conversations_held:

@@ -7,7 +7,7 @@
 [ext_resource path="res://characters/NPCs/Spouse.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui_elements/DialogueLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://templates/Teleport.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scripts/npcs/spouse.gd" type="Script" id=8]
+[ext_resource path="res://characters/NPCs/Duyen.tscn" type="PackedScene" id=8]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 2 )
@@ -34,24 +34,21 @@ position = Vector2( -408.198, -83.3586 )
 polygon = PoolVector2Array( 384, 340, -20, 340, -20, -232, 832, -236, 836, 340, 480, 340, 480, 324, 816, 324, 816, 148, 628, 148, 628, 140, 624, 140, 624, 120, 620, 120, 620, 80, 624, 80, 624, -20, 532, -20, 532, -60, 448, -60, 448, -68, 544, -132, 624, -132, 624, -228, 544, -228, 544, -188, 432, -112, 336, -112, 336, -84, 240, -84, 240, -108, 240, -112, 144, -112, 144, -12, 92, -12, 92, -60, 52, -60, 52, -12, 0, -12, 0, 36, 28, 36, 28, 240, 0, 240, 0, 324, 384.198, 323.359 )
 
 [node name="Teleport" parent="." instance=ExtResource( 7 )]
-position = Vector2( 936, 1192 )
+position = Vector2( 936, 1111 )
 next_scene = "res://levels/town.tscn"
 transition_name = "home_to_town"
 transition_type = "down"
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Spouse" parent="YSort" groups=["NPCs"] instance=ExtResource( 5 )]
-position = Vector2( 248, 960 )
-collision_layer = 4
-collision_mask = 2147483648
-script = ExtResource( 8 )
-dialogue_file = "res://dialogue/spouse/spouse_intro.json"
-extra_dialogue = [ "res://dialogue/spouse/spouse_intro.json", "res://dialogue/spouse/spouse_idle_before_you_gather_info.json", "res://dialogue/spouse/spouse_decision_once_you_have_gathered_information.json", "res://dialogue/spouse/spouse_idle_before_you_get_papers_and_tickets_to_leave.json", "res://dialogue/spouse/spouse_farewell.json" ]
-npc_name = "Linh"
+[node name="Duyen" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1205, 613 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 584.382, 740.757 )
+
+[node name="Spouse" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 244, 676 )
 
 [node name="DialogueLayer" parent="." instance=ExtResource( 6 )]
 
