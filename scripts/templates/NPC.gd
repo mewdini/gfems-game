@@ -7,7 +7,7 @@ export (String, FILE) var dialogue_file
 export (Array, String, FILE) var extra_dialogue
 export (String) var npc_name
 export (bool) var randomize_conversation = false
-export (bool) var seated = false
+export (bool) var seated
 
 # checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
 export (bool) var moves = false
@@ -120,27 +120,48 @@ func _physics_process(delta):
 		update_velocity(delta)
 		velocity = move_and_slide(velocity)
 	# Update player animation
-	animation_manager(direction)
+	animation_manager(false, direction)
 	
-func animation_manager(dir):
+func animation_manager(convo, dir):
+	var act_str = null
+	var dir_s = null
+	
 	var action = "run"
 	if dir == Vector2.ZERO:
 		action = "idle"
 		if seated:
 			action = "sit"
 
-	var dir_s = null
-	if dir.x == 1:
-		dir_s = "right"
-	if dir.x == -1:
-		dir_s = "left"
-	elif dir.y == 1:
-		dir_s = "down"
-	elif dir.y == -1:
-		dir_s = "up"
-	
+	# if convo, should face the player
+	if convo:
+		# set animation to idle in direction of player
+		var player_to_npc_x_delta = player.position.x - self.position.x
+		var player_to_npc_y_delta = player.position.y - self.position.y
+
+		# if player is further on the x axis, then the rotation should be on x axis
+		if abs(player_to_npc_x_delta) >= abs(player_to_npc_y_delta):
+			if player_to_npc_x_delta < 0:
+				dir_s = "left"
+			elif player_to_npc_x_delta > 0:
+				dir_s = "right"
+		else:
+			if player_to_npc_y_delta < 0:
+				dir_s = "up"
+			elif player_to_npc_y_delta > 0:
+				dir_s = "down"
+	else:
+		if dir.x == 1:
+			dir_s = "right"
+		if dir.x == -1:
+			dir_s = "left"
+		elif dir.y == 1:
+			dir_s = "down"
+		elif dir.y == -1:
+			dir_s = "up"
+			
 	if dir_s:
-		$AnimatedSprite.play(action + "_" + dir_s)
+		act_str = action + "_" + dir_s
+		$AnimatedSprite.play(act_str)
 
 # logic to select conversation, returns an integer depending on how conversation
 # is selected. Each NPC can have a different funciton here
@@ -180,21 +201,8 @@ func talk(answer = "") -> void:
 	# Set dialoguePopup npc to neighbor
 	dialogue_popup.npc = self
 	
-	# set animation to idle in direction of player
-	var player_to_npc_x_delta = player.position.x - self.position.x
-	var player_to_npc_y_delta = player.position.y - self.position.y
-	
-	# if player is further on the x axis, then the rotation should be on x axis
-	if abs(player_to_npc_x_delta) >= abs(player_to_npc_y_delta):
-		if player_to_npc_x_delta < 0:
-			$AnimatedSprite.play("idle_left")
-		elif player_to_npc_x_delta > 0:
-			$AnimatedSprite.play("idle_right")
-	else:
-		if player_to_npc_y_delta < 0:
-			$AnimatedSprite.play("idle_up")
-		elif player_to_npc_y_delta > 0:
-			$AnimatedSprite.play("idle_down")
+	# Update animation
+	animation_manager(true, velocity.normalized())
 
 	# Get player's dialogue choice
 	if answer != "":
