@@ -43,6 +43,7 @@ transition_type = "down"
 
 [node name="Duyen" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1205, 613 )
+collision_layer = 5
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 584.382, 740.757 )
