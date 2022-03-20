@@ -1,10 +1,56 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://templates/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/npcs/broker.gd" type="Script" id=2]
+[ext_resource path="res://characters/NPCs/Conference_man_48x48.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 864, 96, 48, 96 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 912, 96, 48, 96 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 960, 96, 48, 96 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1008, 96, 48, 96 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1056, 96, 48, 96 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1104, 96, 48, 96 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="NPC" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
-frame = 0
+frames = SubResource( 7 )
+frame = 4
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, 37.5434 )
+
+[node name="NPCDetection" parent="." index="2"]
+position = Vector2( 0, 15 )
