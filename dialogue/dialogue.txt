@@ -32,12 +32,12 @@ dialogue/
 		puzzled_man.json                                                           |  not done
 		relaxed_onlooker.json                                                      |  not done
 		young_woman.json                                                           |  not done
-		your_kid_1.json                                                            |  not done
-		your_kid_2.json                                                            |  not done
+		your_kid_1.json                                                            |  done
+		your_kid_2.json                                                            |  done
 		your_kid_3.json                                                            |  not done
 	spouse/                                                                        |  CHECK ORDER AND LOGIC, CHANGED ORDER AND SCRIPT IS SAME
 		spouse_decision_once_you_have_gathered_information.json                    |  NOT DONE
 		spouse_farewell.json                                                       |  not done
 		spouse_idle_before_you_gather_info.json                                    |  NOT DONE
 		spouse_idle_before_you_get_papers_and_tickets_to_leave.json                |  not done
-		spouse_intro.json                                                          |  not done
+		spouse_intro.json                                                          |  done?
