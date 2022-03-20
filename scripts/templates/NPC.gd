@@ -7,6 +7,7 @@ export (String, FILE) var dialogue_file
 export (Array, String, FILE) var extra_dialogue
 export (String) var npc_name
 export (bool) var randomize_conversation = false
+export (bool) var seated = false
 
 # checkpoints are set up as arrays with x, y, delay at point in seconds, and visibility (0 for invisible, 1 for visible)
 export (bool) var moves = false
@@ -122,25 +123,25 @@ func _physics_process(delta):
 	animation_manager(direction)
 	
 func animation_manager(dir):
+	var action = "run"
+	if dir == Vector2.ZERO:
+		action = "idle"
+		if seated:
+			action = "sit"
+
+	var dir_s = null
 	if dir.x == 1:
-		$AnimatedSprite.play("run_right")
-	elif dir.x == -1:
-		$AnimatedSprite.play("run_left")
+		dir_s = "right"
+	if dir.x == -1:
+		dir_s = "left"
 	elif dir.y == 1:
-		$AnimatedSprite.play("run_down")
+		dir_s = "down"
 	elif dir.y == -1:
-		$AnimatedSprite.play("run_up")
-	elif dir == Vector2.ZERO:
-		match $AnimatedSprite.animation:
-			"run_right":
-				$AnimatedSprite.play("idle_right")
-			"run_left":
-				$AnimatedSprite.play("idle_left")
-			"run_up":
-				$AnimatedSprite.play("idle_up")
-			"run_down":
-				$AnimatedSprite.play("idle_down")
+		dir_s = "up"
 	
+	if dir_s:
+		$AnimatedSprite.play(action + "_" + dir_s)
+
 # logic to select conversation, returns an integer depending on how conversation
 # is selected. Each NPC can have a different funciton here
 func select_conversation(dialogue_file, extra_dialogue, randomize_conversation) -> String:
